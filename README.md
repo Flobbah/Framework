@@ -1,3 +1,15 @@
+# Gulfcoast Island V2 Life:
+  - Mapswap to Gulfcoast Island V2
+  - Modded server/client is required
+  - Mission is modified:
+   - like Spyglass was removed
+   - taser bug fixed
+   - welcomenotification removed
+   - textures and sounds outsourced to mod to minimize mission size
+   - removed public cop slots
+  - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
+
+
 [![|Solid](http://i.imgur.com/pL3heId.png)](https://github.com/AsYetUntitled/Framework/)
 
 AsYetUntitled, formerly <b>Altis Life RPG</b> and <b>ARMARPGLIFE</b> is a roleplay framework for ArmA III originally made by <b>TAW_Tonic</b>.
