@@ -1,4 +1,4 @@
-# Gulfcoast Island V2 Life:
+# Gulfcoast Island V2 Life (GIV2 Life):
   - Mapswap to Gulfcoast Island V2
   - Modded server/client is required
   - Mission is modified:
