@@ -7,6 +7,7 @@
    - welcomenotification removed
    - textures and sounds outsourced to mod to minimize mission size
    - removed public cop slots
+   - implemented CH_BrightNights
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
 
