@@ -5,35 +5,34 @@ class TrunkMenu {
     enableSimulation = 1;
 
     class controlsBackground {
-        class RscTitleBackground: Life_RscText {
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+        class MainBackground: Life_RscText {
             idc = -1;
-            x = 0.1;
-            y = 0.2;
-            w = 0.7;
-            h = (1 / 25);
+            x = 0.237031 * safezoneW + safezoneX;
+            y = 0.230556 * safezoneH + safezoneY;
+            w = 0.520781 * safezoneW;
+            h = 0.594 * safezoneH;
+            colorBackground[] = {-1,-1,-1,0.6};
         };
 
-        class RscBackground: Life_RscText {
-            colorBackground[] = {0, 0, 0, 0.7};
+        class BG: Life_RscText {
             idc = -1;
-            x = 0.1;
-            y = 0.2 + (11 / 250);
-            w = 0.7;
-            h = 0.7 - (22 / 250);
+            x = 0.23651 * safezoneW + safezoneX;
+            y = 0.22963 * safezoneH + safezoneY;
+            w = 0.520781 * safezoneW;
+            h = 0.055 * safezoneH;
+            colorBackground[] = {-1,-1,-1,0.7};
         };
 
         class RscTitleText: Life_RscTitle {
-            colorBackground[] = {0, 0, 0, 0};
             idc = 3501;
             text = "";
-            x = 0.1;
-            y = 0.2;
-            w = 0.7;
-            h = (1 / 25);
+            x = 0.236979 * safezoneW + safezoneX;
+            y = 0.233334 * safezoneH + safezoneY;
+            w = 0.520781 * safezoneW;
+            h = 0.055 * safezoneH;
         };
 
-        class VehicleWeight : RscTitleText {
+        class VehicleWeight: RscTitleText {
             idc = 3504;
             style = 1;
             text = "";
@@ -41,24 +40,24 @@ class TrunkMenu {
 
         class RscTrunkText: Life_RscText {
             idc = -1;
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             text = "$STR_Trunk_TInventory";
             sizeEx = 0.04;
-            x = 0.11;
-            y = 0.25;
-            w = 0.3;
-            h = 0.04;
+            x = 0.242187 * safezoneW + safezoneX;
+            y = 0.302 * safezoneH + safezoneY;
+            w = 0.232031 * safezoneW;
+            h = 0.033 * safezoneH;
+            colorBackground[] = {-1,-1,-1,0.7};
         };
-
+        
         class RscPlayerText: Life_RscText {
             idc = -1;
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             text = "$STR_Trunk_PInventory";
             sizeEx = 0.04;
-            x = 0.49;
-            y = 0.25;
-            w = 0.3;
-            h = 0.04;
+            x = 0.515469 * safezoneW + safezoneX;
+            y = 0.302 * safezoneH + safezoneY;
+            w = 0.232031 * safezoneW;
+            h = 0.033 * safezoneH;
+            colorBackground[] = {-1,-1,-1,0.7};
         };
     };
 
