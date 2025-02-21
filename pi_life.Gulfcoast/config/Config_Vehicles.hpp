@@ -2265,7 +2265,7 @@ class LifeCfgVehicles {
 		
         textures[] = {
             { "Sheriff", "cop", {
-                "\pi_asset\textures\hummingbird.paa"
+                "\pi_data\textures\hummingbird.paa"
             }, "" },
             { "Civ Blue", "civ", {
                 "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"
@@ -2304,7 +2304,7 @@ class LifeCfgVehicles {
                 "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             }, "" },
             { "EMS White", "med", {
-                "\pi_asset\skins\medic_hummingbird.paa"
+                "\pi_data\skins\medic_hummingbird.paa"
             }, "" }
         };
     };

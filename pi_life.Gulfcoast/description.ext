@@ -30,49 +30,49 @@ class CfgSounds {
     sounds[] = {};
     class sirenLong {
         name = "sirenLong";
-        sound[] = {"@pi_asset\sounds\sirenLong.ogg", 1.0, 1};
+        sound[] = {"@pi_data\sounds\sirenLong.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class medicSiren {
         name = "medicSiren";
-        sound[] = {"@pi_asset\sounds\medicSiren.ogg", 1.0, 1};
+        sound[] = {"@pi_data\sounds\medicSiren.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class tazerSound {
         name = "tazerSound";
-        sound[] = {"@pi_asset\sounds\tazer.ogg", 0.5, 1};
+        sound[] = {"@pi_data\sounds\tazer.ogg", 0.5, 1};
         titles[] = {};
     };
 
     class flashbang {
         name = "flashbang";
-        sound[] = {"@pi_asset\sounds\flashbang.ogg", 1.0, 1};
+        sound[] = {"@pi_data\sounds\flashbang.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class mining {
         name = "mining";
-        sound[] = {"@pi_asset\sounds\mining.ogg", 1.0, 1};
+        sound[] = {"@pi_data\sounds\mining.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class harvest {
         name = "harvest";
-        sound[] = {"@pi_asset\sounds\harvest.ogg", 1.0, 1};
+        sound[] = {"@pi_data\sounds\harvest.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class lockCarSound {
         name = "lockCarSound";
-        sound[] = {"@pi_asset\sounds\carLock.ogg", 1.0, 1};
+        sound[] = {"@pi_data\sounds\carLock.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class unlockCarSound {
         name = "unlockCarSound";
-        sound[] = {"@pi_asset\sounds\carUnlock.ogg", 0.75, 1};
+        sound[] = {"@pi_data\sounds\carUnlock.ogg", 0.75, 1};
         titles[] = {};
     };
 };
@@ -132,7 +132,7 @@ class CfgNotifications {
 
     class TextMessage {
         title = "$STR_TextMessage_Title";
-        iconPicture = "\pi_asset\icons\ico_messageNew.paa";
+        iconPicture = "\pi_data\icons\ico_messageNew.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -140,7 +140,7 @@ class CfgNotifications {
 
     class PoliceDispatch {
         title = "$STR_PoliceDispatch_Title";
-        iconPicture = "\pi_asset\icons\ico_messagePolice.paa";
+        iconPicture = "\pi_data\icons\ico_messagePolice.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -148,7 +148,7 @@ class CfgNotifications {
 
     class AdminDispatch {
         title = "$STR_AdminDispatch_Title";
-        iconPicture = "\pi_asset\icons\ico_messageAdmin.paa";
+        iconPicture = "\pi_data\icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -156,7 +156,7 @@ class CfgNotifications {
 
     class AdminMessage {
         title = "$STR_AdminMessage_Title";
-        iconPicture = "\pi_asset\icons\ico_messageAdmin.paa";
+        iconPicture = "\pi_data\icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 5;
