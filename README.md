@@ -8,6 +8,8 @@
    - textures and sounds outsourced to mod to minimize mission size
    - removed public cop slots
    - implemented CH_BrightNights
+   - Added 150 different colors for civ and undercover cop vehicles
+   - Added take all/store all from trunk script by "Basti | John Collins" aka DevB
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
 

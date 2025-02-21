@@ -3156,6 +3156,30 @@
             <Polish>Schowaj</Polish>
 			<Chinesesimp>存储</Chinesesimp>
         </Key>
+        <Key ID="STR_Trunk_Take_All">
+            <Original>Take All</Original>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Alles Nehmen</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Trunk_Store_All">
+            <Original>Store All</Original>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Alles Lagern</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
     </Package>
     <Package name="Wanted_Menu">
         <Key ID="STR_Wanted_Title">

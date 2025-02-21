@@ -344,6 +344,8 @@ class Life_Client_Core {
 
     class Vehicle {
         file = "core\vehicle";
+		class vehTakeAllItem {};
+		class vehStoreAllItem {};
         class addVehicle2Chain {};
         class colorVehicle {};
         class deviceMine {};

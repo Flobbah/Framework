@@ -103,27 +103,49 @@ class TrunkMenu {
             w = 0.3;
             h = 0.03;
         };
-
+        
         class TakeItem: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Trunk_Take";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-            onButtonClick = "[] call life_fnc_vehTakeItem;";
-            x = 0.19;
-            y = 0.78;
-            w = (6.25 / 40);
-            h = (1 / 25);
+            onButtonClick = "[] call Life_fnc_vehTakeItem;";
+            x = 0.345312 * safezoneW + safezoneX;
+            y = 0.72 * safezoneH + safezoneY;
+            w = 0.128906 * safezoneW;
+            h = 0.033 * safezoneH;
         };
 
         class StoreItem: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Trunk_Store";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-            onButtonClick = "[] call life_fnc_vehStoreItem;";
-            x = 0.57;
-            y = 0.78;
-            w = (6.25 / 40);
-            h = (1 / 25);
+            onButtonClick = "[] call Life_fnc_vehStoreItem;";
+            x = 0.515469 * safezoneW + safezoneX;
+            y = 0.72 * safezoneH + safezoneY;
+            w = 0.128906 * safezoneW;
+            h = 0.033 * safezoneH;
+        };
+ 
+        class TakeAllItem: Life_RscButtonMenu {
+            idc = -1;
+            text = "Take all";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call Life_fnc_vehTakeAllItem;";
+            x = 0.345312 * safezoneW + safezoneX;
+            y = 0.76 * safezoneH + safezoneY;
+            w = 0.128906 * safezoneW;
+            h = 0.033 * safezoneH;
+        };
+
+        class StoreAllItem: Life_RscButtonMenu {
+            idc = -1;
+            text = "Store all";
+            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call Life_fnc_vehStoreAllItem;";
+            x = 0.515469 * safezoneW + safezoneX;
+            y = 0.76 * safezoneH + safezoneY;
+            w = 0.128906 * safezoneW;
+            h = 0.033 * safezoneH;
         };
 
         class ButtonClose: Life_RscButtonMenu {
