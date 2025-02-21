@@ -144,9 +144,9 @@ randomSeed=340436;
 class ScenarioData
 {
 	author="Flobbah";
-	overViewPicture="\pi_asset\system\armalife.jpg";
-	overViewPictureLocked="\pi_asset\system\armalife.jpg";
-	loadScreen="\pi_asset\system\armalife.jpg";
+	overViewPicture="\pi_asset\textures\armalife.jpg";
+	overViewPictureLocked="\pi_asset\textures\armalife.jpg";
+	loadScreen="\pi_asset\textures\armalife.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
