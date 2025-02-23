@@ -181,6 +181,18 @@ aiSpawn = ["hunting_zone",30] spawn TON_fnc_huntingZone;
 server_corpses = [];
 addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}];
 
+life_nextrob = 0; // 10 min nach Restart, funzt das Überfallen erst.
+publicVariable "life_nextrob";
+life_firstrob = true;
+publicVariable "life_firstrob";
+[] spawn {
+    for "_i" from 0 to 1 step 0 do {
+        uiSleep (10 * 60);
+        life_firstrob = false;
+        publicVariable "life_firstrob";
+    };
+};
+
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Server Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";

@@ -205,6 +205,7 @@ class Life_Client_Core {
         class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
+        class tankerob {};
         class moveIn {};
     };
 
