@@ -1189,7 +1189,7 @@ class Mission
 			position[]={559.15253,2.961458,14378.627};
 			name="cop_car_2";
 			type="Empty";
-			angle=55.120495;
+			angle=55.120491;
 			id=98;
 		};
 		class Item95
@@ -1207,7 +1207,7 @@ class Mission
 			position[]={1326.5387,2.27,1539.7192};
 			name="cop_air_2";
 			type="Empty";
-			angle=221.47002;
+			angle=221.47;
 			id=100;
 		};
 		class Item97
@@ -12319,19 +12319,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7195.3867,11.542009,5264.2832};
-						angles[]={0,1.5843403,0};
+						position[]={7195.3872,11.542439,5264.2827};
+						angles[]={0,1.5843401,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
-						name="Station_shop_1";
+						name="Station_shop_01";
 						disableSimulation=1;
 					};
 					id=512;
 					type="C_Nikos_aged";
-					atlOffset=0.7505703;
+					atlOffset=0.00042915344;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12381,20 +12382,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12306.441,16.191677,9817.8066};
-						angles[]={0,1.6424328,0};
+						position[]={12306.441,16.19211,9817.8066};
+						angles[]={0,1.6424246,0};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
-						name="Station_shop_2";
+						name="Station_shop_02";
 						disableSimulation=1;
 					};
 					id=513;
 					type="C_Nikos_aged";
-					atlOffset=3.8146973e-06;
+					atlOffset=0.00043678284;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12444,19 +12445,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11538.367,36.924622,12950.445};
-						angles[]={0,2.9911721,0};
+						position[]={11538.367,36.924732,12950.446};
+						angles[]={0,2.9911802,0};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
-						name="Station_shop_3";
+						name="Station_shop_03";
 						disableSimulation=1;
 					};
 					id=514;
 					type="C_Nikos_aged";
+					atlOffset=0.00011062622;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12506,8 +12508,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8191.3672,14.186969,11254.649};
-						angles[]={0,1.9715898,0};
+						position[]={8191.3672,14.187439,11254.649};
+						angles[]={0,1.9715936,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -12519,6 +12521,7 @@ class Mission
 					};
 					id=515;
 					type="C_Nikos_aged";
+					atlOffset=0.00047016144;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12568,8 +12571,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8373.2354,14.908799,5725.1279};
-						angles[]={0,5.3753901,0};
+						position[]={8373.2354,14.908834,5725.1279};
+						angles[]={0,5.3753872,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -12581,6 +12584,7 @@ class Mission
 					};
 					id=516;
 					type="C_Nikos_aged";
+					atlOffset=3.4332275e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12630,11 +12634,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12439.249,1.3520999,13503.924};
-						angles[]={0,3.4849181,0};
+						position[]={12439.249,1.3519398,13503.924};
+						angles[]={0,3.4849164,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
@@ -12643,7 +12646,7 @@ class Mission
 					};
 					id=517;
 					type="C_Nikos_aged";
-					atlOffset=2.3841858e-07;
+					atlOffset=0.56199998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12693,7 +12696,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4338.645,14.238561,6839.396};
+						position[]={4338.645,14.23845,6839.396};
 						angles[]={0,2.8397205,0};
 					};
 					side="Civilian";
@@ -12706,6 +12709,7 @@ class Mission
 					};
 					id=518;
 					type="C_Nikos_aged";
+					atlOffset=0.15100002;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12755,8 +12759,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1969.2307,10.428475,10443.909};
-						angles[]={0,3.4429667,0};
+						position[]={1969.231,10.428727,10443.909};
+						angles[]={0,3.4429586,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -12768,6 +12772,7 @@ class Mission
 					};
 					id=519;
 					type="C_Nikos_aged";
+					atlOffset=0.00025177002;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12817,8 +12822,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5587.8784,14.004908,5784.2725};
-						angles[]={0,4.7188745,0};
+						position[]={5587.8779,14.004984,5784.2729};
+						angles[]={0,4.7188816,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -12830,7 +12835,7 @@ class Mission
 					};
 					id=520;
 					type="C_Nikos_aged";
-					atlOffset=0.057916641;
+					atlOffset=7.5340271e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12880,11 +12885,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2963.8071,6.3217735,12020.972};
-						angles[]={0,5.1724787,0};
+						position[]={2963.8069,6.3214388,12020.972};
+						angles[]={0,5.1724749,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
@@ -12893,6 +12897,7 @@ class Mission
 					};
 					id=521;
 					type="C_Nikos_aged";
+					atlOffset=0.52999973;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12942,8 +12947,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14518.378,5.1814384,1898.8124};
-						angles[]={0,4.3257165,0};
+						position[]={14518.378,5.1814389,1898.812};
+						angles[]={0,4.3257113,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -12955,6 +12960,7 @@ class Mission
 					};
 					id=522;
 					type="C_Nikos_aged";
+					atlOffset=4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13004,8 +13010,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14444.643,7.1789274,7044.0405};
-						angles[]={0,3.2114716,0};
+						position[]={14444.643,7.1790051,7044.041};
+						angles[]={0,3.2114756,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -13017,6 +13023,7 @@ class Mission
 					};
 					id=523;
 					type="C_Nikos_aged";
+					atlOffset=7.7724457e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13066,11 +13073,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8988.8389,3.1414421,6944.5718};
-						angles[]={0,1.1056366,0};
+						position[]={8988.8389,3.1414387,6944.5718};
+						angles[]={0,1.1056311,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
@@ -13079,7 +13085,7 @@ class Mission
 					};
 					id=524;
 					type="C_Nikos_aged";
-					atlOffset=3.0994415e-06;
+					atlOffset=0.52999997;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13129,11 +13135,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2422.3491,27.212772,12863.31};
-						angles[]={0,4.4197116,0};
+						position[]={2422.3491,27.212439,12863.31};
+						angles[]={0,4.4197149,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
@@ -13142,6 +13147,7 @@ class Mission
 					};
 					id=525;
 					type="C_Nikos_aged";
+					atlOffset=0.39100075;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13191,8 +13197,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9688.2217,51.175011,10134.771};
-						angles[]={0,2.3653545,0};
+						position[]={9688.2217,51.17543,10134.771};
+						angles[]={0,2.3653574,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -13204,6 +13210,7 @@ class Mission
 					};
 					id=526;
 					type="C_Nikos_aged";
+					atlOffset=0.0004196167;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13253,8 +13260,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={797.02301,12.069553,14263.604};
-						angles[]={0,4.3984213,0};
+						position[]={797.02301,12.06936,14263.604};
+						angles[]={0,4.3984218,0};
 					};
 					side="Civilian";
 					class Attributes
@@ -13265,7 +13272,7 @@ class Mission
 					};
 					id=527;
 					type="C_Nikos_aged";
-					atlOffset=0.38419342;
+					atlOffset=0.38399982;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13315,8 +13322,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3273.9788,11.180341,7040.106};
-						angles[]={0,3.582212,0};
+						position[]={3273.979,11.180744,7040.106};
+						angles[]={0,3.5822184,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -13328,6 +13335,7 @@ class Mission
 					};
 					id=528;
 					type="C_Nikos_aged";
+					atlOffset=0.00040340424;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13377,8 +13385,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13174.502,4.2317786,5482.8623};
-						angles[]={0,2.5080769,0};
+						position[]={13174.502,4.2313771,5482.8628};
+						angles[]={0,2.5080729,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -13390,7 +13398,7 @@ class Mission
 					};
 					id=529;
 					type="C_Nikos_aged";
-					atlOffset=0.21840143;
+					atlOffset=0.21799994;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13440,8 +13448,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11057.145,19.491438,2693.1868};
-						angles[]={0,0.048647936,0};
+						position[]={11057.145,19.491438,2693.187};
+						angles[]={0,0.048642326,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -13502,8 +13510,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7617.6016,14.641438,3953.4431};
-						angles[]={0,2.4269135,0};
+						position[]={7617.6021,14.641438,3953.4431};
+						angles[]={0,2.4269152,0};
 					};
 					side="Civilian";
 					class Attributes
@@ -13514,7 +13522,7 @@ class Mission
 					};
 					id=531;
 					type="C_Nikos_aged";
-					atlOffset=0.52999878;
+					atlOffset=0.52999973;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13564,10 +13572,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7431.3394,14.388987,3968.3535};
-						angles[]={0,0.62442499,0};
+						position[]={7431.3389,14.389439,3968.353};
+						angles[]={0,0.62442642,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
@@ -13576,7 +13585,7 @@ class Mission
 					};
 					id=532;
 					type="C_Nikos_aged";
-					atlOffset=0.27754784;
+					atlOffset=0.00045108795;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13626,10 +13635,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5042.6572,14.604284,14028.186};
-						angles[]={0,3.833287,0};
+						position[]={5042.6572,14.604618,14028.186};
+						angles[]={0,3.8332839,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 						init="this enableSimulation false; this allowDamage false; this addAction[localize""STR_MAR_Station_Shop"",life_fnc_weaponShopMenu,""f_station_store"",1.5,true,true,"""",""true"",5];this addAction[localize""STR_Shop_Station_Coffee"",life_fnc_virt_menu,""f_station_coffee"",1.5,true,true,"""",""true"",5];this addAction[""Tankstelle Ausrauben"",life_fnc_tankerob,nil,0,false,false,"""",""true"",4];";
@@ -13638,7 +13648,7 @@ class Mission
 					};
 					id=533;
 					type="C_Nikos_aged";
-					atlOffset=0.52766609;
+					atlOffset=0.00033283234;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13688,8 +13698,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14060.516,5.4944744,15044.897};
-						angles[]={0,5.1636009,0};
+						position[]={14060.516,5.4943981,15044.897};
+						angles[]={0,5.163609,0};
 					};
 					side="Civilian";
 					flags=4;
@@ -13701,7 +13711,7 @@ class Mission
 					};
 					id=534;
 					type="C_Nikos_aged";
-					atlOffset=2.8610229e-06;
+					atlOffset=0.16299963;
 					class CustomAttributes
 					{
 						class Attribute0
