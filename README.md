@@ -17,9 +17,9 @@
 [![|Solid](https://i.imgur.com/5PFRHRN.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140)
 # Pictures
   - HUD
-[|Solid](https://i.imgur.com/GLtyaUG.png)
+[![|Solid](https://i.imgur.com/GLtyaUG.png)]
   - Trunk Dialog
-[|Solid](https://i.imgur.com/olKkPry.png)
+[![|Solid](https://i.imgur.com/olKkPry.png)]
 
 # Altis Life Framework 5.X.X
 [![|Solid](http://i.imgur.com/pL3heId.png)](https://github.com/AsYetUntitled/Framework/)
