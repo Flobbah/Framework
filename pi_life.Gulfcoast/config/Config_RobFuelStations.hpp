@@ -2,47 +2,47 @@
     Author: Deathman
 	Edit: Flobbah
     File: Config_RobFuelStations.hpp
-    
+
     Description: Hier kannst du alles nötige Einstellen
 */
 #define false 0
 #define true 1
 class TankeRob_Master {
-    DE100_Notifiactionssytsem = false; //Nur auf True Schalten wenn ihr das DE100_Notifiactionssytsem habt
-    
-    Max_Money_Rob = 20000; //Wie viel der Spieler Kriegen soll
-    Max_Money_Rob_Random = 10000; //Wie viel der Spieler zusätzlich kriegen soll (RANDOM!!)
-    
-    FailText_1 = "Seit wann überfallen Polizisten Tankstellen?!"; //Text wenn du als Cop oder Medic Spielst
-    FailText_2 = "Kurz nach dem Erwachen ist noch kein Geld in der Kasse!"; //Text wenn der Server Gerade neugestartet ist
-    FailText_3 = "Es wurde gerade schon eine Tankstelle überfallen, komm in %1 Minuten wieder vorbei!"; //Text wann der Spieler zum Überfall wieder kommen soll
-    FailText_4 = "Du kannst hier niemanden Überfallen!"; //Text wenn du das Gerade nicht Ausrauben darfst
-    FailText_5 = "Steig aus deinem Fahrzeug!"; //Text wenn du Noch im Fahrzeug sitzt
-    FailText_6 = "Du hast kein Druckmittel um die Tankstelle zu überfallen!"; //Text wenn du keine Waffe bei dir hast
-    FailText_7 = "Es ist kein Geld in der Kasse!"; //Text wenn nicht im Gold Depo ist
-    FailText_8 = "Der Kassierer hat den stillen Alarm ausgelöst!"; //Kassierer Löst Alarm aus
-    FailText_9 = "Du hast kein Druckmittel um die Tankstelle zu überfallen!"; //Text wenn du keine Waffe bei dir hast
-    
-    Max_Distance = 5; //Wie Hoch die Distanz sein soll zum Überfallenen
-    Max_Distance_Text = "Du musst 5m von dem Kassierer entfernt sein, um ihn auszurauben!"; //Text für die Maximale Distanz
-    
-    Max_Distance_Shop = 10.5; //Wie Hoch die Distanz sein soll wenn der Überfall im follen gange ist
-    Max_Distance_Shop_Text = "Du musst in 10m Nähe bleiben um zu Überfallen! - Die Kasse ist nun verschlossen."; //Text wenn du dich zuweit weg bewegst
-    
-    Max_Police = 0; //Wie viele Polizisten im Dienst sein müssen
-    Message_To_Police = "ALARM! - Tankstelle: %1 wird ausgeraubt!"; //Text an die Polizei
-    PoliceText_Fail = "Es sind nicht genügend Polizeikräfte im Dienst!"; //Text wenn nicht genugend Polizeikräfte da sind
-    
-    ProgressBarText = "Überfall im Gange, halte dich in der Nähe auf (10m) (1%1)..."; //Was in der ProgressBar Stehen soll wenn der Raub Startet (ACHTUNG NICHT DAS HIER ENTFERNEN (1%1)
-    Stay_DistanceText = "Überfall im Gange, halte dich in der Nähe auf (10m) (%1%2)...";  //Was in der ProgressBar Stehen soll wenn der Raub in Gange ist (ACHTUNG NICHT DAS HIER ENTFERNEN (%1%2)
-    
-    CreatMarkerName = "Marker200"; //Markername der Erstellt wird
-    MarkerColor = "ColorRed"; //Welche Farbe er haben soll
-    MarkerText = "!Achtung! Überfall !Achtung!"; //Wie der Marker Text sein soll
-    MarkerType = "mil_warning"; //Wie der Type des Markers sein soll
-    
-    Rob_Finish = "Du hast $%1 gestohlen, flüchte bevor die Polizei eintrifft!"; //Text wenn der Raub Erfolgreich War
-    
-    ATMuse = 120; //Wie viel Sekunden er warten soll bis er ein ATM Nutzen darf
-    RoberDelay = 900; //Wie der Sekunden Abstand ist zwischen den Überfällen 15 min = 900 Sec.
+    DE100_Notifiactionssytsem = false; //Only switch to True if you have the DE100_Notifiactionssytsem
+
+    Max_Money_Rob = 20000; //How much the player should get
+    Max_Money_Rob_Random = 10000; //How much the player should get in addition (RANDOM!!)
+
+    FailText_1 = "STR_FailText_1"; //Text if you play as a Cop or Medic
+    FailText_2 = "STR_FailText_2"; //Text when the server has just restarted
+    FailText_3 = "STR_FailText_3"; //Text when the player should come back for the raid
+    FailText_4 = "STR_FailText_4"; //Text if you are not allowed to rob the straight
+    FailText_5 = "STR_FailText_5"; //Text when you are still in the vehicle
+    FailText_6 = "STR_FailText_6"; //Text if you don't have a weapon with you
+    FailText_7 = "STR_FailText_7"; //Text when not in the Gold Depot
+    FailText_8 = "STR_FailText_8"; //Cashier triggers alarm
+    FailText_9 = "STR_FailText_9"; //Text if you don't have a weapon with you
+
+    Max_Distance = 5; //How high the distance to the victim should be
+    Max_Distance_Text = "STR_Max_Distance_Text"; //Text for the maximum distance
+
+    Max_Distance_Shop = 10.5; //How high the distance should be when the raid is in full swing
+    Max_Distance_Shop_Text = "STR_Max_Distance_Shop_Text"; //Text if you move too far away
+
+    Max_Police = 0; //How many police officers must be on duty
+    Message_To_Police = "STR_Message_To_Police"; //Text to the police
+    PoliceText_Fail = "STR_PoliceText_Fail"; //Text if there are not enough police forces
+
+    ProgressBarText = "STR_ProgressBarText"; //What should be in the ProgressBar when the robbery starts (ATTENTION DO NOT REMOVE THIS (1%1)
+    Stay_DistanceText = "STR_Stay_DistanceText";  //What should be in the ProgressBar when the robbery is in progress (ATTENTION DO NOT REMOVE THIS (%1%2)
+
+    CreatMarkerName = "Marker200"; //Marker name that is created
+    MarkerColor = "ColorRed"; //What color it should be
+    MarkerText = "STR_MarkerText"; //Wie der Marker Text sein soll
+    MarkerType = "mil_warning"; //How the marker text should be
+
+    Rob_Finish = "STR_Rob_Finish"; //Text if the robbery was successful
+
+    ATMuse = 120; //How many seconds he should wait until he is allowed to use an ATM
+    RoberDelay = 900; //As the interval of seconds between the raids is 15 min = 900 sec.
 };

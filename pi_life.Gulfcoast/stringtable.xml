@@ -13293,4 +13293,210 @@
 			<Chinesesimp>%1 - %2 将 $%3 存进他们的银行账户。银行存款余额：$%4  手上现金：$%5</Chinesesimp>
         </Key>
     </Package>
+    <Package name="RobFuelStations">
+        <Key ID="STR_FailText_1">
+            <English>Police officers do not raid gas stations!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Polizisten überfallen keine Tankstellen!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_2">
+            <English>Shortly after waking up, there is still no money in the till!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Kurz nach dem Erwachen ist noch kein Geld in der Kasse!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_3">
+            <English>A gas station has just been robbed, come back in %1 minutes!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Es wurde gerade schon eine Tankstelle überfallen, komm in %1 Minuten wieder vorbei!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_4">
+            <English>You can't mug anyone here!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du kannst hier niemanden Überfallen!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_5">
+            <English>Get out of your vehicle!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Steig aus deinem Fahrzeug!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_6">
+            <English>You don't have a gun to rob the gas station!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du hast kein Druckmittel um die Tankstelle zu überfallen!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_7">
+            <English>There is no money in the till!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Es ist kein Geld in der Kasse!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_8">
+            <English>The cashier has triggered the silent alarm!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Der Kassierer hat den stillen Alarm ausgelöst!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_FailText_9">
+            <English>You don't have a gun to rob the gas station!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du hast kein Druckmittel um die Tankstelle zu überfallen!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Max_Distance_Text">
+            <English>You have to stay within 5 meters to rob the cashier!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du musst 5m von dem Kassierer entfernt sein, um ihn auszurauben!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Max_Distance_Shop_Text">
+            <English>You have to stay within 10m to rob! - The cash register is now locked.</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du musst in 10m Nähe bleiben um zu Überfallen! - Die Kasse ist nun verschlossen.</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Message_To_Police">
+            <English>ALARM! - Petrol station: %1 is being robbed!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>ALARM! - Tankstelle: %1 wird ausgeraubt!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_PoliceText_Fail">
+            <English>There are not enough police officers on duty!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Es sind nicht genügend Polizeikräfte im Dienst!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_ProgressBarText">
+            <English>Robbery in progress, stay nearby (10m) (1%1)...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Überfall im Gange, halte dich in der Nähe auf (10m) (1%1)...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Stay_DistanceText">
+            <English>Robbery in progress, stay nearby (10m) (%1%2)...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Überfall im Gange, halte dich in der Nähe auf (10m) (%1%2)...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_MarkerText">
+            <English>!Attention! Robbery !Attention!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>!Achtung! Überfall !Achtung!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Rob_Finish">
+            <English>You stole $%1, escape before the police arrive!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du hast $%1 gestohlen, flüchte bevor die Polizei eintrifft!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+    </Package>
 </Project>

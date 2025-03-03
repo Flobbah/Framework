@@ -10,9 +10,18 @@
    - implemented CH_BrightNights
    - Added 150 different colors for civ and undercover cop vehicles
    - Added take all/store all from trunk script by "Basti | John Collins" aka DevB
+   - Added New Hud by "Kureo & Zalac"
+   - Added Rob Gas Stations script by "Moeck" edited by Deathman and me. Added Strings so it's in english and german.
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
+[![|Solid](https://imgur.com/5PFRHRN)](https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140)
+# Pictures
+  - HUD
+[![|Solid](https://imgur.com/GLtyaUG)]
+  - Trunk Dialog
+[![|Solid](https://imgur.com/olKkPry)]
 
+# Altis Life Framework 5.X.X
 [![|Solid](http://i.imgur.com/pL3heId.png)](https://github.com/AsYetUntitled/Framework/)
 
 AsYetUntitled, formerly <b>Altis Life RPG</b> and <b>ARMARPGLIFE</b> is a roleplay framework for ArmA III originally made by <b>TAW_Tonic</b>.
@@ -23,21 +32,21 @@ This Github is not currently associated with any forums.
 
 # Features:
 
-  - Police, Civ and Medic roles 
+  - Police, Civ and Medic roles
   - Banking System
-  - Virtual Item system 
-  - Vitem shops, vehicle shops, weapon shops, clothing stores etc. 
-  - Housing System 
+  - Virtual Item system
+  - Vitem shops, vehicle shops, weapon shops, clothing stores etc.
+  - Housing System
   - Persistent wanted system
-  - Many more. 
+  - Many more.
 
-# License: 
+# License:
 Altis Life RPG by AsYetUntitled is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/deed.en_US)
 
 # Links:
   - Discord: https://discord.gg/ajGUDSH
   - Forums: TBD
-  - Wiki: https://github.com/AsYetUntitled/Framework/wiki 
+  - Wiki: https://github.com/AsYetUntitled/Framework/wiki
   - Releases (Stable Builds): https://github.com/AsYetUntitled/Framework/releases
 
 <p align="center">
