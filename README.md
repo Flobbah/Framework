@@ -25,6 +25,9 @@
 
 ![TrunkDialog](https://i.imgur.com/olKkPry.png)
 
+  - View at night (CH_BrightNights)
+![BrightNights](https://i.imgur.com/XgM1kTk.jpeg)
+
 # Altis Life Framework 5.X.X
 [![|Solid](http://i.imgur.com/pL3heId.png)](https://github.com/AsYetUntitled/Framework/)
 
