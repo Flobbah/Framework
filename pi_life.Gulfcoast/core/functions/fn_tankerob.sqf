@@ -201,4 +201,4 @@ if !(_onWanted) then {
  };
  };
 };
-_action = _shop addAction["Tankstelle Ausrauben",life_fnc_tankerob];
+_action = _shop addAction[localize "STR_Rob_Action",life_fnc_tankerob];

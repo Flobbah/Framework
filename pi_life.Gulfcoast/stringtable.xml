@@ -13498,5 +13498,17 @@
             <German>Du hast $%1 gestohlen, flüchte bevor die Polizei eintrifft!</German>
 			<Chinesesimp></Chinesesimp>
         </Key>
+        <Key ID="STR_Rob_Action">
+            <English>Rob Gas Station!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Tankstelle Überfallen!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
     </Package>
 </Project>
