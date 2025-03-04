@@ -12,8 +12,9 @@
    - Added take all/store all from trunk script by "Basti | John Collins" aka DevB
    - Added New Hud by "Kureo & Zalac"
    - Added Rob Gas Stations script by "Moeck" edited by Deathman and me. Added Strings so it's in english and german.
+   - DE100 Notification System added
+   - Coming soon: Bankrobberys
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
-  - DE100 Notification System coming soon...
 
 [![|Solid](https://i.imgur.com/5PFRHRN.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140)
 # Pictures
