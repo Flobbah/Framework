@@ -9,11 +9,11 @@
 private ["_unit","_unitID","_members"];
 disableSerialization;
 
-if ((lbCurSel 2621) isEqualTo -1) exitWith {hint localize "STR_GNOTF_SelectKick"};
+if ((lbCurSel 2621) isEqualTo -1) exitWith {[ localize "STR_GNOTF_SelectKick",false,"fast"] call life_fnc_notification_system};
 _unit = call compile format ["%1",CONTROL_DATA(2621)];
 
 if (isNull _unit) exitWith {}; //Bad unit?
-if (_unit == player) exitWith {hint localize "STR_GNOTF_KickSelf"};
+if (_unit == player) exitWith {[ localize "STR_GNOTF_KickSelf",true,"fast"] call life_fnc_notification_system};
 
 _unitID = getPlayerUID _unit;
 _members = group player getVariable "gang_members";

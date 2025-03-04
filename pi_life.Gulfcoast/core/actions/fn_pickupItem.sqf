@@ -8,7 +8,7 @@
     Master handling for picking up an item.
 */
 private ["_itemInfo","_itemName","_illegal","_diff"];
-if ((time - life_action_delay) < 2) exitWith {hint localize "STR_NOTF_ActionDelay"; INUSE(_this);};
+if ((time - life_action_delay) < 2) exitWith {[ localize "STR_NOTF_ActionDelay",true,"fast"] call life_fnc_notification_system; INUSE(_this);};
 if (isNull _this || {player distance _this > 3}) exitWith {INUSE(_this);};
 
 _itemInfo = _this getVariable ["item",[]]; if (count _itemInfo isEqualTo 0) exitWith {deleteVehicle _this;};
@@ -28,7 +28,7 @@ if (playerSide isEqualTo west && _illegal isEqualTo 1) exitWith {
 
 life_action_delay = time;
 _diff = [(_itemInfo select 0),(_itemInfo select 1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if (_diff <= 0) exitWith {hint localize "STR_NOTF_InvFull"; INUSE(_this);};
+if (_diff <= 0) exitWith {[ localize "STR_NOTF_InvFull",true,"fast"] call life_fnc_notification_system; INUSE(_this);};
 
 if (!(_diff isEqualTo (_itemInfo select 1))) then {
     if ([true,(_itemInfo select 0),_diff] call life_fnc_handleInv) then {

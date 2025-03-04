@@ -11,7 +11,7 @@ _vehicle = param [0,objNull,[objNull]];
 _filters = ["Car","Air","Ship"];
 if (!((KINDOF_ARRAY(_vehicle,_filters)))) exitWith {};
 if (player distance cursorObject > 10) exitWith {};
-if (_vehicle getVariable "NPC") exitWith {hint localize "STR_NPC_Protected"};
+if (_vehicle getVariable "NPC") exitWith {[ localize "STR_NPC_Protected",true,"fast"] call life_fnc_notification_system};
 
 _vehicleData = _vehicle getVariable ["vehicle_info_owners",[]];
 if (_vehicleData isEqualTo 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
@@ -43,7 +43,7 @@ for "_i" from 0 to 1 step 0 do {
 
 "progressBar" cutText ["","PLAIN"];
 
-if (player distance _vehicle > 10) exitWith {hint localize "STR_NOTF_ImpoundingCancelled"; life_action_inUse = false;};
+if (player distance _vehicle > 10) exitWith {[ localize "STR_NOTF_ImpoundingCancelled",true,"fast"] call life_fnc_notification_system; life_action_inUse = false;};
 if (!alive player) exitWith {life_action_inUse = false;};
 
 if (count crew _vehicle isEqualTo 0) then {
@@ -64,17 +64,17 @@ if (count crew _vehicle isEqualTo 0) then {
             _value = _price * _impoundMultiplier;
             [0,"STR_NOTF_HasImpounded",true,[profileName,((_vehicleData select 0) select 1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
             if (_vehicle in life_vehicles) then {
-                hint format [localize "STR_NOTF_OwnImpounded",[_value] call life_fnc_numberText,_type];
+                [ format [localize "STR_NOTF_OwnImpounded",[_value] call life_fnc_numberText,_type],true,"fast"] call life_fnc_notification_system;
                 BANK = BANK - _value;
             } else {
-                hint format [localize "STR_NOTF_Impounded",_type,[_value] call life_fnc_numberText];
+                [ format [localize "STR_NOTF_Impounded",_type,[_value] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
                 BANK = BANK + _value;
             };
             if (BANK < 0) then {BANK = 0;};
             [1] call SOCK_fnc_updatePartial;
     };
 } else {
-    hint localize "STR_NOTF_ImpoundingCancelled";
+    [ localize "STR_NOTF_ImpoundingCancelled",true,"fast"] call life_fnc_notification_system;
 };
 
 life_action_inUse = false;

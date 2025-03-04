@@ -23,7 +23,7 @@ _msgCooldown = (60 * LIFE_SETTINGS(getNumber,"news_broadcast_cooldown"));
 _msgCost = LIFE_SETTINGS(getNumber,"news_broadcast_cost");
 
 if (CASH < _msgCost) then {
-    hint format [localize "STR_News_NotEnough",[_msgCost] call life_fnc_numberText];
+    [ format [localize "STR_News_NotEnough",[_msgCost] call life_fnc_numberText],true,"fast"] call life_fnc_notification_system;
 } else {
     _confirmBtn ctrlEnable true;
     _confirmBtn buttonSetAction "[] call life_fnc_postNewsBroadcast; closeDialog 0;";

@@ -10,11 +10,11 @@
 private ["_startPos","_badDistance","_title","_ui","_progress","_pgText","_cP","_action","_fuelCost"];
 life_interrupted = false;
 if (life_inv_fuelEmpty isEqualTo 0) exitWith {};
-if (count(nearestObjects [player,["Land_FuelStation_Feed_F","Land_fs_feed_F"],3.5]) isEqualTo 0) exitWith { hint localize "STR_ISTR_Jerry_Distance";};
+if (count(nearestObjects [player,["Land_FuelStation_Feed_F","Land_fs_feed_F"],3.5]) isEqualTo 0) exitWith { [ localize "STR_ISTR_Jerry_Distance",true,"fast"] call life_fnc_notification_system;};
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
-if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
-if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
+if (player getVariable "restrained") exitWith {[ localize "STR_NOTF_isrestrained",true,"fast"] call life_fnc_notification_system;};
+if (player getVariable "playerSurrender") exitWith {[ localize "STR_NOTF_surrender",true,"fast"] call life_fnc_notification_system;};
 _fuelCost = LIFE_SETTINGS(getNumber,"fuelCan_refuel");
 
 life_action_inUse = true;
@@ -26,7 +26,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    if (CASH < _fuelCost) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; life_action_inUse = false;};
+    if (CASH < _fuelCost) exitWith {[ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system; life_action_inUse = false;};
     _startPos = getPos player;
     //Setup our progress bar.
     disableSerialization;
@@ -72,9 +72,9 @@ if (_action) then {
     life_action_inUse = false;
     CASH = CASH - _fuelCost;
     [true,"fuelFull",1] call life_fnc_handleInv;
-    hint localize "STR_ISTR_Jerry_Refueled";
+    [ localize "STR_ISTR_Jerry_Refueled",false,"fast"] call life_fnc_notification_system;
 } else {
-    hint localize "STR_NOTF_ActionCancel";
+    [ localize "STR_NOTF_ActionCancel",true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
     life_action_inUse = false;
 };

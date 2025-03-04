@@ -70,7 +70,7 @@ class life_admin_menu {
         class RscButtonMenu_2405: Life_RscButtonMenu {
             idc = 2906;
             text = "$STR_Admin_Teleport";
-            onButtonClick = "[] call life_fnc_adminTeleport; hint 'Select where you would like to teleport';";
+            onButtonClick = "[] call life_fnc_adminTeleport; [ 'Select where you would like to teleport',false,'fast'] call life_fnc_notification_system;";
             x = 0.613437 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
             w = 0.061875 * safezoneW;

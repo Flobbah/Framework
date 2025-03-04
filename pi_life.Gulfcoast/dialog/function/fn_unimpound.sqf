@@ -8,7 +8,7 @@
 */
 private ["_vehicle","_vehicleLife","_vid","_pid","_unit","_price","_price","_storageFee","_purchasePrice"];
 disableSerialization;
-if ((lbCurSel 2802) isEqualTo -1) exitWith {hint localize "STR_Global_NoSelection"};
+if ((lbCurSel 2802) isEqualTo -1) exitWith {[ localize "STR_Global_NoSelection",true,"fast"] call life_fnc_notification_system};
 _vehicle = lbData[2802,(lbCurSel 2802)];
 _vehicle = (call compile format ["%1",_vehicle]) select 0;
 _vehicleLife = _vehicle;
@@ -16,7 +16,7 @@ _vid = lbValue[2802,(lbCurSel 2802)];
 _pid = getPlayerUID player;
 _unit = player;
 _spawntext = localize "STR_Garage_spawn_Success";
-if (isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
+if (isNil "_vehicle") exitWith {[ localize "STR_Garage_Selection_Error",true,"fast"] call life_fnc_notification_system};
 if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife)) then {
     _vehicleLife = "Default"; //Use Default class if it doesn't exist
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_vehicle];
@@ -34,7 +34,7 @@ switch (playerSide) do {
 _price = _purchasePrice * _storageFee;
 
 if (!(_price isEqualType 0) || _price < 1) then {_price = 500;};
-if (BANK < _price) exitWith {hint format [(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
+if (BANK < _price) exitWith {[ format [(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText],true,"fast"] call life_fnc_notification_system;};
 
 if (life_garage_sp isEqualType []) then {
     if (life_HC_isActive) then {
@@ -58,7 +58,7 @@ if (life_garage_sp isEqualType []) then {
     };
 };
 
-hint localize "STR_Garage_SpawningVeh";
+[ localize "STR_Garage_SpawningVeh",false,"fast"] call life_fnc_notification_system;
 BANK = BANK - _price;
 [1] call SOCK_fnc_updatePartial;
 closeDialog 0;

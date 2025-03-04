@@ -9,12 +9,12 @@
 if (isNil "life_ticket_val" || isNil "life_ticket_cop") exitWith {};
 if (CASH < life_ticket_val) exitWith {
     if (BANK < life_ticket_val) exitWith {
-        hint localize "STR_Cop_Ticket_NotEnough";
+        [ localize "STR_Cop_Ticket_NotEnough",true,"fast"] call life_fnc_notification_system;
         [1,"STR_Cop_Ticket_NotEnoughNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
         closeDialog 0;
     };
 
-    hint format [localize "STR_Cop_Ticket_Paid",[life_ticket_val] call life_fnc_numberText];
+    [ format [localize "STR_Cop_Ticket_Paid",[life_ticket_val] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
     BANK = BANK - life_ticket_val;
     [1] call SOCK_fnc_updatePartial;
     life_ticket_paid = true;

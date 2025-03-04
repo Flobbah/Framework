@@ -8,7 +8,7 @@
 */
 private ["_sellers","_crimes","_names"];
 _sellers = (_this select 0) getVariable ["sellers",[]];
-if (count _sellers isEqualTo 0) exitWith {hint localize "STR_Cop_DealerQuestion"}; //No data.
+if (count _sellers isEqualTo 0) exitWith {[ localize "STR_Cop_DealerQuestion",true,"fast"] call life_fnc_notification_system}; //No data.
 life_action_inUse = true;
 _crimes = LIFE_SETTINGS(getArray,"crimes");
 
@@ -28,6 +28,6 @@ _names = "";
     _names = _names + format ["%1<br/>",(_x select 1)];
 } forEach _sellers;
 
-hint parseText format [(localize "STR_Cop_DealerMSG")+ "<br/><br/>%1",_names];
+[ parseText format [(localize "STR_Cop_DealerMSG")+ "<br/><br/>%1",_names],false,"slow"] call life_fnc_notification_system;
 (_this select 0) setVariable ["sellers",[],true];
 life_action_inUse = false;

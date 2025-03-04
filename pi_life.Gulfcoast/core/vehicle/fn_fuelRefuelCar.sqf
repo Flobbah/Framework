@@ -10,7 +10,7 @@ private _index = lbCurSel 20302;
 private _classname = lbData[20302,_index];
 
 if (isNil "_classname" || _classname isEqualTo "") exitWith {
-    hint localize "STR_Select_Vehicle_Pump";
+    [ localize "STR_Select_Vehicle_Pump",true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
 };
 private _vehicleFuelList = uiNamespace getVariable ["fuel_list",[]];
@@ -26,7 +26,7 @@ private _fueltoput = ((parseNumber((sliderPosition 20901) toFixed 2))-(floor(_fu
 private _setfuel = _fuelnow + (_fueltoput/_fueltank);
 private _timer = ((_fueltoput * .25)/100);
 if (_car distance player > 10 && !(isNull objectParent player)) exitWith {
-    hint localize "STR_Distance_Vehicle_Pump";
+    [ localize "STR_Distance_Vehicle_Pump",true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
 };
 
@@ -59,12 +59,12 @@ if ((BANK - (_fueltoput * _fuelCost)) > 0) then {
     [_car,_cP * _setfuel] remoteExecCall ["life_fnc_setFuel",_car]; //update the fuel
     "progressBar" cutText ["","PLAIN"];
     if (_car distance player > 10 || !(isNull objectParent player)) then {
-        hint localize "STR_Distance_Vehicle_Pump";
+        [ localize "STR_Distance_Vehicle_Pump",true,"fast"] call life_fnc_notification_system;
     };
     [0] call SOCK_fnc_updatePartial;
     life_is_processing = false;
 } else {
-    hint localize "STR_NOTF_NotEnoughMoney";
+    [ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system;
 };
 
 closeDialog 0;

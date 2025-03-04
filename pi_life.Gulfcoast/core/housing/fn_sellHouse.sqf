@@ -16,7 +16,7 @@ _uid = getPlayerUID player;
 
 if (isNull _house) exitWith {};
 if (!(_house isKindOf "House_F")) exitWith {};
-if (isNil {_house getVariable "house_owner"}) exitWith {hint localize "STR_House_noOwner";};
+if (isNil {_house getVariable "house_owner"}) exitWith {[ localize "STR_House_noOwner",true,"fast"] call life_fnc_notification_system;};
 closeDialog 0;
 
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;

@@ -9,13 +9,13 @@
 private ["_serviceCost"];
 disableSerialization;
 private ["_search","_ui","_progress","_cP","_pgText"];
-if (life_action_inUse) exitWith {hint localize "STR_NOTF_Action"};
+if (life_action_inUse) exitWith {[ localize "STR_NOTF_Action",true,"fast"] call life_fnc_notification_system;};
 
 _serviceCost = LIFE_SETTINGS(getNumber,"service_chopper");
 _search = nearestObjects[getPos air_sp, ["Air"],10];
 
-if (count _search isEqualTo 0) exitWith {hint localize "STR_Service_Chopper_NoAir"};
-if (CASH < _serviceCost) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
+if (count _search isEqualTo 0) exitWith {[ localize "STR_Service_Chopper_NoAir",true,"fast"] call life_fnc_notification_system;};
+if (CASH < _serviceCost) exitWith {[ localize "STR_Serive_Chopper_NotEnough",true,"fast"] call life_fnc_notification_system;};
 
 life_action_inUse = true;
 "progressBar" cutRsc ["life_progress","PLAIN"];
@@ -34,7 +34,7 @@ for "_i" from 0 to 1 step 0 do {
     if (_cP >= 1) exitWith {};
 };
 
-if (!alive (_search select 0) || (_search select 0) distance air_sp > 15) exitWith {life_action_inUse = false; hint localize "STR_Service_Chopper_Missing"};
+if (!alive (_search select 0) || (_search select 0) distance air_sp > 15) exitWith {life_action_inUse = false; [ localize "STR_Service_Chopper_Missing",true,"fast"] call life_fnc_notification_system;};
 
 CASH = CASH - _serviceCost;
 if (!local (_search select 0)) then {

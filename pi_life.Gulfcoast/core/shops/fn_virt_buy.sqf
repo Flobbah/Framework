@@ -7,21 +7,21 @@
     Buy a virtual item from the store.
 */
 private ["_type","_price","_amount","_diff","_name","_hideout"];
-if ((lbCurSel 2401) isEqualTo -1) exitWith {hint localize "STR_Shop_Virt_Nothing"};
+if ((lbCurSel 2401) isEqualTo -1) exitWith {[ localize "STR_Shop_Virt_Nothing",true,"fast"] call life_fnc_notification_system};
 _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
 _amount = ctrlText 2404;
-if (!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
+if (!([_amount] call TON_fnc_isnumber)) exitWith {[ localize "STR_Shop_Virt_NoNum",true,"fast"] call life_fnc_notification_system;};
 _diff = [_type,parseNumber(_amount),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 _amount = parseNumber(_amount);
-if (_diff <= 0) exitWith {hint localize "STR_NOTF_NoSpace"};
+if (_diff <= 0) exitWith {[ localize "STR_NOTF_NoSpace",true,"fast"] call life_fnc_notification_system};
 _amount = _diff;
 private _altisArray = ["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"];
 private _tanoaArray = ["Land_School_01_F","Land_Warehouse_03_F","Land_House_Small_02_F"];
 private _hideoutObjs = [[["Gulfcoast", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 _hideout = (nearestObjects[getPosATL player,_hideoutObjs,25]) select 0;
-if ((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
-if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
+if ((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {[ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system};
+if ((time - life_action_delay) < 0.2) exitWith {[ localize "STR_NOTF_ActionDelay",true,"fast"] call life_fnc_notification_system;};
 life_action_delay = time;
 
 _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
@@ -38,7 +38,7 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
             localize "STR_Shop_Virt_UI_YourCash"
         ] call BIS_fnc_guiMessage;
         if (_action) then {
-            hint format [localize "STR_Shop_Virt_BoughtGang",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
+            [ format [localize "STR_Shop_Virt_BoughtGang",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
             _funds = group player getVariable "gang_bank";
             _funds = _funds - (_price * _amount);
             group player setVariable ["gang_bank",_funds,true];
@@ -50,13 +50,13 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
             };
 
         } else {
-            if ((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
-            hint format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
+            if ((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; [ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system;};
+            [ format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
             CASH = CASH - _price * _amount;
         };
     } else {
-        if ((_price * _amount) > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
-        hint format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
+        if ((_price * _amount) > CASH) exitWith {[ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system; [true,_type,_amount] call life_fnc_handleInv;};
+        [ format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
         CASH = CASH - _price * _amount;
     };
     [] call life_fnc_virt_update;

@@ -103,6 +103,6 @@ life_vehicles = [];
 
 /* Setup life_hideoutBuildings */
 {
-    _building = nearestBuilding getMarkerPos _x; 
+    _building = nearestBuilding getMarkerPos _x;
     life_hideoutBuildings pushBack _building
 } forEach (LIFE_SETTINGS(getArray,"gang_area"));

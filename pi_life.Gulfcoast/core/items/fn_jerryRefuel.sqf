@@ -10,9 +10,9 @@ private ["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_pr
 _vehicle = cursorObject;
 life_interrupted = false;
 
-if (isNull _vehicle) exitWith {hint localize "STR_ISTR_Jerry_NotLooking"};
+if (isNull _vehicle) exitWith {[ localize "STR_ISTR_Jerry_NotLooking",true,"fast"] call life_fnc_notification_system};
 if (!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship")) exitWith {};
-if (player distance _vehicle > 7.5) exitWith {hint localize "STR_ISTR_Jerry_NotNear"};
+if (player distance _vehicle > 7.5) exitWith {[ localize "STR_ISTR_Jerry_NotNear",true,"fast"] call life_fnc_notification_system};
 
 if (!([false,"fuelFull",1] call life_fnc_handleInv)) exitWith {};
 life_action_inUse = true;

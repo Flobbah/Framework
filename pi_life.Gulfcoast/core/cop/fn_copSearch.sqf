@@ -53,10 +53,10 @@ if (count _invs > 0) then {
     _inv = localize "STR_Cop_NoIllegal";
 };
 
-if (!alive _civ || player distance _civ > 5) exitWith {hint format [localize "STR_Cop_CouldntSearch",_civ getVariable ["realname",name _civ]]};
-//hint format ["%1",_this];
-hint parseText format ["<t color='#FF0000'><t size='2'>%1</t></t><br/><t color='#FFD700'><t size='1.5'><br/>" +(localize "STR_Cop_IllegalItems")+ "</t></t><br/>%2<br/><br/><br/><br/><t color='#FF0000'>%3</t>"
-,(_civ getVariable ["realname",name _civ]),_inv,if (_robber) then {"Robbed the bank"} else {""}];
+if (!alive _civ || player distance _civ > 5) exitWith {[ format [localize "STR_Cop_CouldntSearch",_civ getVariable ["realname",name _civ]],true,"fast"] call life_fnc_notification_system};
+
+[ parseText format ["<t color='#FF0000'><t size='2'>%1</t></t><br/><t color='#FFD700'><t size='1.5'><br/>" +(localize "STR_Cop_IllegalItems")+ "</t></t><br/>%2<br/><br/><br/><br/><t color='#FF0000'>%3</t>"
+,(_civ getVariable ["realname",name _civ]),_inv,if (_robber) then {"Robbed the bank"} else {""}],true,"fast"] call life_fnc_notification_system;
 
 if (_robber) then {
     [0,"STR_Cop_Robber",true,[(_civ getVariable ["realname",name _civ])]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

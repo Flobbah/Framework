@@ -9,7 +9,7 @@
 private ["_building","_doors","_door","_cP","_cpRate","_ui","_title","_titleText","_locked"];
 _building = param [0,objNull,[objNull]];
 if (isNull _building) exitWith {};
-if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
+if (!(_building isKindOf "House_F")) exitWith {[ localize "STR_ISTR_Bolt_NotNear",true,"fast"] call life_fnc_notification_system;};
 
 _doors = 1;
 _doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"NumberOfDoors");
@@ -21,9 +21,9 @@ for "_i" from 1 to _doors do {
         if (player distance _worldSpace < 5) exitWith {_door = _i;};
 };
 
-if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
+if (_door isEqualTo 0) exitWith {[ localize "STR_Cop_NotaDoor",true,"fast"] call life_fnc_notification_system}; //Not near a door to be broken into.
 _doorN = _building getVariable [format ["bis_disabled_Door_%1",_door],0];
-if (_doorN isEqualTo 1) exitWith {hint localize "STR_House_FedDoor_Locked"};
+if (_doorN isEqualTo 1) exitWith {[ localize "STR_House_FedDoor_Locked",true,"fast"] call life_fnc_notification_system};
 life_action_inUse = true;
 
 closeDialog 0;

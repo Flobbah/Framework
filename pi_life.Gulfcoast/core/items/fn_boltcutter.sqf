@@ -15,11 +15,11 @@ private _tanoaArray = [11074.2,11501.5,0.00137329];
 private _pos = [[["Gulfcoast", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
 if (isNull _building) exitWith {};
-if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
+if (!(_building isKindOf "House_F")) exitWith {[ localize "STR_ISTR_Bolt_NotNear",true,"fast"] call life_fnc_notification_system;};
 if (((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {
-    hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+    [ format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))],true,"fast"] call life_fnc_notification_system;
 };
-if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Bolt_Exploit"};
+if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {[ localize "STR_ISTR_Bolt_Exploit",true,"fast"] call life_fnc_notification_system};
 if (isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 
 _doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"numberOfDoors");
@@ -30,8 +30,8 @@ for "_i" from 1 to _doors do {
     _worldSpace = _building modelToWorld _selPos;
         if (player distance _worldSpace < 2) exitWith {_door = _i;};
 };
-if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
-if ((_building getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
+if (_door isEqualTo 0) exitWith {[ localize "STR_Cop_NotaDoor",true,"fast"] call life_fnc_notification_system}; //Not near a door to be broken into.
+if ((_building getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {[ localize "STR_House_Raid_DoorUnlocked",false,"fast"] call life_fnc_notification_system};
 
 if ((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) then {
     [[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

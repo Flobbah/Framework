@@ -9,14 +9,14 @@
 private "_unit";
 disableSerialization;
 
-if ((lbCurSel 2632) isEqualTo -1) exitWith {hint localize "STR_GNOTF_SelectPerson"};
+if ((lbCurSel 2632) isEqualTo -1) exitWith {[ localize "STR_GNOTF_SelectPerson",true,"fast"] call life_fnc_notification_system};
 _unit = call compile format ["%1",CONTROL_DATA(2632)];
 
 if (isNull _unit) exitWith {}; //Bad unit?
-if (_unit == player) exitWith {hint localize "STR_GNOTF_InviteSelf"};
-if (!isNil {(group _unit) getVariable "gang_name"}) exitWith {hint localize "STR_GNOTF_playerAlreadyInGang";}; //Added
+if (_unit == player) exitWith {[ localize "STR_GNOTF_InviteSelf",true,"fast"] call life_fnc_notification_system};
+if (!isNil {(group _unit) getVariable "gang_name"}) exitWith {[ localize "STR_GNOTF_playerAlreadyInGang",true,"fast"] call life_fnc_notification_system;}; //Added
 
-if (count(group player getVariable ["gang_members",8]) == (group player getVariable ["gang_maxMembers",8])) exitWith {hint localize "STR_GNOTF_MaxSlot"};
+if (count(group player getVariable ["gang_members",8]) == (group player getVariable ["gang_maxMembers",8])) exitWith {[ localize "STR_GNOTF_MaxSlot",true,"fast"] call life_fnc_notification_system};
 
 _action = [
     format [localize "STR_GNOTF_InvitePlayerMSG",_unit getVariable ["realname",name _unit]],
@@ -30,7 +30,7 @@ if (_action) then {
     _members = group player getVariable "gang_members";
     _members pushBack getPlayerUID _unit;
     group player setVariable ["gang_members",_members,true];
-    hint format [localize "STR_GNOTF_InviteSent",_unit getVariable ["realname",name _unit]];
+    [ format [localize "STR_GNOTF_InviteSent",_unit getVariable ["realname",name _unit]],false,"fast"] call life_fnc_notification_system;
 } else {
-    hint localize "STR_GNOTF_InviteCancel";
+    [ localize "STR_GNOTF_InviteCancel",true,"fast"] call life_fnc_notification_system;
 };

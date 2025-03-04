@@ -10,10 +10,10 @@ private ["_vehicle","_veh_data"];
 if (dialog) exitWith {};
 _vehicle = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (isNull _vehicle || !(_vehicle isKindOf "Car" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship" || _vehicle isKindOf "Box_IND_Grenades_F" || _vehicle isKindOf "B_supplyCrate_F")) exitWith {}; //Either a null or invalid vehicle type.
-if ((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint localize "STR_MISC_VehInvUse"};
+if ((_vehicle getVariable ["trunk_in_use",false])) exitWith {[ localize "STR_MISC_VehInvUse",true,"fast"] call life_fnc_notification_system};
 _vehicle setVariable ["trunk_in_use",true,true];
 _vehicle setVariable ["trunk_in_use_by",player,true];
-if (!createDialog "TrunkMenu") exitWith {hint localize "STR_MISC_DialogError";}; //Couldn't create the menu?
+if (!createDialog "TrunkMenu") exitWith {[ localize "STR_MISC_DialogError",true,"fast"] call life_fnc_notification_system;}; //Couldn't create the menu?
 disableSerialization;
 
 if (_vehicle isKindOf "Box_IND_Grenades_F" || _vehicle isKindOf "B_supplyCrate_F") then {
@@ -24,7 +24,7 @@ if (_vehicle isKindOf "Box_IND_Grenades_F" || _vehicle isKindOf "B_supplyCrate_F
 
 _veh_data = [_vehicle] call life_fnc_vehicleWeight;
 
-if (_veh_data select 0 isEqualTo -1) exitWith {closeDialog 0; _vehicle setVariable ["trunk_in_use",false,true]; hint localize "STR_MISC_NoStorageVeh";};
+if (_veh_data select 0 isEqualTo -1) exitWith {closeDialog 0; _vehicle setVariable ["trunk_in_use",false,true]; [ localize "STR_MISC_NoStorageVeh",true,"fast"] call life_fnc_notification_system;};
 
 ctrlSetText[3504,format [(localize "STR_MISC_Weight")+ " %1/%2",_veh_data select 1,_veh_data select 0]];
 [_vehicle] call life_fnc_vehInventory;

@@ -9,13 +9,13 @@ params [
     ["_reOpen", false, [false]]
 ];
 
-if (FETCH_CONST(life_adminlevel) < 4) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if (FETCH_CONST(life_adminlevel) < 4) exitWith {closeDialog 0; [ localize "STR_ANOTF_ErrorLevel",true,"fast"] call life_fnc_notification_system;};
 
 life_markers_active = true;
 
 if !(_reOpen) then {
     life_markers = !life_markers;
-    hint localize (["STR_ANOTF_MDisabled", "STR_ANOTF_MEnabled"] select life_markers);
+    [ localize (["STR_ANOTF_MDisabled", "STR_ANOTF_MEnabled"] select life_markers),false,"fast"] call life_fnc_notification_system;
 };
 
 for "_i" from 0 to 1 step 0 do {

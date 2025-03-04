@@ -11,7 +11,7 @@
 disableSerialization;
 
 if ((lbCurSel 2005) isEqualTo -1) exitWith {
-    hint localize "STR_ISTR_SelectItemFirst";
+    [ localize "STR_ISTR_SelectItemFirst",true,"fast"] call life_fnc_notification_system;
 };
 
 private _item = CONTROL_DATA(2005);
@@ -76,7 +76,7 @@ switch (_item) do {
     };
 
     case "spikeStrip": {
-        if (!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"; closeDialog 0};
+        if (!isNull life_spikestrip) exitWith {[ localize "STR_ISTR_SpikesDeployment",false,"fast"] call life_fnc_notification_system; closeDialog 0};
         if ([false, _item, 1] call life_fnc_handleInv) then {
             [] spawn life_fnc_spikeStrip;
             closeDialog 0;
@@ -84,7 +84,7 @@ switch (_item) do {
     };
 
     case "fuelFull": {
-        if !(isNull objectParent player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
+        if !(isNull objectParent player) exitWith {[ localize "STR_ISTR_RefuelInVehicle",false,"fast"] call life_fnc_notification_system};
         [] spawn life_fnc_jerryRefuel;
         closeDialog 0;
     };
@@ -100,7 +100,7 @@ switch (_item) do {
     };
 
     default {
-        hint localize "STR_ISTR_NotUsable";
+        [ localize "STR_ISTR_NotUsable",true,"fast"] call life_fnc_notification_system;
     };
 };
 

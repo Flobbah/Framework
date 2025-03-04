@@ -23,13 +23,13 @@ for "_i" from 1 to _doors do {
 };
 
 //-- if no door nearby, exitWith
-if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"};
+if (_door isEqualTo 0) exitWith {[ localize "STR_Cop_NotaDoor",true,"fast"] call life_fnc_notification_system};
 
 //-- if the door is currently open, set the target to 0 (close)
 private _target = [1, 0] select (
-    ((_b animationPhase format ["door_%1a_move", _door]) isEqualTo 1) || 
-    ((_b animationPhase format ["door_%1_rot", _door]) isEqualTo 1) || 
-    ((_b animationPhase format ["door_%1a_rot", _door]) isEqualTo 1) 
+    ((_b animationPhase format ["door_%1a_move", _door]) isEqualTo 1) ||
+    ((_b animationPhase format ["door_%1_rot", _door]) isEqualTo 1) ||
+    ((_b animationPhase format ["door_%1a_rot", _door]) isEqualTo 1)
 );
 
 //-- play the animation for all known sources.

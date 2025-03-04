@@ -17,7 +17,7 @@ _gear_list = CONTROL(2400,2402);
 lbClear _item_list;
 lbClear _gear_list;
 
-if (!isClass(missionConfigFile >> "VirtualShops" >> life_shop_type)) exitWith {closeDialog 0; hint localize "STR_NOTF_ConfigDoesNotExist";}; //Make sure the entry exists..
+if (!isClass(missionConfigFile >> "VirtualShops" >> life_shop_type)) exitWith {closeDialog 0; [ localize "STR_NOTF_ConfigDoesNotExist",true,"fast"] call life_fnc_notification_system;}; //Make sure the entry exists..
 ctrlSetText[2403,localize (M_CONFIG(getText,"VirtualShops",life_shop_type,"name"))];
 _shopItems = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
 

@@ -9,8 +9,8 @@
 
 params [["_mode",true,[true]]];
 
-if ((lbCurSel 2302) isEqualTo -1) exitWith {hint localize "STR_Shop_Veh_DidntPick";closeDialog 0;};
-if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
+if ((lbCurSel 2302) isEqualTo -1) exitWith {[ localize "STR_Shop_Veh_DidntPick",true,"fast"] call life_fnc_notification_system;closeDialog 0;};
+if ((time - life_action_delay) < 0.2) exitWith {[ localize "STR_NOTF_ActionDelay",true,"fast"] call life_fnc_notification_system;};
 life_action_delay = time;
 
 private _className = lbData[2302,(lbCurSel 2302)];
@@ -53,12 +53,12 @@ if (_mode) then {
 
 private _conditions = M_CONFIG(getText,"LifeCfgVehicles",_className,"conditions");
 
-if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NoLicense";};
+if !([_conditions] call life_fnc_levelCheck) exitWith {[ localize "STR_Shop_Veh_NoLicense",true,"fast"] call life_fnc_notification_system;};
 
 private _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 if (_purchasePrice < 0) exitWith {closeDialog 0;}; //Bad price entry
-if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText];closeDialog 0;};
+if (CASH < _purchasePrice) exitWith {[ format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText],true,"fast"] call life_fnc_notification_system;closeDialog 0;};
 
 private _spawnPoints = life_veh_shop select 1;
 private _spawnPoint = "";
@@ -79,13 +79,13 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
 };
 
 
-if (_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
+if (_spawnPoint isEqualTo "") exitWith {[ localize "STR_Shop_Veh_Block",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
 CASH = CASH - _purchasePrice;
 [0] call SOCK_fnc_updatePartial;
 if (_mode) then {
-    hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
+    [ format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
 } else {
-    hint format [localize "STR_Shop_Veh_Rented",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
+    [ format [localize "STR_Shop_Veh_Rented",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
 };
 
 //Spawn the vehicle and prep it.

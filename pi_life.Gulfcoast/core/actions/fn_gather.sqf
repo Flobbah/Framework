@@ -9,8 +9,8 @@
 private ["_maxGather","_resource","_amount","_maxGather","_requiredItem"];
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
-if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
-if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
+if (player getVariable "restrained") exitWith {[ localize "STR_NOTF_isrestrained",true,"fast"] call life_fnc_notification_system;};
+if (player getVariable "playerSurrender") exitWith {[ localize "STR_NOTF_surrender",true,"fast"] call life_fnc_notification_system;};
 
 life_action_inUse = true;
 _zone = "";
@@ -52,7 +52,7 @@ if (_exit) exitWith {life_action_inUse = false;};
 _amount = round(random(_maxGather)) + 1;
 _diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
+    [ localize "STR_NOTF_InvFull",true,"fast"] call life_fnc_notification_system;
     life_action_inUse = false;
 };
 

@@ -6,20 +6,20 @@
     Description:
     Opens & initializes the chop shop menu.
 */
-if (life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
-if !(playerSide isEqualTo civilian) exitWith {hint localize "STR_NOTF_notAllowed"};
+if (life_action_inUse) exitWith {[ localize "STR_NOTF_ActionInProc",true,"fast"] call life_fnc_notification_system};
+if !(playerSide isEqualTo civilian) exitWith {[ localize "STR_NOTF_notAllowed",true,"fast"] call life_fnc_notification_system};
 
 disableSerialization;
 
 private _chopable = LIFE_SETTINGS(getArray,"chopShop_vehicles");
 private _nearVehicles = nearestObjects [getMarkerPos (_this select 3),_chopable,25];
 private _nearUnits = (nearestObjects[player,["CAManBase"],5]) arrayIntersect playableUnits;
-if (count _nearUnits > 1) exitWith {hint localize "STR_NOTF_PlayerNear"};
+if (count _nearUnits > 1) exitWith {[ localize "STR_NOTF_PlayerNear",true,"fast"] call life_fnc_notification_system};
 
 life_chopShop = _this select 3;
 //Error check
 if (_nearVehicles isEqualTo []) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
-if (!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
+if (!(createDialog "Chop_Shop")) exitWith {[ localize "STR_Shop_ChopShopError",true,"fast"] call life_fnc_notification_system};
 
 private _control = CONTROL(39400,39402);
 private "_className";

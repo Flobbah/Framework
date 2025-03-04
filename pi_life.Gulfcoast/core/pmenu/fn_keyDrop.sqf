@@ -12,11 +12,11 @@ private _list = _dialog displayCtrl 2701;
 private _sel = lbCurSel _list;
 
 if (_sel isEqualTo -1) exitWith {
-    hint localize "STR_NOTF_noDataSelected"
+    [ localize "STR_NOTF_noDataSelected",true,"fast"] call life_fnc_notification_system
 };
 
 if (_list lbData _sel isEqualTo "") exitWith {
-    hint localize "STR_NOTF_didNotSelectVehicle"
+    [ localize "STR_NOTF_didNotSelectVehicle",true,"fast"] call life_fnc_notification_system
 };
 
 private _index = parseNumber (_list lbData _sel);
@@ -25,12 +25,12 @@ if isNull _vehicle exitWith {};
 
 // Do not let them drop the key to a house
 if (_vehicle isKindOf "House_F") exitWith {
-    hint localize "STR_NOTF_cannotRemoveHouseKeys"
+    [ localize "STR_NOTF_cannotRemoveHouseKeys",true,"fast"] call life_fnc_notification_system
 };
 
 // Solve stupidness
 if (objectParent player isEqualTo _vehicle && {locked _vehicle isEqualTo 2}) exitWith {
-    hint localize "STR_NOTF_cannotDropKeys"
+    [ localize "STR_NOTF_cannotDropKeys",true,"fast"] call life_fnc_notification_system
 };
 
 life_vehicles = life_vehicles - [_vehicle];

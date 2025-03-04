@@ -13,16 +13,16 @@ _price = M_CONFIG(getNumber,"VirtualItems",_type,"sellPrice");
 if (_price isEqualTo -1) exitWith {};
 
 _amount = ctrlText 2405;
-if (!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
+if (!([_amount] call TON_fnc_isnumber)) exitWith {[ localize "STR_Shop_Virt_NoNum",true,"fast"] call life_fnc_notification_system;};
 _amount = parseNumber (_amount);
-if (_amount > (ITEM_VALUE(_type))) exitWith {hint localize "STR_Shop_Virt_NotEnough"};
-if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
+if (_amount > (ITEM_VALUE(_type))) exitWith {[ localize "STR_Shop_Virt_NotEnough",true,"fast"] call life_fnc_notification_system};
+if ((time - life_action_delay) < 0.2) exitWith {[ localize "STR_NOTF_ActionDelay",true,"fast"] call life_fnc_notification_system;};
 life_action_delay = time;
 
 _price = (_price * _amount);
 _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
 if ([false,_type,_amount] call life_fnc_handleInv) then {
-    hint format [localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
+    [ format [localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
     CASH = CASH + _price;
     [0] call SOCK_fnc_updatePartial;
     [] call life_fnc_virt_update;

@@ -14,7 +14,7 @@ private _fuelStations = nearestObjects [player, ["Land_fs_feed_F", "Land_FuelSta
 if (_fuelstations isEqualTo []) exitWith {};
 
 private _vehicleList = nearestObjects [player, ["Car","Air"], 10];
-if (_vehicleList isEqualTo []) exitWith {hint localize "STR_NOTF_VehicleNear"};
+if (_vehicleList isEqualTo []) exitWith {[ localize "STR_NOTF_VehicleNear",true,"fast"] call life_fnc_notification_system};
 
 createDialog "Life_FuelStat";
 life_action_inUse = true;

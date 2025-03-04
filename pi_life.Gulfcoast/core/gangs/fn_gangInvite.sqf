@@ -13,7 +13,7 @@ params [
 ];
 
 if (_name isEqualTo "" || isNull _group) exitWith {}; //Fail horn anyone?
-if (!isNil {(group player) getVariable "gang_name"}) exitWith {hint localize "STR_GNOTF_AlreadyInGang";};
+if (!isNil {(group player) getVariable "gang_name"}) exitWith {[ localize "STR_GNOTF_AlreadyInGang",true,"fast"] call life_fnc_notification_system;};
 
 _gangName = _group getVariable "gang_name";
 _action = [

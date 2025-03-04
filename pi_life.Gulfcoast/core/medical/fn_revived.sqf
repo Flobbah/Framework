@@ -12,7 +12,7 @@ _reviveCost = LIFE_SETTINGS(getNumber,"revive_fee");
 
 [life_save_gear] spawn life_fnc_loadDeadGear;
 
-hint format [localize "STR_Medic_RevivePay",_medic,[_reviveCost] call life_fnc_numberText];
+[ format [localize "STR_Medic_RevivePay",_medic,[_reviveCost] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
 
 closeDialog 0;
 life_deathCamera cameraEffect ["TERMINATE","BACK"];

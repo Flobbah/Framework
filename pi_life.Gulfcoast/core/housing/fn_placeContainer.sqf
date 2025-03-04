@@ -59,14 +59,14 @@ deleteVehicle _container;
 [true,_type,1] call life_fnc_handleInv;
 
 if (_message isEqualTo 0 || _message isEqualTo 1) then {
-    hint localize "STR_House_Container_House_Near";
+    [ localize "STR_House_Container_House_Near",true,"fast"] call life_fnc_notification_system;
 };
 if (_message isEqualTo 2) then {
-    hint localize "STR_House_Container_House_Near_Owner";
+    [ localize "STR_House_Container_House_Near_Owner",true,"fast"] call life_fnc_notification_system;
 };
 if (_message isEqualTo 3) then {
-    hint localize "STR_House_Container_Floating";
+    [ localize "STR_House_Container_Floating",true,"fast"] call life_fnc_notification_system;
 };
 if (_message isEqualTo 4) then {
-    hint localize "STR_ISTR_Box_HouseFull";
+    [ localize "STR_ISTR_Box_HouseFull",true,"fast"] call life_fnc_notification_system;
 };

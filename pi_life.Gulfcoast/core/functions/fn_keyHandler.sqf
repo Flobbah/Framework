@@ -95,7 +95,7 @@ switch (_code) do {
         private _CommandMode = actionKeys "tacticalView";
 
         if (_code in _CommandMode) then {
-            hint localize "STR_NOTF_CommanderView";
+            [ localize "STR_NOTF_CommanderView",true,"fast"] call life_fnc_notification_system;
             _handled = true;
         };
     };
@@ -179,7 +179,7 @@ switch (_code) do {
                 if (!(isNil "_list")) then {
                     _house = nearestObject [(ASLtoATL (getPosASL _list)), "House"];
                     if (_house getVariable ["locked", false]) then {
-                        hint localize "STR_House_ContainerDeny";
+                        [ localize "STR_House_ContainerDeny",true,"fast"] call life_fnc_notification_system;
                     } else {
                         [_list] spawn life_fnc_openInventory;
                     };
@@ -279,7 +279,7 @@ switch (_code) do {
             if (_veh isKindOf "House_F" && {playerSide isEqualTo civilian}) then {
                 if (_veh in life_vehicles && {player distance _veh < 20}) then {
                     private _door = [_veh] call life_fnc_nearestDoor;
-                    if (_door isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
+                    if (_door isEqualTo 0) exitWith {[ localize "STR_House_Door_NotNear",true,"fast"] call life_fnc_notification_system};
                     private _locked = _veh getVariable [format ["bis_disabled_Door_%1",_door],0];
 
                     if (_locked isEqualTo 0) then {

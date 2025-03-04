@@ -10,14 +10,14 @@ private ["_house","_uid","_cpRate","_cP","_title","_titleText","_ui","_houseInv"
 _house = param [0,objNull,[objNull]];
 
 if (isNull _house || !(_house isKindOf "House_F")) exitWith {};
-if (isNil {(_house getVariable "house_owner")}) exitWith {hint localize "STR_House_Raid_NoOwner"};
+if (isNil {(_house getVariable "house_owner")}) exitWith {[ localize "STR_House_Raid_NoOwner",true,"fast"] call life_fnc_notification_system};
 
 _uid = ((_house getVariable "house_owner") select 0);
 
-if (!([_uid] call life_fnc_isUIDActive)) exitWith {hint localize "STR_House_Raid_OwnerOff"};
+if (!([_uid] call life_fnc_isUIDActive)) exitWith {[ localize "STR_House_Raid_OwnerOff",true,"fast"] call life_fnc_notification_system};
 
 _houseInv = _house getVariable ["Trunk",[[],0]];
-if (_houseInv isEqualTo [[],0]) exitWith {hint localize "STR_House_Raid_Nothing"};
+if (_houseInv isEqualTo [[],0]) exitWith {[ localize "STR_House_Raid_Nothing",true,"fast"] call life_fnc_notification_system};
 life_action_inUse = true;
 
 //Setup the progress bar
@@ -80,5 +80,5 @@ if (_value > 0) then {
         [_house] remoteExecCall ["TON_fnc_updateHouseTrunk",RSERV];
     };
 } else {
-    hint localize "STR_House_Raid_NoIllegal";
+    [ localize "STR_House_Raid_NoIllegal",true,"fast"] call life_fnc_notification_system;
 };

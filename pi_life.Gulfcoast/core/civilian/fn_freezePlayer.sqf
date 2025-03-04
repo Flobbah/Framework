@@ -10,12 +10,12 @@ private ["_admin"];
 _admin = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
 if (life_frozen) then {
-    hint localize "STR_NOTF_Unfrozen";
+    [ localize "STR_NOTF_Unfrozen",true,"fast"] call life_fnc_notification_system;
     [1,format [localize "STR_ANOTF_Unfrozen",profileName]] remoteExecCall ["life_fnc_broadcast",_admin];
     disableUserInput false;
     life_frozen = false;
 } else {
-    hint localize "STR_NOTF_Frozen";
+    [ localize "STR_NOTF_Frozen",true,"fast"] call life_fnc_notification_system;
     [1,format [localize "STR_ANOTF_Frozen",profileName]] remoteExecCall ["life_fnc_broadcast",_admin];
     disableUserInput true;
     life_frozen = true;

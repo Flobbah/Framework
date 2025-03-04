@@ -7,10 +7,10 @@
     Figure it out.
 */
 private ["_value","_action"];
-if (FETCH_CONST(life_adminlevel) < 2) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if (FETCH_CONST(life_adminlevel) < 2) exitWith {closeDialog 0; [ localize "STR_ANOTF_ErrorLevel",true,"fast"] call life_fnc_notification_system;};
 _value = parseNumber(ctrlText 9922);
 if (_value < 0) exitWith {};
-if (_value > 999999) exitWith {hint localize "STR_ANOTF_Fail"};
+if (_value > 999999) exitWith {[ localize "STR_ANOTF_Fail",true,"fast"] call life_fnc_notification_system;};
 
 _action = [
     format [localize "STR_ANOTF_CompWarn",[_value] call life_fnc_numberText],
@@ -21,9 +21,9 @@ _action = [
 
 if (_action) then {
     CASH = CASH + _value;
-    hint format [localize "STR_ANOTF_Success",[_value] call life_fnc_numberText];
+    [ format [localize "STR_ANOTF_Success",[_value] call life_fnc_numberText],true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
 } else {
-    hint localize "STR_NOTF_ActionCancel";
+    [ localize "STR_NOTF_ActionCancel",true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
 };

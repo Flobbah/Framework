@@ -22,7 +22,7 @@ player setVariable ["Escorting",false,true];
 player setVariable ["transporting",false,true];
 
 titleText[localize "STR_Jail_Warn","PLAIN"];
-hint localize "STR_Jail_LicenseNOTF";
+[ localize "STR_Jail_LicenseNOTF",true,"fast"] call life_fnc_notification_system;
 player setPos (getMarkerPos "jail_marker");
 
 if (_bad) then {

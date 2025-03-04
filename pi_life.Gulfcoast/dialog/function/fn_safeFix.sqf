@@ -8,7 +8,7 @@
 */
 private "_vault";
 _vault = _this select 0;
-if (!(_vault getVariable ["safe_open",false])) exitWith {hint localize "STR_Cop_VaultLocked"};
+if (!(_vault getVariable ["safe_open",false])) exitWith {[ localize "STR_Cop_VaultLocked",true,"fast"] call life_fnc_notification_system};
 
 life_action_inUse = true;
 
@@ -54,4 +54,4 @@ if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "ST
 life_action_inUse = false;
 
 _vault setVariable ["safe_open",false,true];
-hint localize "STR_Cop_VaultRepaired";
+[ localize "STR_Cop_VaultRepaired",false,"fast"] call life_fnc_notification_system;

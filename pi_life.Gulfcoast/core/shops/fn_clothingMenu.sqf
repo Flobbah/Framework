@@ -32,7 +32,7 @@ if !(_shopSide isEqualTo "") then {
 if (_exit) exitWith {};
 
 _exit = [_conditions] call life_fnc_levelCheck;
-if !(_exit) exitWith {hint localize "STR_Shop_Veh_NoLicense";};
+if !(_exit) exitWith {[ localize "STR_Shop_Veh_NoLicense",true,"fast"] call life_fnc_notification_system;};
 
 //Save old inventory
 life_oldClothes = uniform player;
@@ -55,10 +55,10 @@ ctrlSetText [3103,localize _shopTitle];
 sliderSetRange [3107, 0, 360];
 
 //Cop / Civ Pre Check
-if (_shop in ["bruce","dive","reb","kart"] && {!(playerSide isEqualTo civilian)}) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
-if (_shop == "reb" && {!license_civ_rebel}) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
-if (_shop == "cop" && {!(playerSide isEqualTo west)}) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
-if (_shop == "dive" && {!license_civ_dive}) exitWith {hint localize "STR_Shop_NotaDive"; closeDialog 0;};
+if (_shop in ["bruce","dive","reb","kart"] && {!(playerSide isEqualTo civilian)}) exitWith {[ localize "STR_Shop_NotaCiv",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
+if (_shop == "reb" && {!license_civ_rebel}) exitWith {[ localize "STR_Shop_NotaReb",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
+if (_shop == "cop" && {!(playerSide isEqualTo west)}) exitWith {[ localize "STR_Shop_NotaCop",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
+if (_shop == "dive" && {!license_civ_dive}) exitWith {[ localize "STR_Shop_NotaDive",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
 
 
 private ["_pos","_oldPos","_oldDir","_oldBev","_testLogic","_nearVeh","_light"];
@@ -117,7 +117,7 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
         if (_x != player) then {_x hideObject true;};
         true
     } count playableUnits;
-    
+
     if (LIFE_SETTINGS(getNumber,"clothing_box") isEqualTo 0) then {
         {
             if (_x != player && _x != _light) then {_x hideObject true;};
@@ -149,7 +149,7 @@ if (isClass(missionConfigFile >> "Licenses" >> life_clothing_store)) then {
     _flag = M_CONFIG(getText,"Licenses",life_clothing_store,"side");
     _displayName = M_CONFIG(getText,"Licenses",life_clothing_store,"displayName");
     if !(LICENSE_VALUE(life_clothing_store,_flag)) exitWith {
-        hint format [localize "STR_Shop_YouNeed",localize _displayName];
+        [ format [localize "STR_Shop_YouNeed",localize _displayName],true,"fast"] call life_fnc_notification_system;
         closeDialog 0;
     };
 };

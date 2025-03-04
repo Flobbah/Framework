@@ -16,12 +16,12 @@ _distance = ((boundingBox _curTarget select 1) select 0) + 2;
 if (player distance _curTarget > _distance) exitWith {}; //Too far
 
 _isVehicle = if ((_curTarget isKindOf "LandVehicle") || (_curTarget isKindOf "Ship") || (_curTarget isKindOf "Air")) then {true} else {false};
-if (_isVehicle && _curTarget in life_vehicles) exitWith {hint localize "STR_ISTR_Lock_AlreadyHave"};
+if (_isVehicle && _curTarget in life_vehicles) exitWith {[ localize "STR_ISTR_Lock_AlreadyHave",true,"fast"] call life_fnc_notification_system};
 
 //More error checks
 if (!_isVehicle && !isPlayer _curTarget) exitWith {};
 if (!_isVehicle && !(_curTarget getVariable ["restrained",false])) exitWith {};
-if (_curTarget getVariable "NPC") exitWith {hint localize "STR_NPC_Protected"};
+if (_curTarget getVariable "NPC") exitWith {[ localize "STR_NPC_Protected",true,"fast"] call life_fnc_notification_system};
 
 _title = format [localize "STR_ISTR_Lock_Process",if (!_isVehicle) then {"Handcuffs"} else {getText(configFile >> "CfgVehicles" >> (typeOf _curTarget) >> "displayName")}];
 life_action_inUse = true; //Lock out other actions

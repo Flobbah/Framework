@@ -2,7 +2,7 @@
     File: fn_copLights.sqf
     Author: mindstorm, modified by Adanteh
     Link: http://forums.bistudio.com/showthread.php?157474-Offroad-Police-sirens-lights-and-underglow
-    
+
     Description:
     Adds the light effect to cop vehicles.
 */
@@ -49,7 +49,7 @@ _lightLeft setLightAmbient [0.1,0.1,1];
 
 if (_leftOffset isEqualTo [-1]) exitWith {
     diag_log format ["Vehicle emergency lights not set for: %1", _vehicle];
-    hint localize "STR_NOTF_ELSNotSet";
+    [ localize "STR_NOTF_ELSNotSet",true,"fast"] call life_fnc_notification_system;
 };
 
 _lightLeft lightAttachObject [_vehicle, _leftOffset];
@@ -78,7 +78,7 @@ _lightLeft setLightDayLight true;
 _lightRight setLightDayLight true;
 
 private _leftRed = true;
-while {alive _vehicle} do {  
+while {alive _vehicle} do {
     if !(_vehicle getVariable "lights") exitWith {};
     if (_leftRed) then {
         _lightRight setLightBrightness 0.0;
@@ -90,7 +90,7 @@ while {alive _vehicle} do {
         _lightRight setLightBrightness 6;
     };
     _leftRed = !_leftRed;
-    sleep _lightTime;  
+    sleep _lightTime;
 };
 
 deleteVehicle _lightLeft;

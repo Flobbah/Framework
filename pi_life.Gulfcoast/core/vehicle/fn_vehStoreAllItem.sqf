@@ -4,11 +4,11 @@
  File: fn_vehStoreAllItem.sqf
  Author: Basti | John Collins
  Edit by: Blackfisch
- 
+
  Description:
  stores all (max items) from selected and add it to the Vehicles inventory
 */
-if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith { closeDialog 0; hint localize "STR_MISC_VehInvUse"; };
+if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith { closeDialog 0; [ localize "STR_MISC_VehInvUse",true,"fast"] call life_fnc_notification_system; };
 private["_ctrl","_num","_totalWeight","_itemWeight","_veh_data","_inv","_index","_val"];
 if(!DarfEinzahlen) exitWith {[localize "STR_NOTF_Trunk_Store_Stop",true,"fast","orange","Error"]spawn Life_fnc_msg;};
 if(DarfEinzahlen) then {
@@ -49,7 +49,7 @@ if(_ctrl == "money") then
  _val = _inv select _index select 1;
  _inv set[_index,[_ctrl,_val + _num]];
  };
- 
+
  Life_cash = Life_cash - _num;
  Life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
  [Life_trunk_vehicle] call Life_fnc_vehInventory;
@@ -68,7 +68,7 @@ if(_ctrl == "money") then
  _val = _inv select _index select 1;
  _inv set[_index,[_ctrl,_val + _num]];
  };
- 
+
  Life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
  [Life_trunk_vehicle] call Life_fnc_vehInventory;
 };
