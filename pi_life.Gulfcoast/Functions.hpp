@@ -207,6 +207,7 @@ class Life_Client_Core {
         class whereAmI {};
         class tankerob {};
         class moveIn {};
+        class robBank {};
     };
 
     class Gangs {

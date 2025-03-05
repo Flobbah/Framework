@@ -13511,4 +13511,138 @@
 			<Chinesesimp></Chinesesimp>
         </Key>
     </Package>
+    <Package name="RobBank">
+        <Key ID="STR_Bank_MinCops">
+            <English>There must be at least 4 police officers on duty to rob the bank</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Es müssen mindestens 4 Polizisten im Dienst sein um die Bank ausrauben zu können</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_BankTimer">
+            <English>The bank has already been robbed and has no more money in the vault</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Die Banke wurde bereits ausgeraubt und hat kein Geld mehr im Tresor</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_CopRobBank">
+            <English>Robbing a bank as a policeman?</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Als Polizist eine Bank ausrauben?</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_TooFar">
+            <English>You want to crack the safe from back there?</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Von dort hinten willst du den Tresor knacken?</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_InVeh">
+            <English>Get out of your vehicle!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Steig aus deinem Fahrzeug!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_Fail">
+            <English>The attempt has failed</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Der Versuch ist fehlgeschlagen</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_CopNotification">
+            <English>ALARM! - Bank is robbed: %1</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>ALARM! - Bank wird ausgeraubt: %1</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_Hacking">
+            <English>Vault is being hacked. Stay close (10m) (1%1)...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Tresorraum wird gehackt. Bleib in der Nähe (10m) (1%1)...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_Hacking2">
+            <English>Vault is being hacked. Stay close (10m) (%1%2)...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Tresorraum wird gehackt. Bleib in der Nähe (10m) (%1%2)...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_MarkerName">
+            <English>ATTENTION: Bank is robbed</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>ACHTUNG: Bank wird ausgeraubt</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bank_Distance">
+            <English>You must stay in the vicinity (radius 10m)</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du musst in der Nähe bleiben (Radius 10m)</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+    </Package>
 </Project>

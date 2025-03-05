@@ -8,7 +8,7 @@ class EditorData
 	toggles=1034;
 	class ItemIDProvider
 	{
-		nextID=723;
+		nextID=729;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13943.404,43.150002,14568.421};
-		dir[]={-0.71173465,-0.70187789,0.028438868};
-		up[]={-0.70131999,0.71229559,0.028022744};
-		aside[]={0.039925452,-5.2008545e-08,0.99920696};
+		pos[]={13077.711,74.472763,1062.7576};
+		dir[]={0.56786835,-0.82299024,-0.015773457};
+		up[]={0.82267016,0.56805986,-0.022851};
+		aside[]={-0.027766189,-7.1508111e-08,-0.99963075};
 	};
 };
 binarizationWanted=0;
@@ -46,13 +46,14 @@ addons[]=
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"PoliceStation",
 	"A3_Structures_F_Naval_Piers",
-	"mm_bank"
+	"mm_bank",
+	"A3_Missions_F_Oldman"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -137,6 +138,13 @@ class AddonsMetaData
 		{
 			className="mm_bank";
 			name="mm_bank";
+		};
+		class Item13
+		{
+			className="A3_Missions_F_Oldman";
+			name="Arma 3 Old Man - Playable Content";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -236,7 +244,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=392;
+		items=395;
 		class Item0
 		{
 			dataType="Marker";
@@ -1189,7 +1197,7 @@ class Mission
 			position[]={559.15253,2.961458,14378.627};
 			name="cop_car_2";
 			type="Empty";
-			angle=55.120491;
+			angle=55.12048;
 			id=98;
 		};
 		class Item95
@@ -1207,7 +1215,7 @@ class Mission
 			position[]={1326.5387,2.27,1539.7192};
 			name="cop_air_2";
 			type="Empty";
-			angle=221.47;
+			angle=221.46996;
 			id=100;
 		};
 		class Item97
@@ -2108,7 +2116,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={330.01764,5.3218303,14957.277};
+				position[]={330.01801,5.3215499,14957.277};
 			};
 			side="Empty";
 			class Attributes
@@ -2118,7 +2126,7 @@ class Mission
 			};
 			id=217;
 			type="Land_Garbage_line_F";
-			atlOffset=0.11830616;
+			atlOffset=0.11800003;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2286,8 +2294,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4703.7271,6.9064932,6042.8447};
-				angles[]={0.025327841,4.1672087,6.2791886};
+				position[]={4703.7271,6.9064813,6042.8452};
+				angles[]={0.025324726,4.1672006,6.2791882};
 			};
 			side="Empty";
 			flags=4;
@@ -2299,7 +2307,6 @@ class Mission
 			};
 			id=223;
 			type="FlagPole_F";
-			atlOffset=2.3841858e-07;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12584,7 +12591,7 @@ class Mission
 					};
 					id=516;
 					type="C_Nikos_aged";
-					atlOffset=3.4332275e-05;
+					atlOffset=3.528595e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13522,7 +13529,7 @@ class Mission
 					};
 					id=531;
 					type="C_Nikos_aged";
-					atlOffset=0.52999973;
+					atlOffset=0.52999878;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15711,7 +15718,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8024.7319,13.867204,11374.044};
-				angles[]={0,1.7065288,0};
+				angles[]={0,1.7065306,0};
 			};
 			side="Empty";
 			flags=5;
@@ -16730,8 +16737,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5340.3882,14.986792,2897.8083};
-				angles[]={0,5.6125655,0};
+				position[]={5340.3882,14.986792,2897.8081};
+				angles[]={0,5.6125598,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17131,7 +17138,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13184.293,4.7471313,5482.5776};
+				position[]={13205.245,4.7471304,1171.2726};
 				angles[]={0,5.6974688,0};
 			};
 			side="Empty";
@@ -17142,6 +17149,7 @@ class Mission
 			};
 			id=685;
 			type="Land_Mattaust_ATM";
+			atlOffset=-6.2955275;
 		};
 		class Item360
 		{
@@ -17521,17 +17529,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13118.438,2.9154921,1072.5651};
-				angles[]={0,0.19209203,0};
+				position[]={13118.438,2.915,1072.5649};
+				angles[]={0,0.19209093,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this animate [""Vault_Door"",0];";
 			};
 			id=705;
 			type="Land_CommonwealthBank";
-			atlOffset=-1.004508;
+			atlOffset=-1.0050001;
 		};
 		class Item380
 		{
@@ -17566,17 +17575,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6969.4907,10.027169,5307.4902};
-				angles[]={0,5.4585562,0};
+				position[]={6969.4912,10.027652,5307.4902};
+				angles[]={0,5.4585524,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this animate [""Vault_Door"",0];";
 			};
 			id=708;
 			type="Land_CommonwealthBank";
-			atlOffset=-1.0034838;
+			atlOffset=-1.0030003;
 		};
 		class Item383
 		{
@@ -17593,8 +17603,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6980.689,11.611256,5304.6416};
-				angles[]={0,5.4666772,0};
+				position[]={6980.7061,11.634648,5304.6426};
+				angles[]={0,5.4666681,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17604,24 +17614,25 @@ class Mission
 			};
 			id=710;
 			type="Land_Mattaust_ATM";
-			atlOffset=0.093482971;
+			atlOffset=0.11689472;
 		};
 		class Item385
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14356.006,4.5332189,14940.063};
-				angles[]={0,5.0677967,0};
+				position[]={14356.006,4.532959,14940.063};
+				angles[]={0,5.0677905,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this animate [""Vault_Door"",0];";
 			};
 			id=711;
 			type="Land_CommonwealthBank";
-			atlOffset=-0.79674006;
+			atlOffset=-0.79699993;
 		};
 		class Item386
 		{
@@ -17663,7 +17674,7 @@ class Mission
 			flags=1;
 			id=715;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=4.9178448;
+			atlOffset=4.9181042;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17704,7 +17715,7 @@ class Mission
 			type="plp_mark_civc_temple";
 			colorName="Color4_FD_F";
 			id=716;
-			atlOffset=3.8146973e-06;
+			atlOffset=0.00049686432;
 		};
 		class Item390
 		{
@@ -17715,7 +17726,7 @@ class Mission
 			type="plp_mark_civc_temple";
 			colorName="Color4_FD_F";
 			id=717;
-			atlOffset=2.8399858;
+			atlOffset=2.8395033;
 		};
 		class Item391
 		{
@@ -17726,6 +17737,114 @@ class Mission
 			type="plp_mark_civc_temple";
 			colorName="Color4_FD_F";
 			id=718;
+		};
+		class Item392
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6967.7759,12.478294,5306.6348};
+				angles[]={0,2.3137131,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="this addAction[""Bank hacken"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				disableSimulation=1;
+			};
+			id=723;
+			type="Item_Laptop_Unfolded";
+			atlOffset=1.0733509;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item393
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14354.734,6.990489,14938.762};
+				angles[]={0,1.9208926,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="this addAction[""Bank hacken"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				disableSimulation=1;
+			};
+			id=727;
+			type="Item_Laptop_Unfolded";
+			atlOffset=1.0802388;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item394
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13116.939,5.3714943,1073.5947};
+				angles[]={0,3.2793643,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="this addAction[""Bank hacken"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				disableSimulation=1;
+			};
+			id=728;
+			type="Item_Laptop_Unfolded";
+			atlOffset=1.0792031;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
