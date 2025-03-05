@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1034;
+	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=729;
+		nextID=734;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13077.711,74.472763,1062.7576};
-		dir[]={0.56786835,-0.82299024,-0.015773457};
-		up[]={0.82267016,0.56805986,-0.022851};
-		aside[]={-0.027766189,-7.1508111e-08,-0.99963075};
+		pos[]={7006.2241,52.712315,5246.3247};
+		dir[]={-0.52141905,-0.62604588,0.57985359};
+		up[]={-0.41860676,0.77977204,0.46551901};
+		aside[]={0.7435894,5.048496e-07,0.66865391};
 	};
 };
 binarizationWanted=0;
@@ -47,13 +47,13 @@ addons[]=
 	"PoliceStation",
 	"A3_Structures_F_Naval_Piers",
 	"mm_bank",
-	"A3_Missions_F_Oldman"
+	"A3_Structures_F_Civ_InfoBoards"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=13;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -138,13 +138,6 @@ class AddonsMetaData
 		{
 			className="mm_bank";
 			name="mm_bank";
-		};
-		class Item13
-		{
-			className="A3_Missions_F_Oldman";
-			name="Arma 3 Old Man - Playable Content";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1197,7 +1190,7 @@ class Mission
 			position[]={559.15253,2.961458,14378.627};
 			name="cop_car_2";
 			type="Empty";
-			angle=55.12048;
+			angle=55.120476;
 			id=98;
 		};
 		class Item95
@@ -1215,7 +1208,7 @@ class Mission
 			position[]={1326.5387,2.27,1539.7192};
 			name="cop_air_2";
 			type="Empty";
-			angle=221.46996;
+			angle=221.46992;
 			id=100;
 		};
 		class Item97
@@ -2185,7 +2178,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1343.35,2.9459317,1463.4802};
+				position[]={1343.3501,2.9455314,1463.4803};
 				angles[]={0,6.2539859,0};
 			};
 			side="Empty";
@@ -2197,7 +2190,7 @@ class Mission
 			};
 			id=220;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.64140129;
+			atlOffset=0.64100003;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15096,13 +15089,13 @@ class Mission
 		class Item299
 		{
 			dataType="Marker";
-			position[]={358.46701,6.5229998,14952.013};
+			position[]={14780.285,-19.367188,12363.12};
 			name="fed_reserve";
 			text="@STR_MAR_Federal_Reserve";
 			type="plp_mark_civc_temple";
 			colorName="Color4_FD_F";
 			id=598;
-			atlOffset=-0.00019788742;
+			atlOffset=-79.907188;
 		};
 		class Item300
 		{
@@ -15526,6 +15519,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Armament"",life_fnc_weaponShopMenu,""gang"",0,false,false,"""",' _b = (nearestObjects[getPosATL player,[""Land_i_barracks_V2_F"",""Land_u_barracks_V2_F"",""Land_House_Small_02_F""],25]) select 0; !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide isEqualTo civilian ']; this addAction[localize""STR_Shops_C_Gang"",life_fnc_clothingMenu,""gang_clothing"",0,false,false,"""",' _b = (nearestObjects[getPosATL player,[""Land_School_01_F"",""Land_Warehouse_03_F"",""Land_House_Small_02_F""],25]) select 0; !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide isEqualTo civilian ']; this setVariable [""realname"",""Gang Armament""];";
+				disableSimulation=1;
 			};
 			id=617;
 			type="Land_Pallet_MilBoxes_F";
@@ -15562,6 +15556,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Armament"",life_fnc_weaponShopMenu,""gang"",0,false,false,"""",' _b = (nearestObjects[getPosATL player,[""Land_i_barracks_V2_F"",""Land_u_barracks_V2_F"",""Land_House_Small_02_F""],25]) select 0; !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide isEqualTo civilian ']; this addAction[localize""STR_Shops_C_Gang"",life_fnc_clothingMenu,""gang_clothing"",0,false,false,"""",' _b = (nearestObjects[getPosATL player,[""Land_School_01_F"",""Land_Warehouse_03_F"",""Land_House_Small_02_F""],25]) select 0; !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide isEqualTo civilian ']; this setVariable [""realname"",""Gang Armament""];";
+				disableSimulation=1;
 			};
 			id=618;
 			type="Land_Pallet_MilBoxes_F";
@@ -15598,6 +15593,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this allowDamage false; this enableSimulation false; this addAction[localize""STR_MAR_Armament"",life_fnc_weaponShopMenu,""gang"",0,false,false,"""",' _b = (nearestObjects[getPosATL player,[""Land_i_barracks_V2_F"",""Land_u_barracks_V2_F"",""Land_House_Small_02_F""],25]) select 0; !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide isEqualTo civilian ']; this addAction[localize""STR_Shops_C_Gang"",life_fnc_clothingMenu,""gang_clothing"",0,false,false,"""",' _b = (nearestObjects[getPosATL player,[""Land_School_01_F"",""Land_Warehouse_03_F"",""Land_House_Small_02_F""],25]) select 0; !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide isEqualTo civilian ']; this setVariable [""realname"",""Gang Armament""];";
+				disableSimulation=1;
 			};
 			id=619;
 			type="Land_Pallet_MilBoxes_F";
@@ -17541,6 +17537,23 @@ class Mission
 			id=705;
 			type="Land_CommonwealthBank";
 			atlOffset=-1.0050001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item380
 		{
@@ -17587,6 +17600,23 @@ class Mission
 			id=708;
 			type="Land_CommonwealthBank";
 			atlOffset=-1.0030003;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item383
 		{
@@ -17633,6 +17663,23 @@ class Mission
 			id=711;
 			type="Land_CommonwealthBank";
 			atlOffset=-0.79699993;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item386
 		{
@@ -17743,19 +17790,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6967.7759,12.478294,5306.6348};
+				position[]={6967.7759,12.045587,5306.6348};
 				angles[]={0,2.3137131,0};
 			};
 			side="Empty";
-			flags=1;
 			class Attributes
 			{
-				init="this addAction[""Bank hacken"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				init="this addAction[""Hack Bank"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				name="CapeRasseBank";
 				disableSimulation=1;
 			};
-			id=723;
-			type="Item_Laptop_Unfolded";
-			atlOffset=1.0733509;
+			id=730;
+			type="Land_InfoStand_V2_F";
+			atlOffset=0.31995392;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17779,19 +17826,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14354.734,6.990489,14938.762};
-				angles[]={0,1.9208926,-0};
+				position[]={14354.734,6.5377321,14938.762};
+				angles[]={0,1.9208919,0};
 			};
 			side="Empty";
-			flags=1;
 			class Attributes
 			{
-				init="this addAction[""Bank hacken"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				init="this addAction[""Hack Bank"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				name="CorelSpringsBank";
 				disableSimulation=1;
 			};
-			id=727;
-			type="Item_Laptop_Unfolded";
-			atlOffset=1.0802388;
+			id=732;
+			type="Land_InfoStand_V2_F";
+			atlOffset=0.30679226;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17815,19 +17862,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13116.939,5.3714943,1073.5947};
-				angles[]={0,3.2793643,-0};
+				position[]={13116.694,4.9175143,1073.6063};
+				angles[]={0,3.2793689,0};
 			};
 			side="Empty";
-			flags=1;
 			class Attributes
 			{
-				init="this addAction[""Bank hacken"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				init="this addAction[""Hack Bank"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				name="GulfshoreBank";
 				disableSimulation=1;
 			};
-			id=728;
-			type="Item_Laptop_Unfolded";
-			atlOffset=1.0792031;
+			id=733;
+			type="Land_InfoStand_V2_F";
+			atlOffset=0.30453348;
 			class CustomAttributes
 			{
 				class Attribute0

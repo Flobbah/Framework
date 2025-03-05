@@ -13584,6 +13584,18 @@
             <German>Der Versuch ist fehlgeschlagen</German>
 			<Chinesesimp></Chinesesimp>
         </Key>
+        <Key ID="STR_Bank_RobAlready">
+            <English>A bank is already being robbed!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Es wird schon eine Bank ausgeraubt!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
         <Key ID="STR_Bank_CopNotification">
             <English>ALARM! - Bank is robbed: %1</English>
             <Czech></Czech>
