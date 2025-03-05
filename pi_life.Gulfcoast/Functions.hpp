@@ -193,7 +193,6 @@ class Life_Client_Core {
         class onFired {};
         class onTakeItem {};
         class playerSkins {};
-        class playerTags {};
         class postNewsBroadcast {};
         class pullOutVeh {};
         class pushObject {};
