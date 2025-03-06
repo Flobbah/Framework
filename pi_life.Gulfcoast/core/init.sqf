@@ -47,37 +47,16 @@ waitUntil {life_session_completed};
 
 switch (playerSide) do {
     case west: {
-		switch (call life_coplevel) do {
-			case 1: {life_paycheck =  600;};
-			case 2: {life_paycheck = 800;};
-			case 3: {life_paycheck = 1000;};
-			case 4: {life_paycheck = 1200;};
-			case 5: {life_paycheck = 1400;};
-			case 6: {life_paycheck = 1600;};
-			case 7: {life_paycheck = 1800;};
-			case 8: {life_paycheck = 2000;};
-			case 9: {life_paycheck = 2200;};
-			case 10: {life_paycheck = 2400;};
-			case 11: {life_paycheck = 2600;};
-			case 12: {life_paycheck = 2800;};
-			case 13: {life_paycheck = 3000;};
-		};
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_cop");
+        [] call life_fnc_initCop;
     };
     case civilian: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_civ");
         [] call life_fnc_initCiv;
     };
     case independent: {
-		switch (call life_mediclevel) do {
-			case 1: {life_paycheck =  800;};
-			case 2: {life_paycheck = 1000;};
-			case 3: {life_paycheck = 1200;};
-			case 4: {life_paycheck = 1400;};
-			case 5: {life_paycheck = 1600;};
-			case 6: {life_paycheck = 1800;};
-			case 7: {life_paycheck = 2000;};
-			case 8: {life_paycheck = 2200;};
-		};
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
+        [] call life_fnc_initMedic;
     };
 };
 CONSTVAR(life_paycheck);

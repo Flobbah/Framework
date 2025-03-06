@@ -13,12 +13,12 @@ if (life_blacklisted) exitWith {
     sleep 30;
 };
 
-if ((FETCH_CONST(life_coplevel) isEqualTo 0) && (FETCH_CONST(life_adminlevel) isEqualTo 0)) then {
+if ((FETCH_CONST(life_coplevel) isEqualTo 0) && (FETCH_CONST(life_adminlevel) isEqualTo 0)) exitWith {
     ["NotWhitelisted",false,true] call BIS_fnc_endMission;
     sleep 35;
 };
 
-
+player setvariable ["coplevel",1,true];
 player setVariable ["rank",(FETCH_CONST(life_coplevel)),true];
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
