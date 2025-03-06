@@ -43,6 +43,7 @@ life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 life_hideoutBuildings = [];
 life_firstSpawn = true;
+life_open_notifications = [];
 
 //Farbkorrektur in der Nacht
 CHBN_adjustBrightness = 10;
