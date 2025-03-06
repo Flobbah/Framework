@@ -13656,5 +13656,17 @@
             <German>Du musst in der Nähe bleiben (Radius 10m)</German>
 			<Chinesesimp></Chinesesimp>
         </Key>
+        <Key ID="STR_Bank_Action">
+            <English>Hack the bank</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Bank Hacken</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
     </Package>
 </Project>

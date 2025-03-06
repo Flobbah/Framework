@@ -17796,7 +17796,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this addAction[""Hack Bank"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
+				init="this addAction[localize""STR_Bank_Action"",life_fnc_robBank,"""",0,false,false,"""",'playerSide == civilian'];";
 				name="CapeRasseBank";
 				disableSimulation=1;
 			};

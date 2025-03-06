@@ -13,7 +13,7 @@
    - Added New Hud by "Kureo & Zalac"
    - Added Rob Gas Stations script by "Moeck" edited by Deathman and me. Added Strings so it's in english and german.
    - DE100 Notification System added
-   - Coming soon: Bankrobberys
+   - Added Bankrobbery script by "cmdFlow" edited by "DevB" and me.
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
 [![|Solid](https://i.imgur.com/5PFRHRN.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140)
