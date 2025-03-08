@@ -17,6 +17,10 @@
    - Coming Soon: Barrier System
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
+# Fixed some minor issues
+  - Fixed Cop/Medic Spawn/Init
+  - Fixed Cop access for Police buildings
+
 [![|Solid](https://i.imgur.com/5PFRHRN.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140)
 # Pictures
   - HUD
