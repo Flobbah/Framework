@@ -71,28 +71,28 @@ class CfgSpawnPoints {
             };
 
             class Athira {
-                displayName = "Athira HQ";
+                displayName = "Cape Rassa";
                 spawnMarker = "cop_spawn_3";
                 icon = "\a3\ui_f\data\map\MapControl\fuelstation_ca.paa";
                 conditions = "";
             };
 
             class Pyrgos {
-                displayName = "Pyrgos HQ";
+                displayName = "Orion Air Base";
                 spawnMarker = "cop_spawn_2";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
                 conditions = "";
             };
 
             class Air {
-                displayName = $STR_MAR_Police_Air_HQ;
+                displayName = "Gasparilla Airbase";
                 spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
                 conditions = "call life_coplevel >= 2 && {license_cop_cAir}";
             };
 
             class HW {
-                displayName = $STR_MAR_Highway_Patrol;
+                displayName = "Sebring Highway Patrol";
                 spawnMarker = "cop_spawn_5";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
                 conditions = "call life_coplevel >= 3";
@@ -101,21 +101,21 @@ class CfgSpawnPoints {
 
         class Medic {
             class Kavala {
-                displayName = $STR_SP_EMS_Kav;
+                displayName = "Cape Rassa Hospital";
                 spawnMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
             };
 
             class Athira {
-                displayName = $STR_SP_EMS_Ath;
+                displayName = "Del Mare Hospital";
                 spawnMarker = "medic_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
             };
 
             class Pyrgos {
-                displayName = $STR_SP_EMS_Pyr;
+                displayName = "St Armand Hospital";
                 spawnMarker = "medic_spawn_3";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
