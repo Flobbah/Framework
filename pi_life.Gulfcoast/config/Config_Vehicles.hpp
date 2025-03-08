@@ -90,26 +90,13 @@ class CarShops {
 			{ "d3s_durango_18", "" },
 			{ "d3s_durango_18_SRT", "" },
 			{ "d3s_srthellcat_15", "" },
-			{ "d3s_giulia_quad_16", "" }
-        };
-    };
-    class luxus_car {
-        side = "civ";
-        conditions = "";
-        vehicles[] = {
+			{ "d3s_giulia_quad_16", "" },
             { "d3s_rapide_10", "" },
             { "d3s_continentalGT_18", "" },
             { "d3s_camaro_ss_16", "" },
             { "d3s_LaFerrari_14", "" },
             { "d3s_asterion_15", "" },
-            { "d3s_alfieri_14", "" }
-        };
-    };
-
-    class admin_shop {
-        side = "civ";
-        conditions = "license_civ_tuning";
-        vehicles[] = {
+            { "d3s_alfieri_14", "" },
             { "d3s_boss_15_payback", "" },
 			{ "d3s_boss_15", "" },
 			{ "d3s_e60_09_ACS5", "" },
@@ -276,21 +263,21 @@ class CarShops {
 			{ "d3s_tahoe_PPV", "" },
 			{ "d3s_fpace_17_COP", "" },
 			{ "d3s_vklasse_17_COP", "" },
-			{ "d3s_fseries_17_P3E", "license_cop_swat" },
-			{ "d3s_g63amg_16_FSB", "license_cop_swat" },
-			{ "d3s_raptor_UNM_17", "license_cop_swat" },
-			{ "d3s_gl63amg_12_FSB", "license_cop_swat" },
-			{ "d3s_200_16_FSB", "license_cop_swat" },
-			{ "d3s_teslaS_16_Mark_42", "license_cop_fbi" },
-			{ "d3s_ctsv_16_unm", "license_cop_fbi" },
-			{ "d3s_taurus_UNM_10", "license_cop_fbi" },
-			{ "d3s_f86_15_UNM", "license_cop_fbi" },
-			{ "d3s_tahoe_UNM", "license_cop_fbi" },
-			{ "d3s_malibu_18_UNM", "license_cop_fbi" },
-			{ "d3s_explorer_UNM_13", "license_cop_fbi" },
-			{ "d3s_durango_18_UNM", "license_cop_fbi" },
-			{ "d3s_vklasse_17_UNM", "license_cop_fbi" },
-			{ "d3s_urus_FSB_12", "license_cop_fbi" }
+			{ "d3s_fseries_17_P3E", "" },
+			{ "d3s_g63amg_16_FSB", "" },
+			{ "d3s_raptor_UNM_17", "" },
+			{ "d3s_gl63amg_12_FSB", "" },
+			{ "d3s_200_16_FSB", "" },
+			{ "d3s_teslaS_16_Mark_42", "" },
+			{ "d3s_ctsv_16_unm", "" },
+			{ "d3s_taurus_UNM_10", "" },
+			{ "d3s_f86_15_UNM", "" },
+			{ "d3s_tahoe_UNM", "" },
+			{ "d3s_malibu_18_UNM", "" },
+			{ "d3s_explorer_UNM_13", "" },
+			{ "d3s_durango_18_UNM", "" },
+			{ "d3s_vklasse_17_UNM", "" },
+			{ "d3s_urus_FSB_12", "" }
         };
     };
 
@@ -298,7 +285,7 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-			{ "d3s_AS_365", "license_cop_fbi" },
+			{ "d3s_AS_365", "" },
             { "B_Heli_Light_01_F", "" }
         };
     };
@@ -318,61 +305,61 @@ class CarShops {
 //Farben
 class Colors {
 	textures[] = {
-		{ "Schwarz", "civ", {
+		{ "Black", "civ", {
 			"#(argb,8,8,3)color(0,0,0,1.0,CO)"
 		} },
-		{ "Weiß", "civ", {
+		{ "White", "civ", {
 			"#(argb,8,8,3)color(1,1,1,1.0,CO)"
 		} },
-		{ "Grau", "civ", {
+		{ "Grey", "civ", {
 			"#(argb,8,8,3)color(0.521569,0.521569,0.521569,1.0,CO)"
 		} },
-		{ "Grau Blau", "civ", {
+		{ "Grey blue", "civ", {
 			"#(argb,8,8,3)color(0.537255,0.647059,0.811765,1.0,CO)"
 		} },
-		{ "Dunkelblaues Grau", "civ", {
+		{ "Darkblue Grey", "civ", {
 			"#(argb,8,8,3)color(0.278431,0.427451,0.713725,1.0,CO)"
 		} },
-		{ "Hellblau", "civ", {
+		{ "Lightblue", "civ", {
 			"#(argb,8,8,3)color(0.192157,0.556863,0.968627,1.0,CO)"
 		} },
-		{ "Blau", "civ", {
+		{ "blue", "civ", {
 			"#(argb,8,8,3)color(0.0352941,0.415686,0.882353,1.0,CO)"
 		} },
-		{ "Dunkelblau", "civ", {
+		{ "Darkblue", "civ", {
 			"#(argb,8,8,3)color(0.0235294,0.12549,0.592157,1.0,CO)"
 		} },
-		{ "Türkisblau", "civ", {
+		{ "Turquoiseblue", "civ", {
 			"#(argb,8,8,3)color(0,0.717647,0.717647,1.0,CO)"
 		} },
-		{ "Hellrot", "civ", {
+		{ "Lightred", "civ", {
 			"#(argb,8,8,3)color(0.992157,0.258824,0.258824,1.0,CO)"
 		} },
-		{ "Rot", "civ", {
+		{ "Red", "civ", {
 			"#(argb,8,8,3)color(0.843137,0,0,1.0,CO)"
 		} },
-		{ "Dunkelrot", "civ", {
+		{ "Darkred", "civ", {
 			"#(argb,8,8,3)color(0.466667,0,0,1.0,CO)"
 		} },
-		{ "Bordeauxrot", "civ", {
+		{ "Bordeauxred", "civ", {
 			"#(argb,8,8,3)color(0.517647,0.0156863,0.027451,1.0,CO)"
 		} },
-		{ "Hellgrün", "civ", {
+		{ "Lightgreen", "civ", {
 			"#(argb,8,8,3)color(0.270588,0.862745,0.345098,1.0,CO)"
 		} },
-		{ "Grün", "civ", {
+		{ "Green", "civ", {
 			"#(argb,8,8,3)color(0.105882,0.545098,0.156863,1.0,CO)"
 		} },
-		{ "Dunkelgrün", "civ", {
+		{ "Darkgreen", "civ", {
 			"#(argb,8,8,3)color(0.0509804,0.266667,0.0784314,1.0,CO)"
 		} },
-		{ "Grüne Limette", "civ", {
+		{ "Green Limette", "civ", {
 			"#(argb,8,8,3)color(0.65098,0.996078,0.00392157,1.0,CO)"
 		} },
 		{ "Khaki", "civ", {
 			"#(argb,8,8,3)color(0.392157,0.447059,0.180392,1.0,CO)"
 		} },
-		{ "Gelb", "civ", {
+		{ "Yellow", "civ", {
 			"#(argb,8,8,3)color(0.917647,0.886275,0.356863,1.0,CO)"
 		} },
 		{ "Orange", "civ", {
@@ -381,16 +368,16 @@ class Colors {
 		{ "Ton", "civ", {
 			"#(argb,8,8,3)color(0.788235,0.427451,0.380392,1.0,CO)"
 		} },
-		{ "Braun", "civ", {
+		{ "Brown", "civ", {
 			"#(argb,8,8,3)color(0.713725,0.517647,0.305882,1.0,CO)"
 		} },
-		{ "Dunkelbraun", "civ", {
+		{ "Darkbrown", "civ", {
 			"#(argb,8,8,3)color(0.407843,0.290196,0.168627,1.0,CO)"
 		} },
 		{ "Pink", "civ", {
 			"#(argb,8,8,3)color(0.972549,0.470588,0.756863,1.0,CO)"
 		} },
-		{ "Dunkelpink", "civ", {
+		{ "Darkpink", "civ", {
 			"#(argb,8,8,3)color(0.713725,0.32549,0.843137,1.0,CO)"
 		} },
 		{ "Lavendel", "civ", {
@@ -776,61 +763,61 @@ class Colors {
 //FarbenCOP
 class Colorscop {
 	textures[] = {
-		{ "Schwarz", "cop", {
+		{ "Black", "cop", {
 			"#(argb,8,8,3)color(0,0,0,1.0,CO)"
 		} },
-		{ "Weiß", "cop", {
+		{ "White", "cop", {
 			"#(argb,8,8,3)color(1,1,1,1.0,CO)"
 		} },
-		{ "Grau", "cop", {
+		{ "Grey", "cop", {
 			"#(argb,8,8,3)color(0.521569,0.521569,0.521569,1.0,CO)"
 		} },
-		{ "Grau Blau", "cop", {
+		{ "Grey Blue", "cop", {
 			"#(argb,8,8,3)color(0.537255,0.647059,0.811765,1.0,CO)"
 		} },
-		{ "Dunkelblaues Grau", "cop", {
+		{ "Darkblue Grey", "cop", {
 			"#(argb,8,8,3)color(0.278431,0.427451,0.713725,1.0,CO)"
 		} },
-		{ "Hellblau", "cop", {
+		{ "Lightblue", "cop", {
 			"#(argb,8,8,3)color(0.192157,0.556863,0.968627,1.0,CO)"
 		} },
-		{ "Blau", "cop", {
+		{ "Blue", "cop", {
 			"#(argb,8,8,3)color(0.0352941,0.415686,0.882353,1.0,CO)"
 		} },
-		{ "Dunkelblau", "cop", {
+		{ "Darkblue", "cop", {
 			"#(argb,8,8,3)color(0.0235294,0.12549,0.592157,1.0,CO)"
 		} },
-		{ "Türkisblau", "cop", {
+		{ "Turquoiseblue", "cop", {
 			"#(argb,8,8,3)color(0,0.717647,0.717647,1.0,CO)"
 		} },
-		{ "Hellrot", "cop", {
+		{ "Lightred", "cop", {
 			"#(argb,8,8,3)color(0.992157,0.258824,0.258824,1.0,CO)"
 		} },
-		{ "Rot", "cop", {
+		{ "Red", "cop", {
 			"#(argb,8,8,3)color(0.843137,0,0,1.0,CO)"
 		} },
-		{ "Dunkelrot", "cop", {
+		{ "Darkred", "cop", {
 			"#(argb,8,8,3)color(0.466667,0,0,1.0,CO)"
 		} },
-		{ "Bordeauxrot", "cop", {
+		{ "Bordeauxred", "cop", {
 			"#(argb,8,8,3)color(0.517647,0.0156863,0.027451,1.0,CO)"
 		} },
-		{ "Hellgrün", "cop", {
+		{ "Lightgreen", "cop", {
 			"#(argb,8,8,3)color(0.270588,0.862745,0.345098,1.0,CO)"
 		} },
-		{ "Grün", "cop", {
+		{ "Green", "cop", {
 			"#(argb,8,8,3)color(0.105882,0.545098,0.156863,1.0,CO)"
 		} },
-		{ "Dunkelgrün", "cop", {
+		{ "Darkgreen", "cop", {
 			"#(argb,8,8,3)color(0.0509804,0.266667,0.0784314,1.0,CO)"
 		} },
-		{ "Grüne Limette", "cop", {
+		{ "greene Limette", "cop", {
 			"#(argb,8,8,3)color(0.65098,0.996078,0.00392157,1.0,CO)"
 		} },
 		{ "Khaki", "cop", {
 			"#(argb,8,8,3)color(0.392157,0.447059,0.180392,1.0,CO)"
 		} },
-		{ "Gelb", "cop", {
+		{ "Yellow", "cop", {
 			"#(argb,8,8,3)color(0.917647,0.886275,0.356863,1.0,CO)"
 		} },
 		{ "Orange", "cop", {
@@ -839,16 +826,16 @@ class Colorscop {
 		{ "Ton", "cop", {
 			"#(argb,8,8,3)color(0.788235,0.427451,0.380392,1.0,CO)"
 		} },
-		{ "Braun", "cop", {
+		{ "Brown", "cop", {
 			"#(argb,8,8,3)color(0.713725,0.517647,0.305882,1.0,CO)"
 		} },
-		{ "Dunkelbraun", "cop", {
+		{ "Darkbrown", "cop", {
 			"#(argb,8,8,3)color(0.407843,0.290196,0.168627,1.0,CO)"
 		} },
 		{ "Pink", "cop", {
 			"#(argb,8,8,3)color(0.972549,0.470588,0.756863,1.0,CO)"
 		} },
-		{ "Dunkelpink", "cop", {
+		{ "Darkpink", "cop", {
 			"#(argb,8,8,3)color(0.713725,0.32549,0.843137,1.0,CO)"
 		} },
 		{ "Lavendel", "cop", {
@@ -1262,16 +1249,16 @@ class LifeCfgVehicles {
         vItemSpace = 100;
         conditions = "";
         price = -1;
-		
+
         textures[] = {};
     };
-	
+
 	//MEDIC
 	class d3s_charger_15_EMS {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1279,7 +1266,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1287,7 +1274,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1295,7 +1282,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1303,7 +1290,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1311,7 +1298,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1319,7 +1306,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1327,7 +1314,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1335,7 +1322,7 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
 
@@ -1343,16 +1330,16 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 25000;
-		
+
 		textures[] = {};
 	};
-	
+
 	//COPS
 	class d3s_fseries_17_P3E {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 		textures[] = {};
 	};
 
@@ -1360,223 +1347,223 @@ class LifeCfgVehicles {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_raptor_UNM_17 : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_gl63amg_12_FSB : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_200_16_FSB : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_teslaS_16_Mark_42 : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_ctsv_16_unm : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_taurus_UNM_10 : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_f86_15_UNM : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_tahoe_UNM : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_malibu_18_UNM : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_explorer_UNM_13 : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_durango_18_UNM : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_vklasse_17_UNM : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
 
 	class d3s_urus_FSB_12 : Colorscop {
 		vItemSpace = 100;
 		conditions ="";
 		price = 60000;
-		
+
 	};
-	
+
 	class d3s_f90_18_PD {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_crown_98_PD {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_charger_15_CPP {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_FPIU_13 {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_raptor_PRP_17 {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_g63amg_16_Police {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_tahoe_PPV {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_fpace_17_COP {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_vklasse_17_COP {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	class d3s_e400_16_COP {
 		vItemSpace = 100;
 		conditions ="";
 		price = 30000;
-		
+
 		textures[] = {};
 	};
-	
+
 	//Zivilisten
 
 	class d3s_giulia_quad_16 : Colors {
 		vItemSpace = 48;
 		conditions ="license_civ_driver";
 		price = 79000;
-		
+
 	};
 
 	class d3s_zaz968m : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 800;
-		
+
 	};
 
 	class d3s_luaz969m : Colors {
 		vItemSpace = 20;
 		conditions ="license_civ_driver";
 		price = 750;
-		
+
 	};
 
 	class d3s_crown_98 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 15000;
-		
+
 	};
 
 	class d3s_oka : Colors {
 		vItemSpace = 15;
 		conditions ="license_civ_driver";
 		price = 500;
-		
+
 	};
-	
+
     // Apex DLC
     class C_Boat_Transport_02_F {
         vItemSpace = 100;
         conditions = "license_civ_boat || {!(playerSide isEqualTo civilian)}";
         price = 2200;
-		
+
         textures[] = {
             { "Civilian", "civ", {
                 "\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_exterior_civilian_CO.paa"
@@ -1592,7 +1579,7 @@ class LifeCfgVehicles {
         vItemSpace = 75;
         conditions = "license_civ_pilot || {!(playerSide isEqualTo civilian)}";
         price = 15000;
-		
+
         textures[] = {
             { "Racing (Tan Interior)", "civ", {
                 "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa",
@@ -1650,7 +1637,7 @@ class LifeCfgVehicles {
         vItemSpace = 30;
         conditions = "license_civ_boat || {!(playerSide isEqualTo civilian)}";
         price = 2500;
-		
+
         textures[] = {
             { "Black", "civ", {
                 "\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Black_CO.paa",
@@ -1682,12 +1669,12 @@ class LifeCfgVehicles {
             }, "" }
         };
     };
-	
+
     class C_Rubberboat {
         vItemSpace = 45;
         conditions = "license_civ_boat || {!(playerSide isEqualTo civilian)}";
         price = 5000;
-		
+
         textures[] = { };
     };
 
@@ -1695,7 +1682,7 @@ class LifeCfgVehicles {
         vItemSpace = 200;
         conditions = "license_cop_cAir || {!(playerSide isEqualTo west)}";
         price = 20000;
-		
+
         textures[] = {};
     };
 
@@ -1703,7 +1690,7 @@ class LifeCfgVehicles {
         vItemSpace = 200;
         conditions = "license_cop_cAir || {!(playerSide isEqualTo west)}";
         price = 100000;
-		
+
         textures[] = {};
     };
 
@@ -1711,7 +1698,7 @@ class LifeCfgVehicles {
         vItemSpace = 175;
         conditions = "license_cop_cg || {!(playerSide isEqualTo west)}";
         price = 7500;
-		
+
         textures[] = { };
     };
 
@@ -1719,7 +1706,7 @@ class LifeCfgVehicles {
         vItemSpace = 45;
         conditions = "license_cop_cg || {!(playerSide isEqualTo west)}";
         price = 3000;
-		
+
         textures[] = { };
     };
 
@@ -1748,7 +1735,7 @@ class LifeCfgVehicles {
         vItemSpace = 65;
         conditions = "license_civ_rebel || {!(playerSide isEqualTo civilian)}";
         price = 75000;
-		
+
         textures[] = { };
     };
 
@@ -1756,7 +1743,7 @@ class LifeCfgVehicles {
         vItemSpace = 85;
         conditions = "license_civ_boat || {!(playerSide isEqualTo civilian)}";
         price = 10000;
-		
+
         textures[] = { };
     };
 
@@ -1764,7 +1751,7 @@ class LifeCfgVehicles {
         vItemSpace = 85;
         conditions = "license_cop_cg || {!(playerSide isEqualTo west)}";
         price = 20000;
-		
+
         textures[] = { };
     };
 
@@ -1772,7 +1759,7 @@ class LifeCfgVehicles {
         vItemSpace = 20;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 15000;
-		
+
         textures[] = {};
     };
 
@@ -1780,438 +1767,438 @@ class LifeCfgVehicles {
         vItemSpace = 20;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 15000;
-		
+
         textures[] = {};
     };
-	
+
 	//rebel
 
 	class d3s_insurgent_gtaV : Colors {
 		vItemSpace = 100;
 		conditions ="";
 		price = 1500000;
-		
+
 	};
-	
+
 	//cars
 
 	class d3s_srthellcat_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 72590;
-		
+
 	};
 
-	class d3s_srthellcat_15_HELL : Colors {
+	class d3s_srthellcat_15_Light : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 1000;
-		
+
 	};
 
 	class d3s_f87_17 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 59500;
-		
+
 	};
 
 	class d3s_f80_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 71500;
-		
+
 	};
 
 	class d3s_f90_18 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 117900;
-		
+
 	};
 
 	class d3s_f13_13 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 134900;
-		
+
 	};
 
 	class d3s_charger_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 62300;
-		
+
 	};
 
 	class d3s_C43_16 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 61850;
-		
+
 	};
 
 	class d3s_C63S_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 77588;
-		
+
 	};
 
 	class d3s_C180_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 39500;
-		
+
 	};
 
 	class d3s_C220_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 44500;
-		
+
 	};
 
 	class d3s_C250_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 48900;
-		
+
 	};
 
 	class d3s_C300_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 52000;
-		
+
 	};
 
 	class d3s_C350_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 55000;
-		
+
 	};
 
 	class d3s_C450_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 58000;
-		
+
 	};
 
 	class d3s_e220_16 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 47000;
-		
+
 	};
 
 	class d3s_e250_16 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 55000;
-		
+
 	};
 
 	class d3s_e350_16 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 61000;
-		
+
 	};
 
 	class d3s_e400_16 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 64800;
-		
+
 	};
 
 	class d3s_s600_17 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 187850;
-		
+
 	};
 
 	class d3s_s600_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 187850;
-		
+
 	};
 
 	class d3s_beetle_04 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 15550;
-		
+
 	};
 
 	class d3s_rapide_10 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 180000;
-		
+
 	};
 
 	class d3s_camaro_ss_16 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 44700;
-		
+
 	};
 
 	class d3s_continentalGT_18 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 206465;
-		
+
 	};
 
 	class d3s_LaFerrari_14 : Colors {
 		vItemSpace = 10;
 		conditions ="license_civ_driver";
 		price = 1190000;
-		
+
 	};
 
 	class d3s_asterion_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 770000;
-		
+
 	};
 
 	class d3s_alfieri_14 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 125000;
-		
+
 	};
 
 	class d3s_amgGTS_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 154000;
-		
+
 	};
 
 	class d3s_amgGT_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 124000;
-		
+
 	};
 
 	class d3s_f85_15 : Colors {
 		vItemSpace = 85;
 		conditions ="license_civ_driver";
 		price = 120700;
-		
+
 	};
 
 	class d3s_f86_15 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 135900;
-		
+
 	};
 
 	class d3s_durango_18_SRT : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 98657;
-		
+
 	};
 
 	class d3s_durango_18 : Colors {
 		vItemSpace = 25;
 		conditions ="license_civ_driver";
 		price = 53870;
-		
+
 	};
 
 	class d3s_g63amg_16 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 158400;
-		
+
 	};
 
 	class d3s_g63amg_18 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 158400;
-		
+
 	};
 
 	class d3s_g65amg_16 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 275723;
-		
+
 	};
 
 	class d3s_gle43amg_15 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 80000;
-		
+
 	};
 
 	class d3s_gle63amg_15 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 131000;
-		
+
 	};
 
 	class d3s_gle63amgS_15 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 141000;
-		
+
 	};
 
 	class d3s_gls63amg_17 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 140242;
-		
+
 	};
 
 	class d3s_g350d_15 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 107000;
-		
+
 	};
 
 	class d3s_g500_15 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 226100;
-		
+
 	};
 
 	class d3s_g500_18 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 226100;
-		
+
 	};
 
 	class d3s_eqc_20 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 65000;
-		
-	}; 
+
+	};
 	class d3s_eqc_20_4matic : d3s_eqc_20 {}; class d3s_eqc_20_400 : d3s_eqc_20 {};
 
 	class d3s_teslaS_16_90 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 95000;
-		
-	}; 
+
+	};
 	class d3s_teslaS_16_100 : d3s_teslaS_16_90 {}; class d3s_teslaS_16_85 : d3s_teslaS_16_90 {};
 
 	class d3s_roadrunner_71_340 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 95000;
-		
-	}; 
+
+	};
 	class d3s_roadrunner_71_440 : d3s_roadrunner_71_340 {}; class d3s_roadrunner_71_GTX : d3s_roadrunner_71_340 {};
 
 	class d3s_e89_12 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 95000;
-		
-	}; 
+
+	};
 	class d3s_e89_12_M : d3s_e89_12 {};
 
 	class d3s_fseries_17 : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 95000;
-		
-	}; 
+
+	};
 	class d3s_fseries_LTD_17 : d3s_fseries_17 {}; class d3s_fseries_PLT_17 : d3s_fseries_17 {}; class d3s_fseries_XLT_17 : d3s_fseries_17 {};
 
 	class d3s_challenger_15_SP : Colors {
 		vItemSpace = 50;
 		conditions ="license_civ_driver";
 		price = 95000;
-		
-	}; 
+
+	};
 	class d3s_challenger_15_RT : d3s_challenger_15_SP {}; class d3s_challenger_15_392 : d3s_challenger_15_SP {}; class d3s_challenger_15_DM : d3s_challenger_15_SP {}; class d3s_challenger_15_LW : d3s_challenger_15_SP {}; class d3s_challenger_15_WIDE : d3s_challenger_15_SP {}; class d3s_challenger_15_HELL : d3s_challenger_15_SP {}; class d3s_challenger_15 : d3s_challenger_15_SP {};
 
 	class d3s_cayenne_s_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 91964;
-		
+
 	};
 
 	class d3s_cayenne_turbo_s_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 151702;
-		
+
 	};
 
 	class d3s_cayenne_turbo_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 138850;
-		
+
 	};
 
 	class d3s_cayenne_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 74828;
-		
+
 	};
 
 	class d3s_macan_s_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 58763;
-		
+
 	};
 
 	class d3s_macan_turbo_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 80338;
-		
+
 	};
 
 	class d3s_macan_16 : Colors {
 		vItemSpace = 67;
 		conditions ="license_civ_driver";
 		price = 58763;
-		
+
 	};
-	
+
 	//truck
 	class V12_STRALIS23 : Colors {
 		vItemSpace = 600;
 		conditions ="license_civ_driver";
 		price = 300000;
-		
+
 	};
 	class d3s_savana_VAN : Colors {
 		vItemSpace = 100;
 		conditions ="license_civ_driver";
 		price = 15000;
-		
+
 	};
 	class d3s_zil_130_05 { vItemSpace = 150; conditions = "license_civ_driver"; price = 40000;  textures[] = { }; };
 	class d3s_zil_130_02 { vItemSpace = 200; conditions = "license_civ_driver"; price = 43000;  textures[] = { }; };
@@ -2241,7 +2228,7 @@ class LifeCfgVehicles {
 	class d3s_kamaz_6350 { vItemSpace = 580; conditions = "license_civ_driver"; price = 200000;  textures[] = { }; };
 	class d3s_nemises_kraz_6316 { vItemSpace = 600; conditions = "license_civ_driver"; price = 240000;  textures[] = { }; };
 	class d3s_nemises_next_tent { vItemSpace = 600; conditions = "license_civ_driver"; price = 240000;  textures[] = { }; };
-	
+
     class C_Kart_01_Fuel_F : C_Kart_01_Blu_F{}; // Get all information of C_Kart_01_Blu_F
     class C_Kart_01_Red_F : C_Kart_01_Blu_F{};
     class C_Kart_01_Vrana_F : C_Kart_01_Blu_F{};
@@ -2250,7 +2237,7 @@ class LifeCfgVehicles {
         vItemSpace = 90;
         conditions = "license_civ_rebel || {!(playerSide isEqualTo civilian)";
         price = 75000;
-		
+
         textures[] = {
             { "Rebel Digital", "reb", {
                 "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"
@@ -2262,7 +2249,7 @@ class LifeCfgVehicles {
         vItemSpace = 90;
         conditions = "license_civ_pilot || {license_cop_cAir} || {license_med_mAir}";
         price = 75000;
-		
+
         textures[] = {
             { "Sheriff", "cop", {
                 "\pi_data\textures\hummingbird.paa"
@@ -2312,14 +2299,14 @@ class LifeCfgVehicles {
     class C_Heli_Light_01_civil_F : B_Heli_Light_01_F {
         vItemSpace = 75;
         price = 75000;
-		
+
     };
 
     class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
         conditions = "license_civ_pilot || {license_med_mAir} || {(playerSide isEqualTo west)}";
         price = 115000;
-		
+
         textures[] = {
             { "Black", "cop", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
@@ -2343,7 +2330,7 @@ class LifeCfgVehicles {
         vItemSpace = 50;
         conditions = "license_civ_boat || {license_cop_cg} || {(playerSide isEqualTo independent)}";
         price = 15000;
-		
+
         textures[] = {};
     };
 };
