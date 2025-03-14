@@ -47,7 +47,21 @@ waitUntil {life_session_completed};
 
 switch (playerSide) do {
     case west: {
-        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_cop");
+		switch (call life_coplevel) do {
+			case 1: {life_paycheck =  1000;};
+			case 2: {life_paycheck = 1200;};
+			case 3: {life_paycheck = 1400;};
+			case 4: {life_paycheck = 1600;};
+			case 5: {life_paycheck = 1800;};
+			case 6: {life_paycheck = 2000;};
+			case 7: {life_paycheck = 2200;};
+			case 8: {life_paycheck = 2400;};
+			case 9: {life_paycheck = 2600;};
+			case 10: {life_paycheck = 2800;};
+			case 11: {life_paycheck = 3000;};
+			case 12: {life_paycheck = 3200;};
+			case 13: {life_paycheck = 3400;};
+		};
         [] call life_fnc_initCop;
     };
     case civilian: {
