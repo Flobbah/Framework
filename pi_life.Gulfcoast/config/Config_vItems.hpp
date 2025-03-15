@@ -179,7 +179,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "\pi_data\icons\ico_bandages.paa";
+        icon = "\pi_data\icons\bandage.paa";
     };
 
     class toolkit {

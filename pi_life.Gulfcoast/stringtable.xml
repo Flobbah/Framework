@@ -6864,6 +6864,18 @@
         </Key>
     </Package>
     <Package name="Life_Items">
+        <Key ID="STR_Item_Bandage">
+            <English>Bandage</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Bandage</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
         <Key ID="STR_Item_Cannabis">
             <English>Marijuana leaf</English>
             <Czech>marihuana list</Czech>
@@ -13776,6 +13788,18 @@
             <Portuguese></Portuguese>
             <Russian></Russian>
             <German>Verband anlegen abgebrochen. Du darfst in kein Fahrzeug einsteigen.</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Success">
+            <English>Bandage applied</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Verband angelegt</German>
 			<Chinesesimp></Chinesesimp>
         </Key>
         <Key ID="STR_Bandage_Success">
