@@ -17,6 +17,7 @@ if (isNull _unit || isNull _shooter) exitWith {player allowDamage true; life_ist
 if (_shooter isKindOf "CAManBase" && alive player) then {
     if (!life_istazed) then {
         life_istazed = true;
+        player allowDamage false;
         _curWep = currentWeapon player;
         _curMags = magazines player;
         _attach = if (!(primaryWeapon player isEqualTo "")) then {primaryWeaponItems player} else {[]};
