@@ -260,6 +260,7 @@ class Life_Client_Core {
         class placestorage {};
         class spikeStrip {};
         class storageBox {};
+        class bandage {};
     };
 
     class Medical_System {

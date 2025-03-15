@@ -221,6 +221,13 @@ switch (_code) do {
         };
     };
 
+    //Shift 0 (zero)
+    case 11: {
+        if (_shift) then {
+            [] spawn life_fnc_bandage;
+        };
+    };
+
     //F Key
     case 33: {
         if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {

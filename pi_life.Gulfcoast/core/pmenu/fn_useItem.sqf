@@ -99,6 +99,11 @@ switch (_item) do {
         closeDialog 0;
     };
 
+    case "bandage": {
+        [] spawn life_fnc_bandage;
+        closeDialog 0;
+    };
+
     default {
         [ localize "STR_ISTR_NotUsable",true,"fast"] call life_fnc_notification_system;
     };

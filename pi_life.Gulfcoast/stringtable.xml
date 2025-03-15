@@ -13669,4 +13669,126 @@
 			<Chinesesimp></Chinesesimp>
         </Key>
     </Package>
+    <Package name="Bandage">
+        <Key ID="STR_Bandage_Error_Dead">
+            <English>Bandages can't help you now...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Verbände können dir jetzt nicht helfen...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Error_NoBandages">
+            <English>You don't have any bandages!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du hast kein Verbandszeug!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Error_InAction">
+            <English>You're already doing something!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du tust schon etwas!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Error_InVehicle">
+            <English>You must be on foot in order bandage!</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Du musst zu Fuß sein, um zu verbinden!</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Error_MaxHealing">
+            <English>A bandage cannot heal you any higher</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Ein Verband kann dich nicht höher heilen</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_ProgressBar">
+            <English>Applying bandage (0%1)...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Anlegen eines Verbandes (0%1)...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_ProgressBar2">
+            <English>Applying bandage (%1%2)...</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Anlegen eines Verbandes (%1%2)...</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Error_CancelBandage">
+            <English>Canceled applying bandage.</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German></German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Error_CancelBandage_Vehicle">
+            <English>Canceled applying bandage, you cannot enter a vehicle.</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Verband anlegen abgebrochen. Du darfst in kein Fahrzeug einsteigen.</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_Bandage_Success">
+            <English>Bandage applied</English>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
+            <Italian></Italian>
+            <Polish></Polish>
+            <Portuguese></Portuguese>
+            <Russian></Russian>
+            <German>Verband angelegt</German>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+    </Package>
 </Project>
