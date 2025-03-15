@@ -20,21 +20,21 @@ class Config_Bandage {
 	class Civilian {
 		bandageTime = 15;
 		bandageSetHealth = false;
-		bandageMaxHealth = 0.8;
+		bandageMaxHealth = 0.2;
 		bandageHealing = 0.2;
 	}
 
 	class Cop {
 		bandageTime = 10;
 		bandageSetHealth = false;
-		bandageMaxHealth = 0.8;
+		bandageMaxHealth = 0.2;
 		bandageHealing = 0.2;
 	}
 
 	class Medic {
 		bandageTime = 5;
 		bandageSetHealth = false;
-		bandageMaxHealth = 0.8;
+		bandageMaxHealth = 0.2;
 		bandageHealing = 0.2;
 	}
 }
