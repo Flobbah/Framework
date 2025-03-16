@@ -3212,6 +3212,18 @@
             <Polish>Sprzedaj obiekt</Polish>
 			<Chinesesimp>卖东西</Chinesesimp>
         </Key>
+        <Key ID="STR_VS_SellAll">
+            <English>Sell All</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Alles Verkaufen</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
     </Package>
     <Package name="Spawn_Menu">
         <Key ID="STR_Spawn_Title">
