@@ -29,3 +29,4 @@
 #include "compensate.hpp"
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
+#include "placeables.hpp"

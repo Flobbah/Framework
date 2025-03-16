@@ -49,6 +49,24 @@ life_open_notifications = [];
 CHBN_adjustBrightness = 10;
 CHBN_adjustColor = [1,1,1];
 
+/*
+**************************************
+****** Placeables Variables *****
+**************************************
+*/
+life_definePlaceables = //Array aller Absperrungen (Cop + Medic)
+[
+ "RoadCone_F",
+ "RoadCone_L_F",
+ "RoadBarrier_F",
+ "RoadBarrier_small_F",
+ "PlasticBarrier_03_orange_F",
+ "Land_CncBarrier_stripes_F",
+ "Land_PortableLight_single_F",
+ "Land_PortableLight_double_F"
+];
+life_bar_limit = 100; //Maximale Anzahl Absperrungen pro Person
+
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast", true];
 life_settings_enableSidechannel = profileNamespace getVariable ["life_enableSidechannel", true];

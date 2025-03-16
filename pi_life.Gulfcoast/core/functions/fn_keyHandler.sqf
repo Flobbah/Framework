@@ -100,7 +100,27 @@ switch (_code) do {
         };
     };
 
+    //Space key for Placing Barriers
+    case 57: {
+        if (!_shift && life_barrier_active) then {
+            0 spawn life_fnc_placeablesPlaceComplete;
+        };
+    };
+
+    //Ö-Key
+    case 39: {
+        if ((isNull(findDisplay 20000)) && (playerSide in ([west,independent]))) then {
+            0 spawn life_fnc_placeablesMenu;
             _handled = true;
+        };
+        _handled = true;
+    };
+
+    //ENTF-Key
+    case 211: {
+        if ((playerSide in [west,independent]) && ((typeOf cursorTarget) in life_definePlaceables)) then {
+            deleteVehicle cursorTarget;
+            [ localize "STR_BS_Success_Remove",false,"fast"] call life_fnc_notification_system;
         };
     };
 

@@ -15,7 +15,10 @@
    - DE100 Notification System added
    - Added Bankrobbery script by "cmdFlow" edited by "DevB" and me.
    - Added Bandages as vItems by "ToxicRageTv" edited by me.
-   - Coming Soon: Barrier System
+   - Added Sell All button by "Basti | John Collins" edited by me.
+   - Barrier System by "Blackfisch" (Native Servers) - Open Menu "Ö/;" | Place Barrier "Spacebar" | Abort Placing Barrier "ESC" | Delete placeable in front of player "DEL"
+   - ~ Removed D3S Cars Pack and replaced by Alessio Cars. Searching for Trucks and Medic Cars at the moment.
+  - !!!COLLECTION UPDATE!!!
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
 [![|Solid](https://i.imgur.com/5PFRHRN.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140)

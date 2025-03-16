@@ -2969,6 +2969,200 @@
 			<Chinesesimp>聊天开启</Chinesesimp>
         </Key>
     </Package>
+    <Package name="Barrier_System">
+        <Key ID="STR_BS_Success_Remove">
+            <English>The barrier was removed</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Die Absperrung wurde entfernt</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Placeables">
+            <English>Available placeables</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German></German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_RemoveAll">
+            <English>Remove All</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Alle entfernen</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Place">
+            <English>Place</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Platzieren</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Pylon">
+            <English>Pylon</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Pylon</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_PylonWithLight">
+            <English>Pylon with light</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Pylon mit Licht</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Woodbarrier">
+            <English>Wooden barrier</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Holzabsperrung</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_WoodbarrierWithLight">
+            <English>Wooden barrier with light</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Holzabsperrung mit Licht</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_PlasticOrange">
+            <English>Orange plastic barrier</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Kunststoffabsperrung Orange</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Concrete">
+            <English>Concrete barrier</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Betonabsperrung</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_PortableLight">
+            <English>Portable light</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Tragbares Licht</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_PortableLightDuo">
+            <English>Portable light (double)</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Tragbares Licht (Doppelt)</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_CancelPlace">
+            <English>Place Canceled</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Platzieren Abgebrochen</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Error_MaxPlaceable">
+            <English>You have reached the maximum number of barriers!</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Du hast die maximale Anzahl Absperrungen erreicht!</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Error_OnlyOne">
+            <English>You can only wear one barrier</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Du kannst nur eine Absperrung tragen</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+        <Key ID="STR_BS_Success_RemoveAll">
+            <English>All objects removed</English>
+            <Czech></Czech>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <German>Alle Objekte entfernt</German>
+            <French></French>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+			<Chinesesimp></Chinesesimp>
+        </Key>
+    </Package>
     <Package name="Virt_Shop">
         <Key ID="STR_VS_SI">
             <English>Shop Inventory</English>
