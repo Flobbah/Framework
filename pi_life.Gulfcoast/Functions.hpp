@@ -283,7 +283,6 @@ class Life_Client_Core {
         file = "core\functions\network";
         class broadcast {};
         class corpse {};
-        class jumpFnc {};
         class say3D {};
         class setFuel {};
         class soundDevice {};

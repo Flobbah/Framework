@@ -156,7 +156,6 @@ class CfgRemoteExec {
         F(life_fnc_corpse,ANYONE)
         F(life_fnc_demoChargeTimer,ANYONE)
         F(life_fnc_flashbang,ANYONE)
-        F(life_fnc_jumpFnc,ANYONE)
         F(life_fnc_lockVehicle,ANYONE)
         F(life_fnc_pulloutVeh,ANYONE)
         F(life_fnc_say3D,ANYONE)
