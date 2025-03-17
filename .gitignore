@@ -51,9 +51,3 @@ Thumbs.db
 #
 .idea/
 *.iml
-
-#
-# git files that we don't want to ignore even it they are dot-files
-#
-!.gitignore
-pi_life.Gulfcoast/config/Config_Vehicles.hpp
