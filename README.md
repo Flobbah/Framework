@@ -8,7 +8,6 @@
    - textures and sounds outsourced to mod to minimize mission size
    - removed public cop slots
    - implemented CH_BrightNights
-   - Added 150 different colors for civ and undercover cop vehicles
    - Added take all/store all from trunk script by "Basti | John Collins" aka DevB
    - Added New Hud by "Kureo & Zalac"
    - Added Rob Gas Stations script by "Moeck" edited by Deathman and me. Added Strings so it's in english and german.
@@ -17,7 +16,7 @@
    - Added Bandages as vItems by "ToxicRageTv" edited by me.
    - Added Sell All button by "Basti | John Collins" edited by me.
    - Barrier System by "Blackfisch" (Native Servers) - Open Menu "Ö/;" | Place Barrier "Spacebar" | Abort Placing Barrier "ESC" | Delete placeable in front of player "DEL"
-   - ~ Removed D3S Cars Pack and replaced by Alessio Cars. Searching for Trucks and Medic Cars at the moment.
+   - ~ Removed Car mods.
   - !!!COLLECTION UPDATE!!!
   - Mod collection on steam: https://steamcommunity.com/sharedfiles/filedetails/?id=3426226140
 
