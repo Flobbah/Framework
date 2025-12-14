@@ -41,6 +41,25 @@ for "_i" from 0 to 1 step 0 do {
             _animal setDir (random 360);
             animals pushBack _animal;
         };
+        [_zone, _radius, _animalList, _dist, _maxAnimals] spawn {
+            params ["_zone", "_radius", "_animalList", "_dist", "_maxAnimals"];
+            for "_j" from 0 to 1 step 0 do {
+                uiSleep (60 + random 30);
+                private _unitsNearRespawn = false;
+                {if ((_x distance _zone) < _dist) exitWith {_unitsNearRespawn = true;}; _unitsNearRespawn = false;} forEach playableUnits;
+                if (!_unitsNearRespawn) exitWith {};
+                private _missing = _maxAnimals - count animals;
+                if (_missing > 0) then {
+                    for "_k" from 1 to _missing do {
+                        _animalClass = selectRandom _animalList;
+                        _position = [((_zone select 0) - _radius + random (_radius * 2)), ((_zone select 1) - _radius + random (_radius * 2)),0];
+                        _animal = createAgent [_animalClass,_position,[],0,"FORM"];
+                        _animal setDir (random 360);
+                        animals pushBack _animal;
+                    };
+                };
+            };
+        };
     } else {
         if (!_unitsNear && _animalsActive) then {
             {deleteVehicle _x;} forEach animals;

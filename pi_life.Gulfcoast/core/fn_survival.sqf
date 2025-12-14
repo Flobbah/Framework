@@ -6,7 +6,7 @@
     Description:
     All survival? things merged into one thread.
 */
-private ["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos"];
+private ["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos","_lastState"];
 _fnc_food =  {
     if (life_hunger < 2) then {player setDamage 1; [ localize "STR_NOTF_EatMSG_Death",true,"slow"] call life_fnc_notification_system;}
     else

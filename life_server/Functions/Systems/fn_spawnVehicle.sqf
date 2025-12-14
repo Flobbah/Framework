@@ -14,7 +14,7 @@ params [
     ["_unit", objNull, [objNull]],
     ["_price", 0, [0]],
     ["_dir", 0, [0]],
-    "_spawntext"
+    ["_spawntext", "", [""]]
 ];
 
 private _unit_return = _unit;
@@ -85,6 +85,7 @@ if (_sp isEqualType "") then {
     _vehicle = createVehicle[(_vInfo select 2),[0,0,999],[],0,"NONE"];
     waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
     _vehicle allowDamage false;
+    private _hs;
     _hs = nearestObjects[getMarkerPos _sp,["Land_Hospital_side2_F"],50] select 0;
     _vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
     uiSleep 0.6;
@@ -147,10 +148,10 @@ if (LIFE_SETTINGS(getNumber,"save_vehicle_fuel") isEqualTo 1) then {
 };
 
 if (count _gear > 0 && (LIFE_SETTINGS(getNumber,"save_vehicle_inventory") isEqualTo 1)) then {
-    _items = _gear select 0;
-    _mags = _gear select 1;
-    _weapons = _gear select 2;
-    _backpacks = _gear select 3;
+    private _items = _gear select 0;
+    private _mags = _gear select 1;
+    private _weapons = _gear select 2;
+    private _backpacks = _gear select 3;
 
     for "_i" from 0 to ((count (_items select 0)) - 1) do {
         _vehicle addItemCargoGlobal [((_items select 0) select _i), ((_items select 1) select _i)];
@@ -167,7 +168,7 @@ if (count _gear > 0 && (LIFE_SETTINGS(getNumber,"save_vehicle_inventory") isEqua
 };
 
 if (count _damage > 0 && (LIFE_SETTINGS(getNumber,"save_vehicle_damage") isEqualTo 1)) then {
-    _parts = getAllHitPointsDamage _vehicle;
+    private _parts = getAllHitPointsDamage _vehicle;
 
     for "_i" from 0 to ((count _damage) - 1) do {
         _vehicle setHitPointDamage [format ["%1",((_parts select 0) select _i)],_damage select _i];
