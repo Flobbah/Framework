@@ -4,7 +4,6 @@
  File: fn_vehStoreAllItem.sqf
  Author: Basti | John Collins
  Edit by: Blackfisch
-
  Description:
  stores all (max items) from selected and add it to the Vehicles inventory
 */
@@ -49,7 +48,6 @@ if(_ctrl == "money") then
  _val = _inv select _index select 1;
  _inv set[_index,[_ctrl,_val + _num]];
  };
-
  Life_cash = Life_cash - _num;
  Life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
  [Life_trunk_vehicle] call Life_fnc_vehInventory;
@@ -68,7 +66,6 @@ if(_ctrl == "money") then
  _val = _inv select _index select 1;
  _inv set[_index,[_ctrl,_val + _num]];
  };
-
  Life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
  [Life_trunk_vehicle] call Life_fnc_vehInventory;
 };

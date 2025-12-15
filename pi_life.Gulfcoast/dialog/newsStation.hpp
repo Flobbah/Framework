@@ -3,7 +3,6 @@ class life_news_broadcast {
     name= "life_news_broadcast";
     movingEnable = 0;
     enableSimulation = 1;
-
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText {
             colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.3843])", "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.7019])", "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.8862])", "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.7])"};
@@ -13,7 +12,6 @@ class life_news_broadcast {
             w = 0.64;
             h = (1 / 25);
         };
-
         class MainBackground: Life_RscText {
             colorBackground[] = {0, 0, 0, 0.7};
             idc = -1;
@@ -23,7 +21,6 @@ class life_news_broadcast {
             h = 0.3 - (5 / 250);
         };
     };
-
     class controls {
         class Title: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
@@ -34,7 +31,6 @@ class life_news_broadcast {
             w = 0.6;
             h = (1 / 25);
         };
-
         class MsgHeader: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
@@ -44,7 +40,6 @@ class life_news_broadcast {
             w = 0.6;
             h = (1 / 25);
         };
-
         class MsgHeaderEdit: Life_RscEdit {
             idc = 100101;
             text = "";
@@ -54,7 +49,6 @@ class life_news_broadcast {
             w = 0.62;
             h = 0.03;
         };
-
         class MsgText: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
@@ -64,7 +58,6 @@ class life_news_broadcast {
             w = 0.6;
             h = (1 /25);
         };
-
         class MsgContentEdit: Life_RscEdit {
             idc = 100102;
             text = "";
@@ -74,7 +67,6 @@ class life_news_broadcast {
             w = 0.62;
             h = 0.03;
         };
-
         class MessageInfo: Life_RscStructuredText {
             colorBackground[] = {0, 0, 0, 0};
             idc = 100103;
@@ -84,7 +76,6 @@ class life_news_broadcast {
             w = 0.6;
             h = .275;
         };
-
         class ConfirmButtonKey: Life_RscButtonMenu {
             idc = 100104;
             text = "$STR_News_Broadcast";
@@ -93,7 +84,6 @@ class life_news_broadcast {
             w = (10.5 / 40);
             h = (1 / 25);
         };
-
         class CloseButtonKey: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";

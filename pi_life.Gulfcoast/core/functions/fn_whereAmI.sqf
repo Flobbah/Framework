@@ -1,18 +1,14 @@
 /*
     File: fn_whereAmI.sqf
     Author: Dardo
-
     Description:
     Return the nearest kind of resource field to the player
-
     mine
     resource
     nothing
 */
-
 private ["_zonem", "_zone", "_mine", "_zoneSize", "_resource", "_nothing"];
 _resourceCfg = missionConfigFile >> "CfgGather" >> "Minerals";
-
 for "_i" from 0 to count(_resourceCfg)-1 do {
     private ["_curConfig", "_resourceZones", "_requiredItem"];
     _zonem = "";
@@ -26,14 +22,10 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
     } forEach _resourceZones;
     if (_zonem != "") exitWith {};
 };
-
 if (_zonem != "") exitWith {
     _mine = "mine";
     _mine;
 };
-
-
-
 _resourceCfg = missionConfigFile >> "CfgGather" >> "Resources";
 for "_i" from 0 to count(_resourceCfg)-1 do {
     private ["_curConfig", "_resourceZones", "_requiredItem"];

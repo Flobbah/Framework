@@ -2,7 +2,6 @@
 /*
     File: fn_actionKeyHandler.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Master action key handler, handles requests for picking up various items and
     interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
@@ -12,18 +11,15 @@ _curObject = cursorObject;
 if (life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 if (life_interrupted) exitWith {life_interrupted = false;};
 _isWater = surfaceIsWater (visiblePositionASL player);
-
 if (playerSide isEqualTo west && {player getVariable ["isEscorting",false]}) exitWith {
     [] call life_fnc_copInteractionMenu;
 };
-
 if (LIFE_SETTINGS(getNumber,"global_ATM") isEqualTo 1) then{
     //Check if the player is near an ATM.
     if ((call life_fnc_nearATM) && {!dialog}) exitWith {
         [] call life_fnc_atmMenu;
     };
 };
-
 if (isNull _curObject) exitWith {
     if (_isWater) then {
         _fish = (nearestObjects[player,(LIFE_SETTINGS(getArray,"animaltypes_fish")),3]) select 0;
@@ -54,32 +50,26 @@ if (isNull _curObject) exitWith {
         };
     };
 };
-
 if ((_curObject isKindOf "B_supplyCrate_F" || _curObject isKindOf "Box_IND_Grenades_F") && {player distance _curObject < 3} ) exitWith {
     if (alive _curObject) then {
         [_curObject] call life_fnc_containerMenu;
     };
 };
-
 private _vaultHouse = [[["Gulfcoast", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
 private _altisArray = [14778.333,12362.36,0];
 private _tanoaArray = [11074.2,11501.5,0.00137329];
 private _pos = [[["Gulfcoast", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
-
 if (_curObject isKindOf "House_F" && {player distance _curObject < 12} || ((nearestObject [_pos,"Land_Dome_Big_F"]) isEqualTo _curObject || (nearestObject [_pos,_vaultHouse]) isEqualTo _curObject)) exitWith {
     [_curObject] call life_fnc_houseMenu;
 };
-
 if (dialog) exitWith {}; //Don't bother when a dialog is open.
 if !(isNull objectParent player) exitWith {}; //He's in a vehicle, cancel!
 life_action_inUse = true;
-
 //Temp fail safe.
 [] spawn {
     sleep 60;
     life_action_inUse = false;
 };
-
 //Check if it's a dead body.
 if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
     //Hotfix code by ins0
@@ -89,7 +79,6 @@ if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
         };
     };
 };
-
 //If target is a player then check if we can use the cop menu.
 if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
     if ((_curObject getVariable ["restrained",false]) && !dialog && playerSide isEqualTo west) then {
@@ -98,11 +87,9 @@ if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
 } else {
     //OK, it wasn't a player so what is it?
     private ["_isVehicle","_miscItems","_money","_list"];
-
     _list = ["landVehicle","Ship","Air"];
     _isVehicle = if (KINDOF_ARRAY(_curObject,_list)) then {true} else {false};
     _miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
-
     //It's a vehicle! open the vehicle interaction key!
     if (_isVehicle) then {
         if (!dialog) then {

@@ -1,14 +1,12 @@
 /*
     File : fn_deleteDBContainer.sqf
     Author: NiiRoZz
-
     Description:
     Delete Container and remove Container in Database
 */
 private ["_house","_houseID","_ownerID","_housePos","_query","_radius","_containers"];
 _container = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (isNull _container) exitWith  {diag_log "container null";};
-
 _containerID = _container getVariable ["container_id",-1];
 if (_containerID isEqualTo -1) then {
     _containerPos = getPosATL _container;
@@ -21,8 +19,6 @@ if (_containerID isEqualTo -1) then {
 };
 _container setVariable ["container_id",nil,true];
 _container setVariable ["container_owner",nil,true];
-
 [_query,1] call DB_fnc_asyncCall;
-
 ["CALL deleteOldContainers",1] call DB_fnc_asyncCall;
 deleteVehicle _container;

@@ -2,26 +2,20 @@
 /*
     File: fn_atmMenu.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Opens and manages the bank menu.
 */
 private ["_units","_type"];
-
 if (!life_use_atm) exitWith {
     [ format [localize "STR_Shop_ATMRobbed",(LIFE_SETTINGS(getNumber,"noatm_timer"))],true,"fast"] call life_fnc_notification_system;
 };
-
 if (!dialog) then {
     if (!(createDialog "Life_atm_management")) exitWith {};
 };
-
 disableSerialization;
 _units = CONTROL(2700,2703);
-
 lbClear _units;
 CONTROL(2700,2701) ctrlSetStructuredText parseText format ["<img size='1.7' image='\pi_data\icons\ico_bank.paa'/> $%1<br/><img size='1.6' image='\pi_data\icons\ico_money.paa'/> $%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
-
 {
     _name = _x getVariable ["realname",name _x];
     if (alive _x && (!(_name isEqualTo profileName))) then {
@@ -34,9 +28,7 @@ CONTROL(2700,2701) ctrlSetStructuredText parseText format ["<img size='1.7' imag
         _units lbSetData [(lbSize _units)-1,str(_x)];
     };
 } forEach playableUnits;
-
 lbSetCurSel [2703,0];
-
 if (isNil {(group player getVariable "gang_bank")}) then {
     (CONTROL(2700,2705)) ctrlEnable false;
     (CONTROL(2700,2706)) ctrlEnable false;

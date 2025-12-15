@@ -1,6 +1,5 @@
 waitUntil {!isServer && {!isNull player} && {player isEqualTo player}};
 if (player diarySubjectExists "controls") exitWith {};
-
 player createDiarySubject ["credits","Credits"];
 player createDiarySubject ["changelog","Change Log"];
 player createDiarySubject ["serverrules","General Rules"];
@@ -11,7 +10,6 @@ player createDiarySubject ["illegalitems","Illegal Activity"];
 //player createDiarySubject ["gangrules","Gang Rules"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
 player createDiarySubject ["controls","Controls"];
-
 /*  Example
     player createDiaryRecord ["", //Container
         [
@@ -22,7 +20,6 @@ TEXT HERE<br/><br/>
         ]
     ];
 */
-
     player createDiaryRecord ["credits",
         [
             "AsYetUntitled",
@@ -31,7 +28,6 @@ AsYetUntitled (formerly ArmaLife) is a GitHub project which aims to update and k
                 "
         ]
     ];
-
     player createDiaryRecord ["changelog",
         [
             "Altis Life Changelog",
@@ -43,7 +39,6 @@ Date: 25. December 2019<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["changelog",
         [
             "Server Change Log",
@@ -52,7 +47,6 @@ This section is meant for people doing their own edits to the mission, DO NOT RE
                 "
         ]
     ];
-
         player createDiaryRecord ["serverrules",
         [
             "Exploits",
@@ -66,7 +60,6 @@ These are considered exploits, and you will not be kicked, but banned.<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["safezones",
         [
             "Safe Zones",
@@ -79,7 +72,6 @@ Rebel Outposts<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Bannable Offenses",
@@ -92,7 +84,6 @@ Consider this your one and only warning.<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Cop Interaction",
@@ -106,7 +97,6 @@ Items on this list may result in your removal from the server and/or ban, based 
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Boats",
@@ -118,7 +108,6 @@ Items on this list may result in your removal from the server and/or ban, based 
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Aviation",
@@ -130,7 +119,6 @@ Items on this list may result in your removal from the server and/or ban, based 
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Vehicles",
@@ -146,7 +134,6 @@ Items on this list may result in your removal from the server and/or ban, based 
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Communication Rules",
@@ -159,7 +146,6 @@ Items on this list may result in your removal from the server and/or ban, based 
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Random Deathmatching (RDM)",
@@ -175,7 +161,6 @@ These are all judged by admins on a case by case basis.<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "New Life Rule",
@@ -190,7 +175,6 @@ Items on this list may result in your removal from the server and/or ban, based 
                 "
         ]
     ];
-
     player createDiaryRecord ["serverrules",
         [
             "Don't Be A Dick!",
@@ -202,7 +186,6 @@ This rule may be invoked at an admin's discretion.<br/><br/>
                 "
         ]
     ];
-
 // Police Section
     player createDiaryRecord ["policerules",
         [
@@ -212,7 +195,6 @@ Crisis Negotiation must be handled by a Sergeant. If one is not available, the p
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "The Federal Reserve",
@@ -228,7 +210,6 @@ Crisis Negotiation must be handled by a Sergeant. If one is not available, the p
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Aviation",
@@ -246,7 +227,6 @@ Small towns: An appropriate location may be chosen. This is to be judged by offi
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Illegal Areas",
@@ -258,7 +238,6 @@ Small towns: An appropriate location may be chosen. This is to be judged by offi
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Patrolling",
@@ -269,7 +248,6 @@ Small towns: An appropriate location may be chosen. This is to be judged by offi
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Checkpoints",
@@ -292,7 +270,6 @@ Proper Checkpoint Procedure:<br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Vehicles",
@@ -307,7 +284,6 @@ Proper Checkpoint Procedure:<br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Speeding",
@@ -322,7 +298,6 @@ Main roads: 110km/h<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "City Protocol",
@@ -336,7 +311,6 @@ Main roads: 110km/h<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Arresting and Ticketing",
@@ -354,7 +328,6 @@ A complete list of all crimes and the appropriate punishments should be given to
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Weapons",
@@ -373,7 +346,6 @@ Any other weapon (Including Silenced P07 [Considered a Police Weapon]) is illega
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Use of Non-Lethal Force",
@@ -385,7 +357,6 @@ At this time the Taser (Silenced P07) is the only form of Non-Lethal Force.<br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Raiding/Camping",
@@ -406,7 +377,6 @@ Camping is defined as the prolong stay of an officer in an area.<br/><br/>
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Chain of Command",
@@ -426,7 +396,6 @@ Cops in game who are not enrolled/accepted into the SPD are the lowest tier and 
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "Use of Lethal Force",
@@ -437,7 +406,6 @@ Cops in game who are not enrolled/accepted into the SPD are the lowest tier and 
                 "
         ]
     ];
-
     player createDiaryRecord ["policerules",
         [
             "TeamSpeak Rule",
@@ -447,7 +415,6 @@ Cops in game who are not enrolled/accepted into the SPD are the lowest tier and 
                 "
         ]
     ];
-
 // Illegal Items Section
     player createDiaryRecord ["illegalitems",
         [
@@ -462,7 +429,6 @@ A rebel is one who rises in armed resistance against a government. In this case 
                 "
         ]
     ];
-
     player createDiaryRecord ["illegalitems",
         [
             "Gang Rules",
@@ -476,7 +442,6 @@ A rebel is one who rises in armed resistance against a government. In this case 
                 "
         ]
     ];
-
     player createDiaryRecord ["illegalitems",
         [
             "Illegal Vehicles",
@@ -489,7 +454,6 @@ A civilian in control of the following prohibited vehicles is subject to the con
                 "
         ]
     ];
-
     player createDiaryRecord ["illegalitems",
         [
             "Illegal Weapons",
@@ -507,7 +471,6 @@ A civilian in possession of the following is subject to the consequences as defi
                 "
         ]
     ];
-
     player createDiaryRecord ["illegalitems",
         [
             "Illegal Items",
@@ -521,9 +484,7 @@ The following items are illegal to posses:<br/><br/>
                 "
         ]
     ];
-
 // Controls Section
-
     player createDiaryRecord ["controls",
         [
             "Police and medic controls",

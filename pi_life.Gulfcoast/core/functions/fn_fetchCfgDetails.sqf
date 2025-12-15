@@ -5,10 +5,8 @@
     @file_author: TAW_Tonic
     @file_edit: 8/2/2013
     @file_description: Fetch information about the entities config
-
     USAGE:
     [Classname,Cfg* (Optional)] call VAS_fnc_fetchCfgDetails;
-
     Return:
     0: classname
     1: displayname
@@ -30,7 +28,6 @@ private ["_className","_section","_type","_accPointer","_accMuzzle","_accOptic",
 _className = [_this,0,"",[""]] call BIS_fnc_param;
 _section = [_this,1,"",[""]] call BIS_fnc_param;
 if (_className isEqualTo "") exitWith {[]};
-
 _type = -1;
 _accPointer = [];
 _accOptic = [];
@@ -41,7 +38,6 @@ _itemInfo = -1;
 _muzzles = [];
 _magazines = [];
 _return = [];
-
 if (_section isEqualTo "") then {
     _section = switch (true) do {
         case (isClass(configFile >> "CfgMagazines" >> _className)): {"CfgMagazines"};
@@ -50,33 +46,28 @@ if (_section isEqualTo "") then {
         case (isClass(configFile >> "CfgGlasses" >> _className)): {"CfgGlasses"};
     };
 };
-
 if (!(_section isEqualType "") || {!isClass(configFile >> _section >> _className)} || {_section isEqualTo ""}) exitWith {[]};
 _config = configFile >> _section >> _className;
 _displayName = getText(_config >> "displayName");
 _picture = getText(_config >> "picture");
 _desc = getText(_config >> "descriptionshort");
 _base = inheritsFrom _config;
-
 switch (_section) do
 {
     case "CfgVehicles": {
         _type = getText(_config >> "vehicleClass");
         _scope = getNumber(_config >> "scope");
     };
-
     case "CfgWeapons": {
         _scope = getNumber(_config >> "scope");
         _type = getNumber(_config >> "type");
         _desc = getText(_config >> "descriptionshort");
-
         //Compatible attachments
         if (isClass (_config >> "WeaponSlotsInfo")) then
         {
             _accPointer = getArray(_config >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleItems");
             _accOptic = getArray(_config >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems");
             _accMuzzle = getArray(_config >> "WeaponSlotsInfo" >> "MuzzleSlot" >> "compatibleItems");
-
             {    private "_thiscfgitem";
                 for "_i" from 0 to (count(_x) - 1) do {
                     _thiscfgitem = _x select _i;
@@ -88,11 +79,9 @@ switch (_section) do
                 };
             } forEach ([_config>>"WeaponSlotsInfo"] call bis_fnc_returnParents);
         };
-
         if (isClass (_config >> "ItemInfo")) then {
             _itemInfo = getNumber(_config >> "ItemInfo" >> "Type");
         };
-
         _muzzles = getArray(_config >> "muzzles");
         _magazines = getArray(_config >> "magazines");
         if (!isNil "_muzzles") then {
@@ -106,12 +95,10 @@ switch (_section) do
             } forEach _muzzles;
         };
     };
-
     case "CfgMagazines": {
         _scope = getNumber(_config >> "scope");
     };
 };
-
 if (!isNil "_classes") then {
     _classes = _classes - ["MuzzleSlot"];
     _classes = _classes - ["CowsSlot"];

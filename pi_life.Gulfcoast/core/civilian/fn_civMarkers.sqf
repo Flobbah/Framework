@@ -1,14 +1,12 @@
 /*
     File: fn_civMarkers.sqf
     Author:
-
     Description:
     Add markers for civilians in groups.
 */
 private ["_markers","_members"];
 _markers = [];
 _members = [];
-
 for "_i" from 0 to 1 step 0 do {
     sleep 0.5;
     if (visibleMap) then
@@ -23,7 +21,6 @@ for "_i" from 0 to 1 step 0 do {
                 _markers pushBack [_marker,_x];
             };
         } forEach _members;
-
         while {visibleMap} do
         {
             {
@@ -36,7 +33,6 @@ for "_i" from 0 to 1 step 0 do {
             if (!visibleMap) exitWith {};
             sleep 0.02;
         };
-
         {deleteMarkerLocal (_x select 0);} forEach _markers;
         _markers = [];
         _members = [];

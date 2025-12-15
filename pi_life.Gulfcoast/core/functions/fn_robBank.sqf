@@ -13,7 +13,6 @@ _cops = (west countSide playableUnits);
 _chance = random(100);
 _startRob = false;
 _minCops = 4;
-
 if(_cops < _minCops) exitWith { [ localize "STR_Bank_MinCops",true,"fast"] call life_fnc_notification_system};
 if (!_canRob) exitWith { [ localize "STR_Bank_BankTimer",true,"fast"] call life_fnc_notification_system};
 if (playerSide != civilian) exitWith { [ localize "STR_Bank_CopRobBank",true,"fast"] call life_fnc_notification_system};
@@ -25,10 +24,8 @@ if !(alive player) exitWith {};
 if (_startRob) exitWith {};
 _startRob = true;
 _bank setVariable ["canRob",false,false];
-
 DevB_BankRobbing = true;
 publicVariable "DevB_BankRobbing";
-
 [2,format[localize "STR_Bank_CopNotification", _bank]] remoteExec ["life_fnc_broadcast",west];
 [1,format[localize "STR_Bank_CopNotification", _bank]] remoteExec ["life_fnc_broadcast",west];
 disableSerialization;
@@ -55,7 +52,6 @@ if(_startRob) then {
 		if(player distance _bank > 11) exitWith { };
 		if!(alive player) exitWith {};
 	};
-
 	if!(alive player) exitWith { _startRob = _false; };
 	if(_robber distance _bank > 11) exitWith {
 		5 cutText ["","PLAIN"];
@@ -80,11 +76,9 @@ if(_startRob) then {
 	_obj = "Land_Money_F" createVehicle _pos;
 	_obj setVariable ["item",["money",_moneyAmount],true];
 	_obj setPos _pos;
-
 	_smoke = "SmokeShellYellow" createVehicle [0,0,9999];
 	_smoke setPos _pos;
 	_smoke setVelocity [100,0,0];
-
 	_startRob = false;
 	life_use_atm = false;
 	sleep (30 + random(180));

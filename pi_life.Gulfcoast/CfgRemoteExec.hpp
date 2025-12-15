@@ -5,17 +5,14 @@
     allowedTargets = TARGET; \
     jip = 1; \
 };
-
 #define ANYONE 0
 #define CLIENT 1
 #define SERVER 2
 #define HC HC_Life
-
 class CfgRemoteExec {
     class Functions {
         mode = 1;
         jip = 0;
-
         /* Client only functions */
         F(life_fnc_AAN,CLIENT)
         F(life_fnc_addVehicle2Chain,CLIENT)
@@ -74,7 +71,6 @@ class CfgRemoteExec {
         F(TON_fnc_clientGetKey,CLIENT)
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
-
         /* Server only functions */
         F(DB_fnc_insertRequest,SERVER)
         F(DB_fnc_queryRequest,SERVER)
@@ -112,7 +108,6 @@ class CfgRemoteExec {
         F(TON_fnc_vehicleUpdate,SERVER)
         F(TON_fnc_handleBlastingCharge,SERVER)
         F(TON_fnc_houseGarage,SERVER)
-
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)
         F(HC_fnc_addHouse,HC)
@@ -146,7 +141,6 @@ class CfgRemoteExec {
         F(HC_fnc_wantedFetch,HC)
         F(HC_fnc_wantedProfUpdate,HC)
         F(HC_fnc_wantedRemove,HC)
-
         /* Functions for everyone */
         F(BIS_fnc_effectKilledAirDestruction,ANYONE)
         F(BIS_fnc_effectKilledSecondaries,ANYONE)
@@ -162,11 +156,9 @@ class CfgRemoteExec {
         F(life_fnc_setFuel,ANYONE)
         F(life_fnc_simDisable,ANYONE)
     };
-
     class Commands {
         mode = 1;
         jip = 0;
-
         F(addHandgunItem,ANYONE)
         F(addMagazine,ANYONE)
         F(addPrimaryWeaponItem,ANYONE)

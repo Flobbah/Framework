@@ -2,7 +2,6 @@
 /*
     File: fn_vehicleWeightCfg.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Master configuration for vehicle weight.
 */
@@ -14,6 +13,5 @@ if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _classNameLife)) then {
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_className];
 };
 _weight = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"vItemSpace");
-
 if (isNil "_weight") then {_weight = -1;};
 _weight;

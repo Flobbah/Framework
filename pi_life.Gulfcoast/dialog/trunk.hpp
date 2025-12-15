@@ -3,7 +3,6 @@ class TrunkMenu {
     name = "TrunkMenu";
     movingEnable = 0;
     enableSimulation = 1;
-
     class controlsBackground {
         class MainBackground: Life_RscText {
             idc = -1;
@@ -13,7 +12,6 @@ class TrunkMenu {
             h = 0.594 * safezoneH;
             colorBackground[] = {-1,-1,-1,0.6};
         };
-
         class BG: Life_RscText {
             idc = -1;
             x = 0.23651 * safezoneW + safezoneX;
@@ -22,7 +20,6 @@ class TrunkMenu {
             h = 0.055 * safezoneH;
             colorBackground[] = {-1,-1,-1,0.7};
         };
-
         class RscTitleText: Life_RscTitle {
             idc = 3501;
             text = "";
@@ -31,13 +28,11 @@ class TrunkMenu {
             w = 0.520781 * safezoneW;
             h = 0.055 * safezoneH;
         };
-
         class VehicleWeight: RscTitleText {
             idc = 3504;
             style = 1;
             text = "";
         };
-
         class RscTrunkText: Life_RscText {
             idc = -1;
             text = "$STR_Trunk_TInventory";
@@ -60,7 +55,6 @@ class TrunkMenu {
             colorBackground[] = {-1,-1,-1,0.7};
         };
     };
-
     class Controls {
         class TrunkGear: Life_RscListbox {
             idc = 3502;
@@ -71,7 +65,6 @@ class TrunkMenu {
             w = 0.232031 * safezoneW;
             h = 0.363 * safezoneH;
         };
-
         class PlayerGear: Life_RscListbox {
             idc = 3503;
             text = "";
@@ -81,7 +74,6 @@ class TrunkMenu {
             w = 0.232031 * safezoneW;
             h = 0.363 * safezoneH;
         };
-
         class TrunkEdit: Life_RscEdit {
             idc = 3505;
             text = "1";
@@ -91,7 +83,6 @@ class TrunkMenu {
             w = 0.0979687 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class PlayerEdit: Life_RscEdit {
             idc = 3506;
             text = "1";
@@ -112,7 +103,6 @@ class TrunkMenu {
             w = 0.128906 * safezoneW;
             h = 0.033 * safezoneH;
         };
-
         class StoreItem: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Trunk_Store";
@@ -134,7 +124,6 @@ class TrunkMenu {
             w = 0.128906 * safezoneW;
             h = 0.033 * safezoneH;
         };
-
         class StoreAllItem: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Trunk_Store_All";
@@ -145,7 +134,6 @@ class TrunkMenu {
             w = 0.128906 * safezoneW;
             h = 0.033 * safezoneH;
         };
-
         class ButtonClose: Life_RscButtonMenu{
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};

@@ -1,9 +1,7 @@
 /*
     File: fn_pullOutVeh.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
-
 */
 if (playerSide isEqualTo west || (isNull objectParent player)) exitWith {};
 if (player getVariable "restrained") then {

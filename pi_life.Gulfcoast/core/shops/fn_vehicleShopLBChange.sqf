@@ -3,21 +3,17 @@
     File: fn_vehicleShopLBChange.sqf
     Author: Bryan "Tonic" Boardwine
     Modified : NiiRoZz
-
     Description:
     Called when a new selection is made in the list box and
     displays various bits of information about the vehicle.
 */
 disableSerialization;
 private ["_className","_classNameLife","_initalPrice","_buyMultiplier","_rentMultiplier","_vehicleInfo","_colorArray","_ctrl","_trunkSpace","_maxspeed","_horsepower","_passengerseats","_fuel","_armor"];
-
 //Fetch some information.
 _className = (_this select 0) lbData (_this select 1);
 _classNameLife = _className;
 _vIndex = (_this select 0) lbValue (_this select 1);
-
 _initalPrice = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
-
 switch (playerSide) do {
     case civilian: {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
@@ -36,7 +32,6 @@ switch (playerSide) do {
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_OPFOR");
     };
 };
-
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 _maxspeed = (_vehicleInfo select 8);
@@ -45,7 +40,6 @@ _passengerseats = (_vehicleInfo select 10);
 _fuel = (_vehicleInfo select 12);
 _armor = (_vehicleInfo select 9);
 [_className] call life_fnc_3dPreviewDisplay;
-
 ctrlShow [2330,true];
 (CONTROL(2300,2303)) ctrlSetStructuredText parseText format [
     (localize "STR_Shop_Veh_UI_Rental")+ " <t color='#8cff9b'>$%1</t><br/>" +
@@ -65,16 +59,13 @@ ctrlShow [2330,true];
     _fuel,
     _armor
 ];
-
 _ctrl = CONTROL(2300,2304);
 lbClear _ctrl;
-
 if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _classNameLife)) then {
     _classNameLife = "Default"; //Use Default class if it doesn't exist
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_className];
 };
 _colorArray = M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures");
-
 {
     _flag = (_x select 1);
     _textureName = (_x select 0);
@@ -87,14 +78,12 @@ _colorArray = M_CONFIG(getArray,"LifeCfgVehicles",_classNameLife,"textures");
         };
     };
 } forEach _colorArray;
-
 _numberindexcolorarray = [];
 for "_i" from 0 to (count(_colorArray) - 1) do {
     _numberindexcolorarray pushBack _i;
 };
 _indexrandom = _numberindexcolorarray call BIS_fnc_selectRandom;
 _ctrl lbSetCurSel _indexrandom;
-
 if (_className in (LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly"))) then {
     ctrlEnable [2309,false];
 } else {
@@ -102,11 +91,9 @@ if (_className in (LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly"))) then {
         ctrlEnable [2309,true];
     };
 };
-
 if !((lbSize _ctrl)-1 isEqualTo -1) then {
     ctrlShow[2304,true];
 } else {
     ctrlShow[2304,false];
 };
-
 true;

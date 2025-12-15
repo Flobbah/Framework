@@ -2,11 +2,9 @@
 /*
     File: fn_initCiv.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Initializes the civilian.
 */
-
 waitUntil {!(isNull (findDisplay 46))};
 if (life_is_alive && !life_is_arrested) then {
     /* Spawn at our last position */

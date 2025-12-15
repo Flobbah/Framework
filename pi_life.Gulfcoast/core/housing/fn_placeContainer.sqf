@@ -3,7 +3,6 @@
     File: fn_placeContainer.sqf
     Author: NiiRoZz
     Credits: BoGuu
-
     Description:
     Check container if are in house and if house are owner of player and if all this conditions are true add container in database
 */
@@ -12,16 +11,13 @@ params [
         ["_container",objNull,[objNull]],
         ["_isFloating",true,[true]]
 ];
-
 _uid = getPlayerUID player;
 _house = nearestObject [player, "House"];
-
 switch (true) do {
     case (typeOf _container isEqualTo "B_supplyCrate_F"): {_type = "storagebig"};
     case (typeOf _container isEqualTo "Box_IND_Grenades_F") : {_type = "storagesmall"};
     default {_type = ""};
 };
-
 _message = 0;
 _isPlaced = false;
 if (!isNull _house) then {
@@ -52,12 +48,9 @@ if (!isNull _house) then {
         };
     };
 };
-
 if (_isPlaced) exitWith {};
-
 deleteVehicle _container;
 [true,_type,1] call life_fnc_handleInv;
-
 if (_message isEqualTo 0 || _message isEqualTo 1) then {
     [ localize "STR_House_Container_House_Near",true,"fast"] call life_fnc_notification_system;
 };

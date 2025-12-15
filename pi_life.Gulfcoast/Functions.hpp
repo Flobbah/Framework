@@ -10,10 +10,8 @@ class Socket_Reciever {
         class updateRequest {};
     };
 };
-
 class Life_Client_Core {
     tag = "life";
-
     class Master_Directory {
         file = "core";
         class initCiv {};
@@ -23,7 +21,6 @@ class Life_Client_Core {
         class setupEVH {};
         class survival {};
     };
-
     class Placeables    {
     file = "core\functions\placeables";
         class placeablesInit {};
@@ -34,7 +31,6 @@ class Life_Client_Core {
         class placeableCancel {};
         class placeablesPlaceComplete {};
     };
-
     class Actions {
         file = "core\actions";
         class arrestAction {};
@@ -72,7 +68,6 @@ class Life_Client_Core {
         class ticketAction {};
         class unrestrain {};
     };
-
     class Admin {
         file = "core\admin";
         class adminCompensate {};
@@ -89,7 +84,6 @@ class Life_Client_Core {
         class adminTeleport {};
         class adminTpHere {};
     };
-
     class Civilian {
         file = "core\civilian";
         class civMarkers {};
@@ -104,7 +98,6 @@ class Life_Client_Core {
         class robReceive {};
         class tazed {};
     };
-
     class Config {
         file = "core\config";
         class houseConfig {};
@@ -112,7 +105,6 @@ class Life_Client_Core {
         class vehicleAnimate {};
         class vehicleWeightCfg {};
     };
-
     class Cop {
         file = "core\cop";
         class bountyReceive {};
@@ -141,7 +133,6 @@ class Life_Client_Core {
         class vehInvSearch {};
         class wantedGrab {};
     };
-
     class Dialog_Controls {
         file = "dialog\function";
         class bankDeposit {};
@@ -167,7 +158,6 @@ class Life_Client_Core {
         class vehicleGarage {};
         class wireTransfer {};
     };
-
     class Functions {
         file = "core\functions";
         class AAN {};
@@ -220,7 +210,6 @@ class Life_Client_Core {
         class moveIn {};
         class robBank {};
     };
-
     class Gangs {
         file = "core\gangs";
         class createGang {};
@@ -236,7 +225,6 @@ class Life_Client_Core {
         class gangUpgrade {};
         class initGang {};
     };
-
     class Housing {
         file = "core\housing";
         class buyHouse {};
@@ -258,7 +246,6 @@ class Life_Client_Core {
         class sellHouse {};
         class sellHouseGarage {};
     };
-
     class Items {
         file = "core\items";
         class blastingCharge {};
@@ -273,7 +260,6 @@ class Life_Client_Core {
         class storageBox {};
         class bandage {};
     };
-
     class Medical_System {
         file = "core\medical";
         class deathScreen {};
@@ -289,7 +275,6 @@ class Life_Client_Core {
         class revived {};
         class revivePlayer {};
     };
-
     class Network {
         file = "core\functions\network";
         class broadcast {};
@@ -298,7 +283,6 @@ class Life_Client_Core {
         class setFuel {};
         class soundDevice {};
     };
-
     class Player_Menu {
         file = "core\pmenu";
         class cellphone {};
@@ -322,7 +306,6 @@ class Life_Client_Core {
         class wantedList {};
         class wantedMenu {};
     };
-
     class Shops {
         file = "core\shops";
         class 3dPreviewDisplay {};
@@ -355,7 +338,6 @@ class Life_Client_Core {
         class weaponShopSelection {};
         class virt_sellAll {};
     };
-
     class Vehicle {
         file = "core\vehicle";
 		class vehTakeAllItem {};

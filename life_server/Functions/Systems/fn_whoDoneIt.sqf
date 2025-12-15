@@ -2,23 +2,19 @@
     File: fn_whoDoneIt.sqf
     Description: Save log file of units killed.
     Author: Å  ColinM - Help of BI Wiki & Forums.
-
     Credits:    KillzoneKid for his Debug_Console v3.0 file. Cuel from the BI Forums for his current & previous posts.
 */
 params [
     ["_victim",objNull,[objNull]],
     ["_killer",objNull,[objNull]]
 ];
-
 if (isServer) then {
     private ["_killerWep","_killerVeh","_distance","_message"];
     if (isNull _victim || isNull _killer) exitWith {};
-
     _killerWep = currentWeapon _killer;
     _killerVeh = vehicle _killer;
     _distance = _killer distance _victim;
     _distance = floor(_distance);
-
     _message = "";
     if (_victim == _killer) then {
         _message = format ["Suicide Message: %1 committed suicide (or disconnected)", (name _victim)];
@@ -35,6 +31,5 @@ if (isServer) then {
     if (_message isEqualTo "") then {
         _message = format ["Death Message: %1 has killed %2", (name _killer), (name _victim)];
     };
-
     diag_log format ["death_log: %1",_message];
 };

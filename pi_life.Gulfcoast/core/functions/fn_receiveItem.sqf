@@ -2,7 +2,6 @@
 /*
     File: fn_receiveItem.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Receive an item from a player.
 */
@@ -12,9 +11,7 @@ if !(_unit isEqualTo player) exitWith {};
 _val = _this select 1;
 _item = _this select 2;
 _from = _this select 3;
-
 _diff = [_item,(parseNumber _val),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-
 if (!(_diff isEqualTo (parseNumber _val))) then {
     if ([true,_item,_diff] call life_fnc_handleInv) then {
         [ format [localize "STR_MISC_TooMuch_3",_from getVariable ["realname",name _from],_val,_diff,((parseNumber _val) - _diff)],true,"fast"] call life_fnc_notification_system;

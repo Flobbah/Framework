@@ -2,7 +2,6 @@
 /*
     File: fn_repairDoor.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Re-locks the door mainly for the federal reserve structures.
 */
@@ -10,7 +9,6 @@ private ["_building","_doors","_door","_cP","_cpRate","_ui","_title","_titleText
 _building = param [0,objNull,[objNull]];
 if (isNull _building) exitWith {};
 if (!(_building isKindOf "House_F")) exitWith {[ localize "STR_ISTR_Bolt_NotNear",true,"fast"] call life_fnc_notification_system;};
-
 _doors = 1;
 _doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"NumberOfDoors");
 _door = 0;
@@ -20,12 +18,10 @@ for "_i" from 1 to _doors do {
     _worldSpace = _building modelToWorld _selPos;
         if (player distance _worldSpace < 5) exitWith {_door = _i;};
 };
-
 if (_door isEqualTo 0) exitWith {[ localize "STR_Cop_NotaDoor",true,"fast"] call life_fnc_notification_system}; //Not near a door to be broken into.
 _doorN = _building getVariable [format ["bis_disabled_Door_%1",_door],0];
 if (_doorN isEqualTo 1) exitWith {[ localize "STR_House_FedDoor_Locked",true,"fast"] call life_fnc_notification_system};
 life_action_inUse = true;
-
 closeDialog 0;
 //Setup the progress bar
 disableSerialization;
@@ -37,14 +33,12 @@ _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format ["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _cP = 0.01;
-
 switch (typeOf _building) do {
     case "Land_Dome_Big_F": {_cpRate = 0.008;};
     case "Land_Medevac_house_V1_F";
     case "Land_Research_house_V1_F": {_cpRate = 0.005;};
     default {_cpRate = 0.08;}
 };
-
 for "_i" from 0 to 1 step 0 do {
     if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
         [player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
@@ -62,22 +56,18 @@ for "_i" from 0 to 1 step 0 do {
     if (_cP >= 1 || !alive player) exitWith {};
     if (life_interrupted) exitWith {};
 };
-
 //Kill the UI display and check for various states
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 if (!alive player) exitWith {life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 life_action_inUse = false;
-
 _building animateSource [format ["Door_%1_source", _door], 0];
 _building setVariable [format ["bis_disabled_Door_%1",_door],1,true]; //Lock the door.
-
 _locked = true;
 for "_i" from 1 to _doors do {
     if ((_building getVariable [format ["bis_disabled_Door_%1",_i],0]) isEqualTo 0) exitWith {_locked = false};
 };
-
 if (_locked) then {
     _building setVariable ["locked",true,true];
 };

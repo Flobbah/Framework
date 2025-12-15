@@ -1,12 +1,10 @@
 #define BaseIconID 78000
-
 class Life_HUD_nameTags {
     idd = -1;
     duration = 1e+011;
     name = "Life_HUD_nameTags";
     onLoad = "uiNamespace setVariable ['Life_HUD_nameTags',_this select 0]";
     objects[] = {};
-
     class controls
     {
         class BaseIcon
@@ -23,7 +21,6 @@ class Life_HUD_nameTags {
             w = 0; h = 0;
             x = 0.1; y = 0.1;
         };
-
         class p1 : BaseIcon {idc = BaseIconID;};
         class p2 : BaseIcon {idc = BaseIconID + 1;};
         class p3 : BaseIcon {idc = BaseIconID + 2;};

@@ -4,7 +4,6 @@ class Life_Vehicle_Shop_v2 {
     movingEnabled = 0;
     enableSimulation = 1;
     onLoad = "ctrlShow [2330,false];";
-
     class controlsBackground {
         class Life_RscTitleBackground : Life_RscText {
             colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.3843])", "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.7019])", "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.8862])", "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.7])"};
@@ -14,7 +13,6 @@ class Life_Vehicle_Shop_v2 {
             w = 0.8;
             h = (1 / 25);
         };
-
         class MainBackground : Life_RscText {
             colorBackground[] = {0,0,0,0.7};
                 idc = -1;
@@ -23,7 +21,6 @@ class Life_Vehicle_Shop_v2 {
                 w = 0.8;
                 h = 0.7 - (22 / 250);
         };
-
         class Title : Life_RscTitle {
             idc = 2301;
             text = "";
@@ -32,7 +29,6 @@ class Life_Vehicle_Shop_v2 {
             w = 0.8;
             h = (1 / 25);
         };
-
         class VehicleTitleBox : Life_RscText {
             idc = -1;
             text = "$STR_GUI_ShopStock";
@@ -41,7 +37,6 @@ class Life_Vehicle_Shop_v2 {
             w = 0.3;
             h = (1 / 25);
         };
-
         class VehicleInfoHeader : Life_RscText {
             idc = 2330;
             text = "$STR_GUI_VehInfo";
@@ -50,7 +45,6 @@ class Life_Vehicle_Shop_v2 {
             w = 0.46;
             h = (1 / 25);
         };
-
         class CloseBtn : Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";
@@ -60,7 +54,6 @@ class Life_Vehicle_Shop_v2 {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
         class RentCar : Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_RentVeh";
@@ -70,7 +63,6 @@ class Life_Vehicle_Shop_v2 {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
         class BuyCar : life_RscButtonMenu {
             idc = 2309;
             text = "$STR_Global_Buy";
@@ -81,7 +73,6 @@ class Life_Vehicle_Shop_v2 {
             h = (1 / 25);
         };
     };
-
     class controls {
         class VehicleList : Life_RscListBox {
             idc = 2302;
@@ -92,13 +83,11 @@ class Life_Vehicle_Shop_v2 {
             x = 0.11; y = 0.302;
             w = 0.303; h = 0.49;
         };
-
         class ColorList : Life_RscCombo {
             idc = 2304;
             x = 0.11; y = 0.8;
             w = 0.303; h = 0.03;
         };
-
         class vehicleInfomationList : Life_RscStructuredText {
             idc = 2303;
             text = "";

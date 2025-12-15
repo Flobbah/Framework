@@ -3,7 +3,6 @@
     File : fn_fetchPlayerHouses.sqf
     Author: Bryan "Tonic" Boardwine
     Modified : NiiRoZz
-
     Description:
     1. Fetches all the players houses and sets them up.
     2. Fetches all the players containers and sets them up.
@@ -13,10 +12,8 @@ params [
     ["_uid","",[""]]
 ];
 if (_uid isEqualTo "") exitWith {};
-
 _query = format ["SELECT pid, pos, classname, inventory, gear, dir, id FROM containers WHERE pid='%1' AND owned='1'",_uid];
 _containers = [_query,2,true] call DB_fnc_asyncCall;
-
 _containerss = [];
 {
     _position = call compile format ["%1",_x select 1];
@@ -71,10 +68,8 @@ _containerss = [];
     };
     _house setVariable ["containers",_containerss,true];
 } forEach _containers;
-
 _query = format ["SELECT pid, pos FROM houses WHERE pid='%1' AND owned='1'",_uid];
 _houses = [_query,2,true] call DB_fnc_asyncCall;
-
 _return = [];
 {
     _pos = call compile format ["%1",_x select 1];
@@ -82,5 +77,4 @@ _return = [];
     _house allowDamage false;
     _return pushBack [_x select 1];
 } forEach _houses;
-
 missionNamespace setVariable [format ["houses_%1",_uid],_return];

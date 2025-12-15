@@ -6,7 +6,6 @@
 *    Description:
 *    Main key handler for event 'keyDown'.
 */
-
 params [
     "_ctrl",
     "_code",
@@ -14,22 +13,18 @@ params [
     "_ctrlKey",
     "_alt"
 ];
-
 private _speed = speed cursorObject;
 private _handled = false;
 private _interactionKey = if (actionKeys "User10" isEqualTo []) then {219} else {(actionKeys "User10") select 0};
 private _interruptionKeys = [17, 30, 31, 32]; //A,S,W,D
-
 //Vault handling...
 if ((_code in (actionKeys "GetOver") || _code in (actionKeys "salute") || _code in (actionKeys "SitDown") || _code in (actionKeys "Throw") || _code in (actionKeys "GetIn") || _code in (actionKeys "GetOut") || _code in (actionKeys "Fire") || _code in (actionKeys "ReloadMagazine") || _code in [16,18]) && ((player getVariable ["restrained",false]) || (player getVariable ["playerSurrender",false]) || life_isknocked || life_istazed)) exitWith {
     true;
 };
-
 if (life_action_inUse) exitWith {
     if (!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true};
     _handled;
 };
-
 //Hotfix for Interaction key not being able to be bound on some operation systems.
 if (!(actionKeys "User10" isEqualTo []) && {(inputAction "User10" > 0)}) exitWith {
     //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
@@ -42,7 +37,6 @@ if (!(actionKeys "User10" isEqualTo []) && {(inputAction "User10" > 0)}) exitWit
     };
     true;
 };
-
 if (life_container_active) exitwith {
     //ignore movement actions
     private _allowedMoves = [
@@ -88,25 +82,21 @@ if (life_container_active) exitwith {
     };
     true;
 };
-
 switch (_code) do {
     // -- Disable commander/tactical view
     if (LIFE_SETTINGS(getNumber,"disableCommanderView") isEqualTo 1) then {
         private _CommandMode = actionKeys "tacticalView";
-
         if (_code in _CommandMode) then {
             [ localize "STR_NOTF_CommanderView",true,"fast"] call life_fnc_notification_system;
             _handled = true;
         };
     };
-
     //Space key for Placing Barriers
     case 57: {
         if (!_shift && life_barrier_active) then {
             0 spawn life_fnc_placeablesPlaceComplete;
         };
     };
-
     //Ö-Key
     case 39: {
         if ((isNull(findDisplay 20000)) && (playerSide in ([west,independent]))) then {
@@ -115,7 +105,6 @@ switch (_code) do {
         };
         _handled = true;
     };
-
     //ENTF-Key
     case 211: {
         if ((playerSide in [west,independent]) && ((typeOf cursorTarget) in life_definePlaceables)) then {
@@ -123,7 +112,6 @@ switch (_code) do {
             [ localize "STR_BS_Success_Remove",false,"fast"] call life_fnc_notification_system;
         };
     };
-
     //Surrender (Shift + B)
     case 48: {
         if (_shift) then {
@@ -135,7 +123,6 @@ switch (_code) do {
             _handled = true;
         };
     };
-
     //Holster / recall weapon. (Shift + H)
     case 35: {
         if (_shift && !_ctrlKey && !(currentWeapon player isEqualTo "")) then {
@@ -143,14 +130,12 @@ switch (_code) do {
             player action ["SwitchWeapon", player, player, 100];
             player switchCamera cameraView;
         };
-
         if (!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(life_curWep_h isEqualTo "")}) then {
             if (life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
                 player selectWeapon life_curWep_h;
             };
         };
     };
-
     //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
     case _interactionKey: {
         if (!life_action_inUse) then {
@@ -161,7 +146,6 @@ switch (_code) do {
             };
         };
     };
-
     //Restraining (Shift + R)
     case 19: {
         if (_shift) then {_handled = true};
@@ -169,7 +153,6 @@ switch (_code) do {
             [] call life_fnc_restrainAction;
         };
     };
-
     //Knock out, this is experimental and yeah... (Shift + G)
     case 34: {
         if (_shift) then {_handled = true};
@@ -179,7 +162,6 @@ switch (_code) do {
             };
         };
     };
-
     //T Key (Trunk)
     case 20: {
         if (!_alt && {!_ctrlKey} && {!dialog} && {!life_action_inUse} && {!(player getVariable ["playerSurrender",false])} && {!(player getVariable ["restrained",false])} && {!life_isknocked} && {!life_istazed}) then {
@@ -208,7 +190,6 @@ switch (_code) do {
             };
         };
     };
-
     //L Key?
     case 38: {
         //If cop run checks for turning lights on.
@@ -224,24 +205,20 @@ switch (_code) do {
                 };
             };
         };
-
         if (!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
     };
-
     //Y Player Menu
     case 21: {
         if (!_alt && !_ctrlKey && !dialog && !(player getVariable ["restrained",false]) && {!life_action_inUse}) then {
             [] call life_fnc_p_openMenu;
         };
     };
-
     //Shift 0 (zero)
     case 11: {
         if (_shift) then {
             [] spawn life_fnc_bandage;
         };
     };
-
     //F Key
     case 33: {
         if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
@@ -250,7 +227,6 @@ switch (_code) do {
                 sleep 4.7;
                 life_siren_active = false;
             };
-
             private _veh = vehicle player;
             if (isNil {_veh getVariable "siren"}) then {_veh setVariable ["siren",false,true];};
             if ((_veh getVariable "siren")) then {
@@ -274,7 +250,6 @@ switch (_code) do {
             };
         };
     };
-
     //O Key
     case 24: {
         if (_shift) then {
@@ -287,7 +262,6 @@ switch (_code) do {
             };
         };
     };
-
     //U Key
     case 22: {
         if (!_alt && !_ctrlKey) then {
@@ -296,13 +270,11 @@ switch (_code) do {
             } else {
                 vehicle player;
             };
-
             if (_veh isKindOf "House_F" && {playerSide isEqualTo civilian}) then {
                 if (_veh in life_vehicles && {player distance _veh < 20}) then {
                     private _door = [_veh] call life_fnc_nearestDoor;
                     if (_door isEqualTo 0) exitWith {[ localize "STR_House_Door_NotNear",true,"fast"] call life_fnc_notification_system};
                     private _locked = _veh getVariable [format ["bis_disabled_Door_%1",_door],0];
-
                     if (_locked isEqualTo 0) then {
                         _veh setVariable [format ["bis_disabled_Door_%1",_door],1,true];
                         _veh animateSource [format ["Door_%1_source", _door], 0];
@@ -319,7 +291,6 @@ switch (_code) do {
                     if (_locked isEqualTo 2) then {
                         if (local _veh) then {
                             _veh lock 0;
-
                             // BI
                             _veh animateDoor ["door_back_R",1];
                             _veh animateDoor ["door_back_L",1];
@@ -343,7 +314,6 @@ switch (_code) do {
                             _veh animateDoor ['DoorR_Back_Open ',1];
                         } else {
                             [_veh,0] remoteExecCall ["life_fnc_lockVehicle",_veh];
-
                             _veh animateDoor ["door_back_R",1];
                             _veh animateDoor ["door_back_L",1];
                             _veh animateDoor ['door_R',1];
@@ -370,7 +340,6 @@ switch (_code) do {
                     } else {
                         if (local _veh) then {
                             _veh lock 2;
-
                             _veh animateDoor ["door_back_R",0];
                             _veh animateDoor ["door_back_L",0];
                             _veh animateDoor ['door_R',0];
@@ -393,7 +362,6 @@ switch (_code) do {
                             _veh animateDoor ['DoorR_Back_Open ',0];
                         } else {
                             [_veh,2] remoteExecCall ["life_fnc_lockVehicle",_veh];
-
                             _veh animateDoor ["door_back_R",0];
                             _veh animateDoor ["door_back_L",0];
                             _veh animateDoor ['door_R',0];
@@ -423,5 +391,4 @@ switch (_code) do {
         };
     };
 };
-
 _handled;

@@ -1,7 +1,6 @@
 /*
     File: fn_cleanupRequest.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Client sends a cleanup request when they hit Abort,
     the server will then monitor when that client aborts and
@@ -10,7 +9,6 @@
 private ["_client","_loops"];
 _client = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (isNull _client) exitWith {};
-
 _loops = 0;
 for "_i" from 0 to 1 step 0 do {
     if (_loops >= 25) exitWith {};
@@ -21,7 +19,6 @@ for "_i" from 0 to 1 step 0 do {
         };
         deleteVehicle _client; //Get rid of the corpse.
     };
-
     _loops = _loops + 1;
     uiSleep 1;
 };

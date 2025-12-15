@@ -4,7 +4,6 @@
         //     empty array means that nothing will be add on players
         //     if you put more than a uniform on the CIV's class, they will be selected randonly,
         //         otherwise, for the other teams, player will get the uniform related to his level
-
         itemType[] = { // itemType can be: uniform, headgear, vest, backpack, weapon, items or linkedItems
             { "classname", "conditions" }
         };
@@ -36,7 +35,6 @@ class Loadouts {
             {"ItemWatch", "call life_copLevel >= 0"}
         };
     };
-
     // CIV
     class CIV {
         uniform[] = {
@@ -60,7 +58,6 @@ class Loadouts {
             {"ItemWatch", ""}
         };
     };
-
     // MED
     class GUER {
         uniform[] = {

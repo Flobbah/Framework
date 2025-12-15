@@ -2,7 +2,6 @@
 /*
     File: fn_weaponShopBuySell.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Master handling of the weapon shop for buying / selling an item.
 */
@@ -12,17 +11,13 @@ if ((lbCurSel 38403) isEqualTo -1) exitWith {[ localize "STR_Shop_Weapon_NoSelec
 _price = lbValue[38403,(lbCurSel 38403)]; if (isNil "_price") then {_price = 0;};
 _item = lbData[38403,(lbCurSel 38403)];
 _itemInfo = [_item] call life_fnc_fetchCfgDetails;
-
 _bad = "";
-
 if ((_itemInfo select 6) != "CfgVehicles") then {
     if ((_itemInfo select 4) in [4096,131072]) then {
         if (!(player canAdd _item) && (uiNamespace getVariable ["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = (localize "STR_NOTF_NoRoom")};
     };
 };
-
 if (_bad != "") exitWith {[ _bad,true,"fast"] call life_fnc_notification_system};
-
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
     CASH = CASH + _price;
     [_item,false] call life_fnc_handleItem;
@@ -49,14 +44,11 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             _funds = _funds - _price;
             group player setVariable ["gang_bank",_funds,true];
             [_item,true] call life_fnc_handleItem;
-
             if (life_HC_isActive) then {
                 [1,group player] remoteExecCall ["HC_fnc_updateGang",HC_Life];
             } else {
                 [1,group player] remoteExecCall ["TON_fnc_updateGang",RSERV];
             };
-
-
         } else {
             if (_price > CASH) exitWith {[ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system};
             [ parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;

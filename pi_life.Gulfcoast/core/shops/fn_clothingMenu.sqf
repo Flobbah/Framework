@@ -2,38 +2,27 @@
 /*
     File: fn_clothingMenu.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Opens and initializes the clothing store menu.
     Started clean, finished messy.
 */
-
 params ["","","",["_shop","",[""]]];
-
 if (_shop isEqualTo "") exitWith {};
 if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
-
 /* License check & config validation */
 if !(isClass(missionConfigFile >> "Clothing" >> _shop)) exitWith {}; //Bad config entry.
-
 private _shopTitle = M_CONFIG(getText,"Clothing",_shop,"title");
 private _shopSide = M_CONFIG(getText,"Clothing",_shop,"side");
 private _conditions = M_CONFIG(getText,"Clothing",_shop,"conditions");
-
 private _exit = false;
-
 private "_flag";
-
 if !(_shopSide isEqualTo "") then {
     _flag = switch (playerSide) do {case west: {"cop"}; case independent: {"med"}; default {"civ"};};
     if !(_flag isEqualTo _shopSide) then {_exit = true;};
 };
-
 if (_exit) exitWith {};
-
 _exit = [_conditions] call life_fnc_levelCheck;
 if !(_exit) exitWith {[ localize "STR_Shop_Veh_NoLicense",true,"fast"] call life_fnc_notification_system;};
-
 //Save old inventory
 life_oldClothes = uniform player;
 life_olduniformItems = uniformItems player;
@@ -43,27 +32,19 @@ life_oldVestItems = vestItems player;
 life_oldBackpackItems = backpackItems player;
 life_oldGlasses = goggles player;
 life_oldHat = headgear player;
-
 /* Open up the menu */
 createDialog "Life_Clothing";
 disableSerialization;
-
 ctrlSetText [3103,localize _shopTitle];
-
 (findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [] call life_fnc_playerSkins;}"]; //Fix Custom Skin after ESC
-
 sliderSetRange [3107, 0, 360];
-
 //Cop / Civ Pre Check
 if (_shop in ["bruce","dive","reb","kart"] && {!(playerSide isEqualTo civilian)}) exitWith {[ localize "STR_Shop_NotaCiv",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
 if (_shop == "reb" && {!license_civ_rebel}) exitWith {[ localize "STR_Shop_NotaReb",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
 if (_shop == "cop" && {!(playerSide isEqualTo west)}) exitWith {[ localize "STR_Shop_NotaCop",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
 if (_shop == "dive" && {!license_civ_dive}) exitWith {[ localize "STR_Shop_NotaDive",true,"fast"] call life_fnc_notification_system; closeDialog 0;};
-
-
 private ["_pos","_oldPos","_oldDir","_oldBev","_testLogic","_nearVeh","_light"];
 private ["_ut1","_ut2","_ut3","_ut4","_ut5"];
-
 if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
     _pos = getPosATL player;
 } else {
@@ -77,16 +58,12 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
             default {[17088.2,11313.6,0.00136757]};
         };
     };
-
     _oldDir = getDir player;
     _oldPos = visiblePositionASL player;
     _oldBev = behaviour player;
-
     _testLogic = "Logic" createVehicleLocal _pos;
     _testLogic setPosATL _pos;
-
     _nearVeh = _testLogic nearEntities ["AllVehicles", 20];
-
     if (LIFE_SETTINGS(getNumber,"clothing_box") isEqualTo 1) then {
         _ut1 = "UserTexture10m_F" createVehicleLocal (_testLogic modelToWorld [0,5,10]);
         _ut1 attachTo [_testLogic,[0,5,5]];
@@ -106,32 +83,27 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
         detach _ut5;
         _ut5 setVectorDirAndUp [[0,0,-.33],[0,.33,0]];
     };
-
     _light = "#lightpoint" createVehicleLocal _pos;
     _light setLightBrightness 0.5;
     _light setLightColor [1,1,1];
     _light setLightAmbient [1,1,1];
     _light lightAttachObject [_testLogic, [0,0,0]];
-
     {
         if (_x != player) then {_x hideObject true;};
         true
     } count playableUnits;
-
     if (LIFE_SETTINGS(getNumber,"clothing_box") isEqualTo 0) then {
         {
             if (_x != player && _x != _light) then {_x hideObject true;};
             true
         } count _nearVeh;
     };
-
     if (LIFE_SETTINGS(getNumber,"clothing_box") isEqualTo 1) then {
         {
             _x setObjectTexture [0,"#(argb,8,8,3)color(0,0,0,1)"];
             true
         } count [_ut1,_ut2,_ut3,_ut4];
     };
-
     player setBehaviour "SAFE";
     if (_shop == "dive") then {
         player setPosATL [-1000, -1000, 10];
@@ -141,9 +113,7 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
     player switchMove "";
     player setDir 360;
 };
-
 life_clothing_store = _shop;
-
 /* Store license check */
 if (isClass(missionConfigFile >> "Licenses" >> life_clothing_store)) then {
     _flag = M_CONFIG(getText,"Licenses",life_clothing_store,"side");
@@ -153,7 +123,6 @@ if (isClass(missionConfigFile >> "Licenses" >> life_clothing_store)) then {
         closeDialog 0;
     };
 };
-
 //initialize camera view
 life_shop_cam = "CAMERA" camCreate getPos player;
 showCinemaBorder false;
@@ -164,24 +133,18 @@ life_shop_cam camSetFOV .33;
 life_shop_cam camSetFocus [50, 0];
 life_shop_cam camCommit 0;
 life_cMenu_lock = false;
-
 if (isNull (findDisplay 3100)) exitWith {};
-
 private _list = (findDisplay 3100) displayCtrl 3101;
 private _filter = (findDisplay 3100) displayCtrl 3105;
 lbClear _filter;
 lbClear _list;
-
 _filter lbAdd localize "STR_Shop_UI_Clothing";
 _filter lbAdd localize "STR_Shop_UI_Hats";
 _filter lbAdd localize "STR_Shop_UI_Glasses";
 _filter lbAdd localize "STR_Shop_UI_Vests";
 _filter lbAdd localize "STR_Shop_UI_Backpack";
-
 _filter lbSetCurSel 0;
-
 [] call life_fnc_playerSkins;
-
 waitUntil {isNull (findDisplay 3100)};
 if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 0) then {
     {
@@ -232,14 +195,12 @@ if (isNil "life_clothesPurchased") exitWith {
             };
         };
     };
-
     if (count life_oldUniformItems > 0) then {
         {
             [_x,true,false,false,true] call life_fnc_handleItem;
             true
         } count life_oldUniformItems;
     };
-
     if (vest player != "") then {
         if (life_oldVest isEqualTo "") then {
             removeVest player;
@@ -256,7 +217,6 @@ if (isNil "life_clothesPurchased") exitWith {
     [] call life_fnc_playerSkins;
 };
 life_clothesPurchased = nil;
-
 //Check uniform purchase.
 if ((life_clothing_purchase select 0) isEqualTo -1) then {
     if (life_oldClothes != uniform player) then {player addUniform life_oldClothes;};
@@ -293,7 +253,6 @@ if ((life_clothing_purchase select 3) isEqualTo -1) then {
         };
     };
 };
-
 //Check Backpack
 if ((life_clothing_purchase select 4) isEqualTo -1) then {
     if (life_oldBackpack != backpack player) then {
@@ -307,6 +266,5 @@ if ((life_clothing_purchase select 4) isEqualTo -1) then {
         };
     };
 };
-
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 [] call life_fnc_saveGear;

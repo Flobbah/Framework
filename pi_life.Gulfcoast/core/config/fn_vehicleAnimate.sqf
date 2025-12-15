@@ -1,7 +1,6 @@
 /*
     File: fn_vehicleAnimate.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Pass what you want to be animated.
 */
@@ -10,7 +9,6 @@ _vehicle = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (isNull _vehicle) exitWith {}; //FUCK
 _animate = [_this,1,"",["",[]]] call BIS_fnc_param;
 _preset = [_this,2,false,[false]] call BIS_fnc_param;
-
 if (!_preset) then
 {
     if (count _animate > 1) then
@@ -39,19 +37,16 @@ if (!_preset) then
             _vehicle lockCargo [4,true];
             _vehicle lockCargo [5,true];
         };
-
         case "service_truck":
         {
             _vehicle animate ["HideServices", 0];
             _vehicle animate ["HideDoor3", 1];
         };
-
         case "med_offroad":
         {
             _vehicle animate ["HidePolice", 0];
             _vehicle setVariable ["lights",false,true];
         };
-
         case "cop_offroad":
         {
             _vehicle animate ["HidePolice", 0];

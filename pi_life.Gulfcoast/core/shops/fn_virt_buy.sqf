@@ -2,7 +2,6 @@
 /*
     File: fn_virt_buy.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Buy a virtual item from the store.
 */
@@ -23,9 +22,7 @@ _hideout = (nearestObjects[getPosATL player,_hideoutObjs,25]) select 0;
 if ((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {[ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system};
 if ((time - life_action_delay) < 0.2) exitWith {[ localize "STR_NOTF_ActionDelay",true,"fast"] call life_fnc_notification_system;};
 life_action_delay = time;
-
 _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
-
 if ([true,_type,_amount] call life_fnc_handleInv) then {
     if (!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") >= _price}) then {
         _action = [
@@ -42,13 +39,11 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
             _funds = group player getVariable "gang_bank";
             _funds = _funds - (_price * _amount);
             group player setVariable ["gang_bank",_funds,true];
-
             if (life_HC_isActive) then {
                 [1,group player] remoteExecCall ["HC_fnc_updateGang",HC_Life];
             } else {
                 [1,group player] remoteExecCall ["TON_fnc_updateGang",RSERV];
             };
-
         } else {
             if ((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; [ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system;};
             [ format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText],false,"fast"] call life_fnc_notification_system;
@@ -61,6 +56,5 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
     };
     [] call life_fnc_virt_update;
 };
-
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;

@@ -2,19 +2,16 @@
 /*
     File: fn_fuelRefuelCar.sqf
     Author: NiiRoZz
-
     Description:
     Adds fuel in car.
 */
 private _index = lbCurSel 20302;
 private _classname = lbData[20302,_index];
-
 if (isNil "_classname" || _classname isEqualTo "") exitWith {
     [ localize "STR_Select_Vehicle_Pump",true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
 };
 private _vehicleFuelList = uiNamespace getVariable ["fuel_list",[]];
-
 (_vehicleFuelList select _index) params ["_car"];
 private _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 private _fuelNow = fuel _car;
@@ -29,7 +26,6 @@ if (_car distance player > 10 && !(isNull objectParent player)) exitWith {
     [ localize "STR_Distance_Vehicle_Pump",true,"fast"] call life_fnc_notification_system;
     closeDialog 0;
 };
-
 private _fuelCost = uiNamespace getVariable ["fuel_cost",0];
 if ((BANK - (_fueltoput * _fuelCost)) > 0) then {
     life_is_processing = true;
@@ -66,5 +62,4 @@ if ((BANK - (_fueltoput * _fuelCost)) > 0) then {
 } else {
     [ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system;
 };
-
 closeDialog 0;

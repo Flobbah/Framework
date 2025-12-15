@@ -3,7 +3,6 @@
     File: fn_weaponShopSelection.sqf
     Author: Bryan "Tonic" Boardwine
     Edited: mohsen98
-
     Description:
     Checks the weapon & adds the price tag.
 */
@@ -13,9 +12,7 @@ _index = [_this,1,-1,[0]] call BIS_fnc_param;
 _shop = uiNamespace getVariable ["Weapon_Shop",""];
 if (isNull _control) exitWith {closeDialog 0;}; //Bad data
 if (_index isEqualTo -1) exitWith {}; //Nothing selected
-
 _priceTag = CONTROL(38400,38404);
-
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
     _item = CONTROL_DATAI(_control,_index);
     _itemArray = M_CONFIG(getArray,"WeaponShops",_shop,"items");
@@ -52,7 +49,6 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             } else {
                 ((findDisplay 38400) displayCtrl 38406) ctrlEnable false;
             };
-
             //Accessories Menu
             _itemArray = _item call BIS_fnc_compatibleItems;
             _bool = false;
@@ -66,7 +62,6 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             } else {
                 ((findDisplay 38400) displayCtrl 38407) ctrlEnable false;
             };
-
         } else {
             ((findDisplay 38400) displayCtrl 38406) ctrlEnable false;
             ((findDisplay 38400) displayCtrl 38407) ctrlEnable false;

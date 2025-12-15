@@ -2,7 +2,6 @@
 /*
     File: fn_postBail.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Called when the player attempts to post bail.
     Needs to be revised.
@@ -13,7 +12,6 @@ if (life_bail_paid) exitWith {};
 if (isNil "life_bail_amount") then {life_bail_amount = 3500;};
 if (!life_canpay_bail) exitWith {[ localize "STR_NOTF_Bail_Post",true,"fast"] call life_fnc_notification_system;};
 if (BANK < life_bail_amount) exitWith {[ format [localize "STR_NOTF_Bail_NotEnough",life_bail_amount],true,"fast"] call life_fnc_notification_system;};
-
 BANK = BANK - life_bail_amount;
 life_bail_paid = true;
 [1] call SOCK_fnc_updatePartial;

@@ -1,7 +1,6 @@
 /*
     File: fn_broadcast.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Broadcast system used in the life mission for multi-notification purposes.
 */
@@ -11,9 +10,7 @@ params [
     ["_localize", false, [false]],
     ["_arr", [], [[]]]
 ];
-
 if (_message isEqualTo "") exitWith {};
-
 if (_localize) exitWith {
     private _msg = switch (count _arr) do {
         case 0: {localize _message;};
@@ -22,7 +19,6 @@ if (_localize) exitWith {
         case 3: {format [localize _message,_arr select 0, _arr select 1, _arr select 2];};
         case 4: {format [localize _message,_arr select 0, _arr select 1, _arr select 2, _arr select 3];};
     };
-
     if (_type isEqualType []) then {
         {
             switch (_x) do {
@@ -40,7 +36,6 @@ if (_localize) exitWith {
         };
     };
 };
-
 if (_type isEqualType []) then {
     {
         switch (_x) do {

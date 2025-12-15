@@ -2,7 +2,6 @@
 /*
     File: fn_startLoadout.sqf
     Author: Casperento
-
     Description:
     Loads a custom loadout on player when he got a new life
 */
@@ -14,10 +13,8 @@ private _pWeapon = M_CONFIG(getArray,"Loadouts",str(playerSide),"weapon");
 private _pMagazines = M_CONFIG(getArray,"Loadouts",str(playerSide),"mags");
 private _pItems = M_CONFIG(getArray,"Loadouts",str(playerSide),"items");
 private _linkedItems = M_CONFIG(getArray,"Loadouts",str(playerSide),"linkedItems");
-
 // Removing every default items before adding the custom ones
 [] call life_fnc_stripDownPlayer;
-
 if !(_pUniform isEqualTo []) then {
     if (playerSide isEqualTo civilian) then {
         _pUniform = selectRandom _pUniform;
@@ -32,7 +29,6 @@ if !(_pUniform isEqualTo []) then {
         };
     };
 };
-
 if !(_pHeadgear isEqualTo []) then {
     _pHeadgear apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {([(_x select 1)] call life_fnc_levelCheck)}}) then {
@@ -40,7 +36,6 @@ if !(_pHeadgear isEqualTo []) then {
         };
     };
 };
-
 if !(_pVest isEqualTo []) then {
     _pVest apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {([(_x select 1)] call life_fnc_levelCheck)}}) then {
@@ -48,7 +43,6 @@ if !(_pVest isEqualTo []) then {
         };
     };
 };
-
 if !(_pBackpack isEqualTo []) then {
     _pBackpack apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {([(_x select 1)] call life_fnc_levelCheck)}}) then {
@@ -56,7 +50,6 @@ if !(_pBackpack isEqualTo []) then {
         };
     };
 };
-
 if !(_pWeapon isEqualTo []) then {
     _pWeapon apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {([(_x select 1)] call life_fnc_levelCheck)}}) then {
@@ -64,7 +57,6 @@ if !(_pWeapon isEqualTo []) then {
         };
     };
 };
-
 if !(_pMagazines isEqualTo []) then {
     _pMagazines apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {((_x select 1) > 0) && {([(_x select 2)] call life_fnc_levelCheck)}}}) then {
@@ -72,7 +64,6 @@ if !(_pMagazines isEqualTo []) then {
         };
     };
 };
-
 if !(_pItems isEqualTo []) then {
     _pItems apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {((_x select 1) > 0) && {([(_x select 2)] call life_fnc_levelCheck)}}}) then {
@@ -80,7 +71,6 @@ if !(_pItems isEqualTo []) then {
         };
     };
 };
-
 if !(_linkedItems isEqualTo []) then {
     _linkedItems apply {
         if (!(_x isEqualTo []) && {!((_x select 0) isEqualTo "") && {([(_x select 1)] call life_fnc_levelCheck)}}) then {
@@ -88,6 +78,5 @@ if !(_linkedItems isEqualTo []) then {
         };
     };
 };
-
 [] call life_fnc_playerSkins;
 [] call life_fnc_saveGear;

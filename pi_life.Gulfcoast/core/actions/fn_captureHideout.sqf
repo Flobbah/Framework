@@ -2,22 +2,17 @@
 /*
     File: fn_captureHideout.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Blah blah.
 */
 private _altisArray = ["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"];
 private _tanoaArray = ["Land_School_01_F","Land_Warehouse_03_F","Land_House_Small_02_F"];
-
 private _hideoutObjs = [[["Gulfcoast", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
-
 private _hideout = (nearestObjects[getPosATL player,_hideoutObjs,25]) select 0;
 private _group = _hideout getVariable ["gangOwner",grpNull];
-
 if (isNil {group player getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
 if (_group == group player) exitWith {titleText[localize "STR_GNOTF_Controlled","PLAIN"]};
 if ((_hideout getVariable ["inCapture",false])) exitWith {[ localize "STR_GNOTF_onePersonAtATime",true,"fast"] call life_fnc_notification_system;};
-
 private "_action";
 private "_cpRate";
 if (!isNull _group) then {
@@ -28,15 +23,12 @@ if (!isNull _group) then {
         localize "STR_Global_Yes",
         localize "STR_Global_No"
     ] call BIS_fnc_guiMessage;
-
     _cpRate = 0.0045;
 } else {
     _cpRate = 0.0075;
 };
-
 if (!isNil "_action" && {!_action}) exitWith {titleText[localize "STR_GNOTF_CaptureCancel","PLAIN"];};
 life_action_inUse = true;
-
 //Setup the progress bar
 disableSerialization;
 private _title = localize "STR_GNOTF_Capturing";
@@ -47,7 +39,6 @@ private _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format ["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 private _cP = 0.01;
-
 for "_i" from 0 to 1 step 0 do {
     if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
         [player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
@@ -70,7 +61,6 @@ for "_i" from 0 to 1 step 0 do {
     if (life_isknocked) exitWith {_hideout setVariable ["inCapture",false,true];}; //Knocked
     if (life_interrupted) exitWith {_hideout setVariable ["inCapture",false,true];};
 };
-
 //Kill the UI display and check for various states
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
@@ -78,7 +68,6 @@ if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;_hideout setVariable ["inCapture",false,true];};
 if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_GNOTF_CaptureCancel","PLAIN"]; life_action_inUse = false;_hideout setVariable ["inCapture",false,true];};
 life_action_inUse = false;
-
 titleText[localize "STR_GNOTF_Captured","PLAIN"];
 private _flagTexture = [
         "\A3\Data_F\Flags\Flag_red_CO.paa",

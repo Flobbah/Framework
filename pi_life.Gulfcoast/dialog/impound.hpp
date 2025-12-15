@@ -4,7 +4,6 @@ class Life_impound_menu {
     movingEnable = 0;
     enableSimulation = 1;
     onLoad = "ctrlShow [2330,false];";
-
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText    {
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -14,7 +13,6 @@ class Life_impound_menu {
             w = 0.8;
             h = (1 / 25);
         };
-
         class MainBackground: Life_RscText {
             colorBackground[] = {0,0,0,0.7};
             idc = -1;
@@ -23,7 +21,6 @@ class Life_impound_menu {
             w = 0.8;
             h = 0.7 - (22 / 250);
         };
-
         class Title: Life_RscTitle {
             idc = 2801;
             text = "$STR_GUI_Garage";
@@ -32,7 +29,6 @@ class Life_impound_menu {
             w = 0.8;
             h = (1 / 25);
         };
-
         class VehicleTitleBox: Life_RscText {
             idc = -1;
             text = "$STR_GUI_YourVeh";
@@ -42,7 +38,6 @@ class Life_impound_menu {
             w = 0.3;
             h = (1 / 25);
         };
-
         class VehicleInfoHeader: Life_RscText {
             idc = 2830;
             text = "$STR_GUI_VehInfo";
@@ -52,7 +47,6 @@ class Life_impound_menu {
             w = 0.46;
             h = (1 / 25);
         };
-
         class CloseBtn: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";
@@ -62,7 +56,6 @@ class Life_impound_menu {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
         class RetrieveCar: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Retrieve";
@@ -72,7 +65,6 @@ class Life_impound_menu {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
         class SellCar: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Sell";
@@ -83,7 +75,6 @@ class Life_impound_menu {
             h = (1 / 25);
         };
     };
-
     class controls {
         class VehicleList: Life_RscListBox {
             idc = 2802;
@@ -96,7 +87,6 @@ class Life_impound_menu {
             w = 0.303;
             h = 0.49;
         };
-
         class vehicleInfomationList: Life_RscStructuredText {
             idc = 2803;
             text = "";
@@ -106,7 +96,6 @@ class Life_impound_menu {
             w = 0.5;
             h = 0.5;
         };
-
         class MainBackgroundHider: Life_RscText {
             colorBackground[] = {0,0,0,1};
             idc = 2810;
@@ -115,7 +104,6 @@ class Life_impound_menu {
             w = 0.8;
             h = 0.7 - (22 / 250);
         };
-
         class MainHideText: Life_RscText {
             idc = 2811;
             text = "$STR_ANOTF_QueryGarage";

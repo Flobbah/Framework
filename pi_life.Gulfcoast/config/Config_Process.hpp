@@ -15,7 +15,6 @@
 *       NoLicenseCost = 4000;
 *   };
 */
-
 class ProcessAction {
     class oil {
         MaterialsReq[] = {{"oil_unprocessed",1}};
@@ -24,7 +23,6 @@ class ProcessAction {
         //ScrollText = "Process Oil";
         NoLicenseCost = 1200;
     };
-
     class diamond {
         MaterialsReq[] = {{"diamond_uncut",1}};
         MaterialsGive[] = {{"diamond_cut",1}};
@@ -32,7 +30,6 @@ class ProcessAction {
         //ScrollText = "Cut Diamonds";
         NoLicenseCost = 1350;
     };
-
     class heroin {
         MaterialsReq[] = {{"heroin_unprocessed",1}};
         MaterialsGive[] = {{"heroin_processed",1}};
@@ -40,7 +37,6 @@ class ProcessAction {
         //ScrollText = "Process Heroin";
         NoLicenseCost = 1750;
     };
-
     class copper {
         MaterialsReq[] = {{"copper_unrefined",1}};
         MaterialsGive[] = {{"copper_refined",1}};
@@ -48,7 +44,6 @@ class ProcessAction {
         //ScrollText = "Refine Copper";
         NoLicenseCost = 750;
     };
-
     class iron {
         MaterialsReq[] = {{"iron_unrefined",1}};
         MaterialsGive[] = {{"iron_refined",1}};
@@ -56,7 +51,6 @@ class ProcessAction {
         //ScrollText = "Refine Iron";
         NoLicenseCost = 1120;
     };
-
     class sand {
         MaterialsReq[] = {{"sand",1}};
         MaterialsGive[] = {{"glass",1}};
@@ -64,7 +58,6 @@ class ProcessAction {
         //ScrollText = "Melt Sand into Glass";
         NoLicenseCost = 650;
     };
-
     class salt {
         MaterialsReq[] = {{"salt_unrefined",1}};
         MaterialsGive[] = {{"salt_refined",1}};
@@ -72,7 +65,6 @@ class ProcessAction {
         //ScrollText = "Refine Salt";
         NoLicenseCost = 450;
     };
-
     class cocaine {
         MaterialsReq[] = {{"cocaine_unprocessed",1}};
         MaterialsGive[] = {{"cocaine_processed",1}};
@@ -80,7 +72,6 @@ class ProcessAction {
         //ScrollText = "Process Cocaine";
         NoLicenseCost = 1500;
     };
-
     class marijuana {
         MaterialsReq[] = {{"cannabis",1}};
         MaterialsGive[] = {{"marijuana",1}};
@@ -88,7 +79,6 @@ class ProcessAction {
         //ScrollText = "Harvest Marijuana";
         NoLicenseCost = 500;
     };
-
     class cement {
         MaterialsReq[] = {{"rock",1}};
         MaterialsGive[] = {{"cement",1}};

@@ -46,7 +46,6 @@ class WeaponShops {
             { "optic_ACO_grn_smg", "", 2500, 1250, "" }
         };
     };
-
     class rebel {
         name = "Mohammed's Jihadi Shop";
         side = "civ";
@@ -79,7 +78,6 @@ class WeaponShops {
             { "acc_flashlight", "", 1000, 500, "" }
         };
     };
-
     class gang {
         name = "Hideout Armament";
         side = "civ";
@@ -101,7 +99,6 @@ class WeaponShops {
             { "optic_ACO_grn_smg", "", 950, 475, "" }
         };
     };
-
     //Basic Shops
     class genstore {
         name = "General Store";
@@ -123,7 +120,6 @@ class WeaponShops {
         mags[] = {};
         accs[] = {};
     };
-
     class f_station_store {
         name = "Fuel Station Store";
         side = "";
@@ -144,7 +140,6 @@ class WeaponShops {
         mags[] = {};
         accs[] = {};
     };
-
     //Cop Shops
     class cop_basic {
         name = "Cop Shop";
@@ -186,7 +181,6 @@ class WeaponShops {
             { "muzzle_snds_H", "", 2750, 1375, "call life_coplevel >= 2" }
         };
     };
-
     //Medic Shops
     class med_basic {
         name = "store";

@@ -2,7 +2,6 @@
 /*
     File: fn_recupKeyForHC.sqf
     Author : NiiRoZz
-
     Description:
     Tells the server to recup the Key of player
 */

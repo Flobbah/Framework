@@ -1,7 +1,6 @@
 /*
     File: fn_federalUpdate.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Uhhh, adds to it?
 */

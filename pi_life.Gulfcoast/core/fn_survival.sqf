@@ -2,7 +2,6 @@
 /*
     File: fn_survival.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     All survival? things merged into one thread.
 */
@@ -24,7 +23,6 @@ _fnc_food =  {
         };
     };
 };
-
 _fnc_water = {
     if (life_thirst < 2) then {player setDamage 1; [ localize "STR_NOTF_DrinkMSG_Death",true,"slow"] call life_fnc_notification_system;}
     else
@@ -45,7 +43,6 @@ _fnc_water = {
         };
     };
 };
-
 //Setup the time-based variables.
 _foodTime = time;
 _waterTime = time;
@@ -54,12 +51,10 @@ _bp = "";
 _lastPos = visiblePosition player;
 _lastPos = (_lastPos select 0) + (_lastPos select 1);
 _lastState = vehicle player;
-
 for "_i" from 0 to 1 step 0 do {
     /* Thirst / Hunger adjustment that is time based */
     if ((time - _waterTime) > 600 && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
     if ((time - _foodTime) > 850 && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
-
     /* Adjustment of carrying capacity based on backpack changes */
     if (backpack player isEqualTo "") then {
         life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight");
@@ -70,13 +65,11 @@ for "_i" from 0 to 1 step 0 do {
             life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4);
         };
     };
-
     /* Check if the player's state changed? */
     if (!(vehicle player isEqualTo _lastState) || {!alive player}) then {
         [] call life_fnc_updateViewDistance;
         _lastState = vehicle player;
     };
-
     /* Check if the weight has changed and the player is carrying to much */
     if (life_carryWeight > life_maxWeight && {!isForcedWalk player} && {!life_god}) then {
         player forceWalk true;
@@ -87,7 +80,6 @@ for "_i" from 0 to 1 step 0 do {
             player forceWalk false;
         };
     };
-
     /* Travelling distance to decrease thirst/hunger which is captured every second so the distance is actually greater then 650 */
     if (!alive player || {life_god}) then {_walkDis = 0;} else {
         _curPos = visiblePosition player;

@@ -1,13 +1,11 @@
 /*
 	Author: moeck edit by Deathman
-
 	File: fn_tankerob.sqf
 */
 #include "..\..\script_macros.hpp"
 private["_robber","_shop","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos", "_robdelay", "_delay","_onWanted","_Max_Distance_ShopText","_Max_Distance_Shop","_RoberDelay","_ATMuse","_Rob_Finish","_MarkerType","_MarkerText","_MarkerColor","_CreatMarkerName","_Stay_DistanceText","_ProgressBarText","_PoliceText_Fail","_Message_To_Police","_Max_Police","_Max_Distance_Text","_Max_Distance","_max_money_rob","_max_money_rob_random","_FailText_1","_FailText_2","_FailText_3","_FailText_4","_FailText_5","_FailText_6","_FailText_7","_FailText_8","_FailText_9"];
 _max_money_rob = getnumber(missionConfigFile >> "TankeRob_Master" >> "Max_Money_Rob");
 _max_money_rob_random = getnumber(missionConfigFile >> "TankeRob_Master" >> "Max_Money_Rob_Random");
-
 _FailText_1 = localize "STR_FailText_1";
 _FailText_2 = localize "STR_FailText_2";
 _FailText_3 = localize "STR_FailText_3";
@@ -17,30 +15,22 @@ _FailText_6 = localize "STR_FailText_6";
 _FailText_7 = localize "STR_FailText_7";
 _FailText_8 = localize "STR_FailText_8";
 _FailText_9 = localize "STR_FailText_9";
-
 _Max_Distance = getnumber(missionConfigFile >> "TankeRob_Master" >> "Max_Distance");
 _Max_Distance_Text = localize "STR_Max_Distance_Text";
-
 _Max_Distance_Shop = getnumber(missionConfigFile >> "TankeRob_Master" >> "Max_Distance_Shop");
 _Max_Distance_ShopText = localize "STR_Max_Distance_Shop_Text";
-
 _Max_Police = getnumber(missionConfigFile >> "TankeRob_Master" >> "Max_Police");
 _Message_To_Police = localize "STR_Message_To_Police";
 _PoliceText_Fail = localize "STR_PoliceText_Fail";
-
 _ProgressBarText = localize "STR_ProgressBarText";
 _Stay_DistanceText = localize "STR_Stay_DistanceText";
-
 _CreatMarkerName= getText(missionConfigFile >> "TankeRob_Master" >> "CreatMarkerName");
 _MarkerColor = getText(missionConfigFile >> "TankeRob_Master" >> "MarkerColor");
 _MarkerText = localize "STR_MarkerText";
 _MarkerType = getText(missionConfigFile >> "TankeRob_Master" >> "MarkerType");
-
 _Rob_Finish = localize "STR_Rob_Finish";
-
 _ATMuse = getnumber(missionConfigFile >> "TankeRob_Master" >> "ATMuse");
 _RoberDelay = getnumber(missionConfigFile >> "TankeRob_Master" >> "RoberDelay");
-
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 _kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call (https://community.bistudio.com/wiki/addAction). Give it a try and post below ;)
@@ -185,7 +175,6 @@ if(_rip) then
 		titleText[format[_Rob_Finish,[_kassa] call life_fnc_numberText],"PLAIN"];
 	};
  deleteMarker _CreatMarkerName; // by ehno delete maker
-
 life_cash = life_cash + _kassa;
 _rip = false;
 life_use_atm = false;

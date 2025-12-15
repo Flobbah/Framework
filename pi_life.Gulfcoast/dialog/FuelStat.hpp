@@ -5,7 +5,6 @@ class Life_FuelStat {
     enableSimulation = 1;
     onLoad = "ctrlShow [2330,false];";
     onUnload = "life_action_inUse = false;";
-
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText    {
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -15,7 +14,6 @@ class Life_FuelStat {
             w = 0.8;
             h = (1 / 25);
         };
-
         class MainBackground: Life_RscText {
             colorBackground[] = {0,0,0,0.7};
             idc = -1;
@@ -24,7 +22,6 @@ class Life_FuelStat {
             w = 0.8;
             h = 0.7 - (22 / 250);
         };
-
         class Title: Life_RscTitle {
             idc = 20301;
             text = "";
@@ -33,7 +30,6 @@ class Life_FuelStat {
             w = 0.8;
             h = (1 / 25);
         };
-
         class VehicleTitleBox: Life_RscText {
             idc = -1;
             text = "$STR_GUI_ShopStock";
@@ -43,7 +39,6 @@ class Life_FuelStat {
             w = 0.32;
             h = (1 / 25);
         };
-
         class VehicleInfoHeader: Life_RscText {
             idc = 20330;
             text = "$STR_GUI_VehInfo";
@@ -53,7 +48,6 @@ class Life_FuelStat {
             w = 0.42;
             h = (1 / 25);
         };
-
         class FuelPrice: Life_RscTitle {
             idc = 20322;
             text = "Price:";
@@ -62,7 +56,6 @@ class Life_FuelStat {
             w = 0.8;
             h = (1 / 25);
         };
-
         class literfuel: Life_RscTitle {
             idc = 20324;
             text = "Fuel:";
@@ -88,7 +81,6 @@ class Life_FuelStat {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
         class refuelCar: Life_RscButtonMenu {
             idc = 20309;
             text = "Refuel";
@@ -99,7 +91,6 @@ class Life_FuelStat {
             h = (1 / 25);
         };
     };
-
     class controls {
         class VehicleList: Life_RscListBox {
             idc = 20302;
@@ -112,7 +103,6 @@ class Life_FuelStat {
             w = 0.32;
             h = 0.49;
         };
-
         class fuelTank: life_RscXSliderH {
             idc = 20901;
             text = "";
@@ -123,7 +113,6 @@ class Life_FuelStat {
             w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
         };
-
         class vehicleInfomationList: Life_RscStructuredText
         {
             idc = 20303;

@@ -4,10 +4,6 @@ class Life_Menu_Placeables {
     movingEnable = false;
     enableSimulation = true;
     onLoad = "";
-
-
-
-
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText {
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -45,10 +41,6 @@ class Life_Menu_Placeables {
             w = 0.56;
             h = 0.370;
         };
-
-
-
-
         class CloseButtonKey : Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";

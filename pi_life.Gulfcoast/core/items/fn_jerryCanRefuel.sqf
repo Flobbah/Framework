@@ -3,7 +3,6 @@
     File: fn_jerryCanRefuel.sqf
     Author: Bryan "Tonic" Boardwine
     Modified: Jesse "tkcjesse" Schultz
-
     Description:
     Refuels the empty fuel canister at a gas pump. Based off the jerryRefuel/lockpick scripts by Tonic.
 */
@@ -16,7 +15,6 @@ if !(isNull objectParent player) exitWith {};
 if (player getVariable "restrained") exitWith {[ localize "STR_NOTF_isrestrained",true,"fast"] call life_fnc_notification_system;};
 if (player getVariable "playerSurrender") exitWith {[ localize "STR_NOTF_surrender",true,"fast"] call life_fnc_notification_system;};
 _fuelCost = LIFE_SETTINGS(getNumber,"fuelCan_refuel");
-
 life_action_inUse = true;
 _action = [
     format [localize "STR_ISTR_Jerry_PopUp",[_fuelCost] call life_fnc_numberText],
@@ -24,7 +22,6 @@ _action = [
     localize "STR_Global_Yes",
     localize "STR_Global_No"
 ] call BIS_fnc_guiMessage;
-
 if (_action) then {
     if (CASH < _fuelCost) exitWith {[ localize "STR_NOTF_NotEnoughMoney",true,"fast"] call life_fnc_notification_system; life_action_inUse = false;};
     _startPos = getPos player;
@@ -38,7 +35,6 @@ if (_action) then {
     _pgText ctrlSetText format ["%2 (1%1)...","%",_title];
     _progress progressSetPosition 0.01;
     _cP = 0.01;
-
     for "_i" from 0 to 1 step 0 do {
         if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
             [player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
@@ -59,11 +55,9 @@ if (_action) then {
         if (!alive player) exitWith {life_action_inUse = false;};
         if (life_interrupted) exitWith {life_interrupted = false; life_action_inUse = false;};
     };
-
     //Kill the UI display and check for various states
     "progressBar" cutText ["","PLAIN"];
     player playActionNow "stop";
-
     if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
     if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
     if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};

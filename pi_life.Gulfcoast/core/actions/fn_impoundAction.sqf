@@ -2,7 +2,6 @@
 /*
     File: fn_impoundAction.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Impounds the vehicle
 */
@@ -12,14 +11,12 @@ _filters = ["Car","Air","Ship"];
 if (!((KINDOF_ARRAY(_vehicle,_filters)))) exitWith {};
 if (player distance cursorObject > 10) exitWith {};
 if (_vehicle getVariable "NPC") exitWith {[ localize "STR_NPC_Protected",true,"fast"] call life_fnc_notification_system};
-
 _vehicleData = _vehicle getVariable ["vehicle_info_owners",[]];
 if (_vehicleData isEqualTo 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
 _vehicleName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
 _price = M_CONFIG(getNumber,"LifeCfgVehicles",(typeOf _vehicle),"price");
 [0,"STR_NOTF_BeingImpounded",true,[((_vehicleData select 0) select 1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 life_action_inUse = true;
-
 _upp = localize "STR_NOTF_Impounding";
 //Setup our progress bar.
 disableSerialization;
@@ -30,7 +27,6 @@ _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
-
 for "_i" from 0 to 1 step 0 do {
     uiSleep 0.09;
     _cP = _cP + 0.01;
@@ -40,24 +36,18 @@ for "_i" from 0 to 1 step 0 do {
     if (player distance _vehicle > 10) exitWith {};
     if (!alive player) exitWith {};
 };
-
 "progressBar" cutText ["","PLAIN"];
-
 if (player distance _vehicle > 10) exitWith {[ localize "STR_NOTF_ImpoundingCancelled",true,"fast"] call life_fnc_notification_system; life_action_inUse = false;};
 if (!alive player) exitWith {life_action_inUse = false;};
-
 if (count crew _vehicle isEqualTo 0) then {
     if (!(KINDOF_ARRAY(_vehicle,_filters))) exitWith {life_action_inUse = false;};
     _type = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
-
     life_impound_inuse = true;
-
     if (life_HC_isActive) then {
         [_vehicle,true,player] remoteExec ["HC_fnc_vehicleStore",HC_Life];
     } else {
         [_vehicle,true,player] remoteExec ["TON_fnc_vehicleStore",RSERV];
     };
-
     waitUntil {!life_impound_inuse};
     if (playerSide isEqualTo west) then {
             _impoundMultiplier = LIFE_SETTINGS(getNumber,"vehicle_cop_impound_multiplier");
@@ -76,5 +66,4 @@ if (count crew _vehicle isEqualTo 0) then {
 } else {
     [ localize "STR_NOTF_ImpoundingCancelled",true,"fast"] call life_fnc_notification_system;
 };
-
 life_action_inUse = false;

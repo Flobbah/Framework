@@ -2,10 +2,8 @@
     File: fn_setupStationService.sqf
     Author: NiiRoZz
     Edit: BoGuu - Added Tanoa Stations
-
     Description:
     Add action fuel action in Station Service.
-
     put function in init file then execute it with:
     call getFuelpumps;
     getFuelpumps =
@@ -14,9 +12,7 @@
         _Station = nearestobjects [_pos,["Land_fs_feed_F","Land_FuelStation_Feed_F"], 25000];
         _br = toString [13, 10];
         _tab = toString [9];
-
         _TexteSortie = "_NiiRoZz_Station_Essence = [" + _br;
-
         {
             _Array = [getpos _x];
             _TexteSortie = _TexteSortie + _tab + (str _Array);
@@ -61,7 +57,6 @@ private _altisPositions = [
     [23379.4,19799,-0.0544052],
     [25701.2,21372.6,-0.0774155]
 ];
-
 private _tanoaPositions = [
     [7978.23,7419.24,-0.100807],
     [7976.92,7427.11,-0.058516],
@@ -149,9 +144,7 @@ private _tanoaPositions = [
     [11629,13055.8,-0.232919],
     [11637.2,13052.8,-0.228891]
 ];
-
 private _stationPositions = [[["Altis", _altisPositions], ["Tanoa", _tanoaPositions]]] call TON_fnc_terrainSort;
-
 {
     private _pump = nearestObjects [_x,["Land_fs_feed_F","Land_FuelStation_01_pump_F","Land_FuelStation_02_pump_F"],5] select 0;
     _pump setFuelCargo 0;

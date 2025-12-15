@@ -15,7 +15,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class boat {
         variable = "boat";
         displayName = "STR_License_Boat";
@@ -23,7 +22,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class pilot {
         variable = "pilot";
         displayName = "STR_License_Pilot";
@@ -31,7 +29,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class trucking {
         variable = "trucking";
         displayName = "STR_License_Truck";
@@ -39,7 +36,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class gun {
         variable = "gun";
         displayName = "STR_License_Firearm";
@@ -47,7 +43,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class dive {
         variable = "dive";
         displayName = "STR_License_Diving";
@@ -55,7 +50,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class home {
         variable = "home";
         displayName = "STR_License_Home";
@@ -63,7 +57,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     //Processing Licenses
     class oil {
         variable = "oil";
@@ -72,7 +65,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class diamond {
         variable = "diamond";
         displayName = "STR_License_Diamond";
@@ -80,7 +72,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class salt {
         variable = "salt";
         displayName = "STR_License_Salt";
@@ -88,7 +79,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class sand {
         variable = "sand";
         displayName = "STR_License_Sand";
@@ -96,7 +86,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class iron {
         variable = "iron";
         displayName = "STR_License_Iron";
@@ -104,7 +93,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class copper {
         variable = "copper";
         displayName = "STR_License_Copper";
@@ -112,7 +100,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class cement {
         variable = "cement";
         displayName = "STR_License_Cement";
@@ -120,7 +107,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class medmarijuana {
         variable = "medmarijuana";
         displayName = "STR_License_Medmarijuana";
@@ -128,7 +114,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     //Illegal Licenses
     class cocaine {
         variable = "cocaine";
@@ -137,7 +122,6 @@ class Licenses {
         illegal = true;
         side = "civ";
     };
-
     class heroin {
         variable = "heroin";
         displayName = "STR_License_Heroin";
@@ -145,7 +129,6 @@ class Licenses {
         illegal = true;
         side = "civ";
     };
-
     class marijuana {
         variable = "marijuana";
         displayName = "STR_License_Marijuana";
@@ -153,7 +136,6 @@ class Licenses {
         illegal = true;
         side = "civ";
     };
-
     class rebel {
         variable = "rebel";
         displayName = "STR_License_Rebel";
@@ -161,7 +143,6 @@ class Licenses {
         illegal = true;
         side = "civ";
     };
-
     //Cop Licenses
     class cAir {
         variable = "cAir";
@@ -170,7 +151,6 @@ class Licenses {
         illegal = false;
         side = "cop";
     };
-
     class cg {
         variable = "cg";
         displayName = "STR_License_CG";
@@ -178,7 +158,6 @@ class Licenses {
         illegal = false;
         side = "cop";
     };
-
     //Medic Licenses
     class mAir {
         variable = "mAir";

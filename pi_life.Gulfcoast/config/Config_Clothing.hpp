@@ -128,7 +128,6 @@ class Clothing {
             { "B_Bergen_tna_f", "", 9500, "" } //Apex DLC
         };
     };
-
     class cop {
         title = "STR_Shops_C_Police";
         conditions = "";
@@ -184,7 +183,6 @@ class Clothing {
             { "B_Carryall_cbr", "", 3500, "" }
         };
     };
-
     class dive {
         title = "STR_Shops_C_Diving";
         conditions = "license_civ_dive";
@@ -208,7 +206,6 @@ class Clothing {
             { "NONE", $STR_C_Remove_backpacks, 0, "" }
         };
     };
-
     class gun_clothing {
         title = "STR_Shops_C_Gun";
         conditions = "license_civ_gun";
@@ -230,7 +227,6 @@ class Clothing {
             { "NONE", $STR_C_Remove_backpacks, 0, "" }
         };
     };
-
     class gang_clothing {
         title = "STR_Shops_C_Gang";
         conditions = "";
@@ -252,7 +248,6 @@ class Clothing {
             { "NONE", $STR_C_Remove_backpacks, 0, "" }
         };
     };
-
     class med_clothing {
         title = "STR_MAR_EMS_Clothing_Shop";
         conditions = "";
@@ -277,7 +272,6 @@ class Clothing {
             { "B_FieldPack_oli", $STR_C_EMS_backpacks, 3000, "" }
         };
     };
-
     class reb {
         title = "STR_Shops_C_Rebel";
         conditions = "license_civ_rebel";
@@ -367,7 +361,6 @@ class Clothing {
             { "B_Carryall_cbr", "", 7500, "" }
         };
     };
-
     class kart {
         title = "STR_Shops_C_Kart";
         conditions = "";

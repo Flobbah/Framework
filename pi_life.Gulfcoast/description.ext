@@ -1,11 +1,9 @@
 disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. Syntax: disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
 overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
 unsafeCVL = 1; // Allows createVehicleLocal to be executed in Multiplayer
-
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
 #include "config\Config_Master.hpp"
-
 class CfgServer {
     DatabaseName = "pilife"; //Config name that'll be grep in the extdb-conf.ini. Default: [pilife]
     DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
@@ -15,18 +13,15 @@ class CfgServer {
     Disabled: If HeadlessSupport is set to 0 (disabled), the connection of a Headless Client will make no difference. This option will increase server performance a TINY but negligible amount.
     */
 };
-
 class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
     //#include "dialog\hud_stats.hpp"
 	#include "dialog\new_HUD.hpp"
 };
-
 class CfgFunctions {
     #include "Functions.hpp"
 };
-
 class CfgSounds {
     sounds[] = {};
     class sirenLong {
@@ -34,50 +29,42 @@ class CfgSounds {
         sound[] = {"@pi_data\sounds\sirenLong.ogg", 1.0, 1};
         titles[] = {};
     };
-
     class medicSiren {
         name = "medicSiren";
         sound[] = {"@pi_data\sounds\medicSiren.ogg", 1.0, 1};
         titles[] = {};
     };
-
     class tazerSound {
         name = "tazerSound";
         sound[] = {"@pi_data\sounds\tazer.ogg", 0.5, 1};
         titles[] = {};
     };
-
     class flashbang {
         name = "flashbang";
         sound[] = {"@pi_data\sounds\flashbang.ogg", 1.0, 1};
         titles[] = {};
     };
-
     class mining {
         name = "mining";
         sound[] = {"@pi_data\sounds\mining.ogg", 1.0, 1};
         titles[] = {};
     };
-
     class harvest {
         name = "harvest";
         sound[] = {"@pi_data\sounds\harvest.ogg", 1.0, 1};
         titles[] = {};
     };
-
     class lockCarSound {
         name = "lockCarSound";
         sound[] = {"@pi_data\sounds\carLock.ogg", 1.0, 1};
         titles[] = {};
     };
-
     class unlockCarSound {
         name = "unlockCarSound";
         sound[] = {"@pi_data\sounds\carUnlock.ogg", 0.75, 1};
         titles[] = {};
     };
 };
-
 class CfgDebriefing {
     class NotWhitelisted {
         title = "$STR_NotWhitelisted_Title";
@@ -87,7 +74,6 @@ class CfgDebriefing {
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
     };
-
     class Blacklisted {
         title = "$STR_Blacklisted_Title";
         subtitle = "$STR_Blacklisted_SubTitle";
@@ -97,7 +83,6 @@ class CfgDebriefing {
         pictureColor[] = {0,0.3,0.6,1};
     };
 };
-
 class CfgNotifications {
     class MedicalRequestEmerg {
         title = "$STR_MedicalRequestEmerg_Title";
@@ -106,7 +91,6 @@ class CfgNotifications {
         duration = 5;
         priority = 7;
     };
-
     class DeliveryAssigned {
         title = "$STR_DeliveryAssigned_Title";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
@@ -114,7 +98,6 @@ class CfgNotifications {
         duration = 10;
         priority = 7;
     };
-
     class DeliveryFailed {
         title = "$STR_DeliveryFailed_Title";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
@@ -122,7 +105,6 @@ class CfgNotifications {
         duration = 7;
         priority = 7;
     };
-
     class DeliverySucceeded {
         title = "$STR_DeliverySucceeded_Title";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
@@ -130,7 +112,6 @@ class CfgNotifications {
         duration = 6;
         priority = 6;
     };
-
     class TextMessage {
         title = "$STR_TextMessage_Title";
         iconPicture = "\pi_data\icons\ico_messageNew.paa";
@@ -138,7 +119,6 @@ class CfgNotifications {
         duration = 10;
         priority = 6;
     };
-
     class PoliceDispatch {
         title = "$STR_PoliceDispatch_Title";
         iconPicture = "\pi_data\icons\ico_messagePolice.paa";
@@ -146,7 +126,6 @@ class CfgNotifications {
         duration = 10;
         priority = 6;
     };
-
     class AdminDispatch {
         title = "$STR_AdminDispatch_Title";
         iconPicture = "\pi_data\icons\ico_messageAdmin.paa";
@@ -154,7 +133,6 @@ class CfgNotifications {
         duration = 10;
         priority = 6;
     };
-
     class AdminMessage {
         title = "$STR_AdminMessage_Title";
         iconPicture = "\pi_data\icons\ico_messageAdmin.paa";

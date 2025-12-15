@@ -2,7 +2,6 @@
 /*
     File: fn_pickupAction.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Validates that the cash is not a lie
 */
@@ -11,7 +10,6 @@ params [
     ["_client",objNull,[objNull]],
     ["_cash",false,[true]]
 ];
-
 if (isNull _obj || {isNull _client}) exitWith {systemChat "Obj or client is null?";}; //No.
 if (!(_obj getVariable ["inUse",false])) exitWith {
     _client = owner _client;

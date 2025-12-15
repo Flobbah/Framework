@@ -3,7 +3,6 @@ class Life_atm_management {
     name= "life_atm_menu";
     movingEnable = 0;
     enableSimulation = 1;
-
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText {
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -13,7 +12,6 @@ class Life_atm_management {
             w = 0.3;
             h = (1 / 25);
         };
-
         class MainBackground: Life_RscText {
             colorBackground[] = {0, 0, 0, 0.7};
             idc = -1;
@@ -23,7 +21,6 @@ class Life_atm_management {
             h = 0.652 - (22 / 250);
         };
     };
-
     class controls {
         class CashTitle: Life_RscStructuredText {
             idc = 2701;
@@ -33,7 +30,6 @@ class Life_atm_management {
             w = 0.3;
             h = .14;
         };
-
         class Title: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
@@ -43,7 +39,6 @@ class Life_atm_management {
             w = 0.6;
             h = (1 / 25);
         };
-
         class WithdrawButton: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_ATM_Withdraw";
@@ -54,7 +49,6 @@ class Life_atm_management {
             w = (6 / 40);
             h = (1 / 25);
         };
-
         class DepositButton: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_ATM_Deposit";
@@ -65,7 +59,6 @@ class Life_atm_management {
             w = (6 / 40);
             h = (1 / 25);
         };
-
         class moneyEdit: Life_RscEdit {
             idc = 2702;
             text = "1";
@@ -75,7 +68,6 @@ class Life_atm_management {
             w = 0.2;
             h = 0.03;
         };
-
         class PlayerList: Life_RscCombo {
             idc = 2703;
             x = 0.4;
@@ -83,7 +75,6 @@ class Life_atm_management {
             w = 0.2;
             h = 0.03;
         };
-
         class TransferButton: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_ATM_Transfer";
@@ -94,7 +85,6 @@ class Life_atm_management {
             w = (6 / 40);
             h = (1 / 25);
         };
-
         class GangWithdraw : TransferButton {
             idc = 2705;
             text = "$STR_ATM_WithdrawGang";
@@ -104,7 +94,6 @@ class Life_atm_management {
             y = 0.7;
             w = 0.275;
         };
-
         class GangDeposit : TransferButton {
             idc = 2706;
             text = "$STR_ATM_DepositGang";
@@ -114,7 +103,6 @@ class Life_atm_management {
             y = 0.752;
             w = 0.275;
         };
-
         class CloseButtonKey: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";

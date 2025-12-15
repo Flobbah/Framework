@@ -7,7 +7,6 @@ class life_progress {
     movingEnable = 0;
     onLoad="uiNamespace setVariable ['life_progress',_this select 0]";
     objects[]={};
-
     class controlsBackground {
         class background: Life_RscText {
             idc = -1;
@@ -24,7 +23,6 @@ class life_progress {
             w = 0.65;
             h = 0.05;
         };
-
         class ProgressText: Life_RscText {
             idc = 38202;
             text = "Servicing Chopper (50%)...";
@@ -35,7 +33,6 @@ class life_progress {
         };
     };
 };
-
 class life_timer {
     name = "life_timer";
     idd = 38300;
@@ -45,7 +42,6 @@ class life_timer {
     movingEnable = 0;
     onLoad = "uiNamespace setVariable ['life_timer',_this select 0]";
     objects[] = {};
-
     class controlsBackground {
         class TimerIcon: life_RscPicture {
             idc = -1;
@@ -55,7 +51,6 @@ class life_timer {
             w = 0.04;
             h = 0.045;
         };
-
         class TimerText: Life_RscText {
             colorBackground[] = {0,0,0,0};
             idc = 38301;

@@ -1,7 +1,6 @@
 /*
     File: fn_lightHouse.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Tells clients to either turn the lights on for that house
     or off.
@@ -11,11 +10,8 @@ params [
     ["_house",objNull,[objNull]],
     ["_mode",false,[false]]
 ];
-
-
 if (isNull _house) exitWith {};
 if (!(_house isKindOf "House_F")) exitWith {};
-
 _exit = false;
 if (_mode) then {
     _lightPos = (getArray (missionConfigFile >> "Housing" >> worldName >> (typeOf _house) >> "lightPos" ));

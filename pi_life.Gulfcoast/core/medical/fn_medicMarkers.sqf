@@ -1,7 +1,6 @@
 /*
     File: fn_medicMarkers.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Marks downed players on the map when it's open.
 */
@@ -10,7 +9,6 @@ _markers = [];
 _markersMedecin = [];
 _units = [];
 _medics = [];
-
 sleep 0.25;
 if (visibleMap) then {
     {if (side _x isEqualTo independent) then {_medics pushBack _x;}} forEach playableUnits; //Fetch list of cops / blufor
@@ -21,18 +19,15 @@ if (visibleMap) then {
             _units pushBack _x;
         };
     } forEach allDeadMen;
-
     {
         if !(_x isEqualTo player) then {
             _markerss = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];
             _markerss setMarkerColorLocal "ColorIndependent";
             _markerss setMarkerTypeLocal "Mil_dot";
             _markerss setMarkerTextLocal format ["%1", _x getVariable ["realname",name _x]];
-
             _markersMedecin pushBack [_markerss,_x];
         };
     } forEach _medics;
-
     //Loop through and create markers.
     {
         _marker = createMarkerLocal [format ["%1_dead_marker",_x],visiblePosition _x];
@@ -41,7 +36,6 @@ if (visibleMap) then {
         _marker setMarkerTextLocal format ["%1",(_x getVariable ["name","Unknown Player"])];
         _markers pushBack _marker;
     } forEach _units;
-
     while {visibleMap} do {
         {
             private ["_unit"];

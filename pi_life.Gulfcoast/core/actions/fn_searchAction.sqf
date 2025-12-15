@@ -1,7 +1,6 @@
 /*
     File: fn_searchAction.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Starts the searching process.
 */

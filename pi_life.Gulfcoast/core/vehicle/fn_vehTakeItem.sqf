@@ -3,7 +3,6 @@
 /*
     File: fn_vehTakeItem.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Used in the vehicle trunk menu, takes the selected item and puts it in the players virtual inventory
     if the player has room.
@@ -13,14 +12,12 @@ disableSerialization;
 if (isNull life_trunk_vehicle || !alive life_trunk_vehicle) exitWith {[ localize "STR_MISC_VehDoesntExist",true,"fast"] call life_fnc_notification_system};
 if (!alive player) exitWith {closeDialog 0;};
 if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith {  closeDialog 0; [ localize "STR_MISC_VehInvUse",true,"fast"] call life_fnc_notification_system; };
-
 if ((lbCurSel 3502) isEqualTo -1) exitWith {[ localize "STR_Global_NoSelection",true,"fast"] call life_fnc_notification_system;};
 _ctrl = ctrlSelData(3502);
 _num = ctrlText 3505;
 if (!([_num] call TON_fnc_isnumber)) exitWith {[ localize "STR_MISC_WrongNumFormat",true,"fast"] call life_fnc_notification_system;};
 _num = parseNumber(_num);
 if (_num < 1) exitWith {[ localize "STR_MISC_Under1",true,"fast"] call life_fnc_notification_system;};
-
 _index = [_ctrl,((life_trunk_vehicle getVariable "Trunk") select 0)] call TON_fnc_index;
 _data = (life_trunk_vehicle getVariable "Trunk") select 0;
 _old = life_trunk_vehicle getVariable "Trunk";
@@ -36,7 +33,6 @@ if (_ctrl == "money") then {
     } else {
         _data set[_index,[_ctrl,(_value - _num)]];
     };
-
     CASH = CASH + _num;
     [0] call SOCK_fnc_updatePartial;
     life_trunk_vehicle setVariable ["Trunk",[_data,(_old select 1) - _weight],true];

@@ -2,14 +2,12 @@
 /*
     File: fn_s_onCheckedChange.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Switching it up and making it prettier..
 */
 private ["_option","_state"];
 _option = _this select 0;
 _state = _this select 1;
-
 switch (_option) do {
     case "tags": {
         if (_state isEqualTo 1) then {
@@ -20,7 +18,6 @@ switch (_option) do {
             profileNamespace setVariable ["life_settings_tagson",false];
         };
     };
-
     case "objects": {
         if (_state isEqualTo 1) then {
             life_settings_revealObjects = true;
@@ -32,7 +29,6 @@ switch (_option) do {
             removeMissionEventHandler ["EachFrame", LIFE_ID_RevealObjects];
         };
     };
-
     case "sidechat": {
         if (_state isEqualTo 1) then {
             life_enableSidechannel = true;
@@ -45,7 +41,6 @@ switch (_option) do {
         };
         [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
     };
-
     case "broadcast": {
         if (_state isEqualTo 1) then {
             life_enableNewsBroadcast = true;

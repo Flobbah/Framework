@@ -2,7 +2,6 @@
 /*
     File: fn_vehInvSearch.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Searches the vehicle for illegal items.
 */
@@ -10,10 +9,8 @@ private ["_vehicle","_vehicleInfo","_value","_list"];
 _vehicle = cursorObject;
 _list = ["Air","Ship","LandVehicle"];
 if (isNull _vehicle || {!(KINDOF_ARRAY(_vehicle,_list))}) exitWith {};
-
 _vehicleInfo = _vehicle getVariable ["Trunk",[]];
 if (count _vehicleInfo isEqualTo 0) exitWith {[ localize "STR_Cop_VehEmpty",true,"fast"] call life_fnc_notification_system};
-
 _value = 0;
 _illegalValue = 0;
 {
@@ -26,7 +23,6 @@ _illegalValue = 0;
             _illegalItemProcessed = M_CONFIG(getText,"VirtualItems",_var,"processedItem");
             _illegalPrice = M_CONFIG(getNumber,"VirtualItems",_illegalItemProcessed,"sellPrice");
         };
-
         _illegalValue = _illegalValue + (round(_val * _illegalPrice / 2));
     };
 } forEach (_vehicleInfo select 0);

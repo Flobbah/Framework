@@ -1,13 +1,10 @@
 /*
     Author: Nanou
     File: fn_initHC.sqf
-
     Description:
     Written for Altis Life RPG.
 */
-
 HC_UID = nil;
-
 // JIP integration of an hc
 "life_HC_isActive" addPublicVariableEventHandler {
     if (_this select 1) then {
@@ -23,7 +20,6 @@ HC_UID = nil;
         diag_log "Headless client is connected and ready to work!";
     };
 };
-
 HC_DC = addMissionEventHandler ["PlayerDisconnected",
     {
         if (!isNil "HC_UID" && {_uid == HC_UID}) then {

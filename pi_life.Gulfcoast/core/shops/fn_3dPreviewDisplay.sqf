@@ -1,15 +1,11 @@
 /*
     File: fn_3dPreviewDisplay.sqf
     Author: KLM
-
     Description:
     Called to change the object in the 3d preview.
 */
-
 if !(params [["_className", "", [""]]]) exitWith {};
-
 if (isNil "life_3dPreview_camera" || {isNull life_3dPreview_camera}) exitWith {};
-
 private _isInCfg = (isClass (configFile >> "CfgVehicles" >> _className));
 if (_isInCfg) then {
     if (isNull life_3dPreview_object || {!(_className isEqualTo typeOf life_3dPreview_object)}) then {

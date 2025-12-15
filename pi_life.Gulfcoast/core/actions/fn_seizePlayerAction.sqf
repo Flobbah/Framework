@@ -2,7 +2,6 @@
 /*
     File: fn_seizePlayerAction.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Starts the seize process..
     Based off Tonic's fn_searchAction.sqf

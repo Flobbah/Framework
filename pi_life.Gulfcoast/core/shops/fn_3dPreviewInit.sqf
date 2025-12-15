@@ -1,13 +1,10 @@
 /*
     File: fn_3dPreviewInit.sqf
     Author: BoGuu & KLM
-
     Description:
     Called to initialize the 3d preview.
 */
-
 if !(params [["_display", displayNull, [displayNull]]]) exitWith {};
-
 life_3dPreview_position = [0, 0, 10000];
 // create camera
 life_3dPreview_camera = "camera" camCreate life_3dPreview_position;
@@ -29,8 +26,6 @@ life_3dPreview_dragging = false;
 // event handlers
 life_3dPreview_evh_down = _display displayAddEventHandler ["MouseButtonDown", {life_3dPreview_dragging = true}];
 life_3dPreview_evh_up = _display displayAddEventHandler ["MouseButtonUp", {life_3dPreview_dragging = false}];
-
-
 life_3dPreview_evh_move = _display displayAddEventHandler ["MouseMoving", {
     params ["", "_dx", "_dy"];
     if (life_3dPreview_dragging) then {
@@ -39,7 +34,6 @@ life_3dPreview_evh_move = _display displayAddEventHandler ["MouseMoving", {
         life_3dPreview_object setVectorDir vectorNormalized _newdir;
     };
 }];
-
 life_3dPreview_evh_zoom = _display displayAddEventHandler ["MouseZChanged", {
     params ["", "_scroll"];
     private _max = life_3dPreview_camera_mag;

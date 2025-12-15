@@ -6,7 +6,6 @@
 #define GUI_GRID_CENTER_H        (GUI_GRID_CENTER_HAbs / 25)
 #define GUI_GRID_CENTER_X        (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y        (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
-
 class Life_Checkbox
 {
     access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
@@ -15,26 +14,22 @@ class Life_Checkbox
     style = ST_LEFT + ST_MULTI; // Style
     default = 0; // Control selected by default (only one within a display can be used)
     blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
-
     x = 0;
     y = 0;
     w = 1 * GUI_GRID_CENTER_W; // Width
     h = 1 * GUI_GRID_CENTER_H; // Height
-
     //Colors
     color[] = { 1, 1, 1, 0.7 }; // Texture color
     colorFocused[] = { 1, 1, 1, 1 }; // Focused texture color
     colorHover[] = { 1, 1, 1, 1 }; // Mouse over texture color
     colorPressed[] = { 1, 1, 1, 1 }; // Mouse pressed texture color
     colorDisabled[] = { 1, 1, 1, 0.2 }; // Disabled texture color
-
     //Background colors
     colorBackground[] = { 0, 0, 0, 0 }; // Fill color
     colorBackgroundFocused[] = { 0, 0, 0, 0 }; // Focused fill color
     colorBackgroundHover[] = { 0, 0, 0, 0 }; // Mouse hover fill color
     colorBackgroundPressed[] = { 0, 0, 0, 0 }; // Mouse pressed fill color
     colorBackgroundDisabled[] = { 0, 0, 0, 0 }; // Disabled fill color
-
     //Textures
     textureChecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";        //Texture of checked CheckBox.
     textureUnchecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";        //Texture of unchecked CheckBox.
@@ -46,20 +41,16 @@ class Life_Checkbox
     texturePressedUnchecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
     textureDisabledChecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
     textureDisabledUnchecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
-
     tooltip = ""; // Tooltip text
     tooltipColorShade[] = { 0, 0, 0, 1 }; // Tooltip background color
     tooltipColorText[] = { 1, 1, 1, 1 }; // Tooltip text color
     tooltipColorBox[] = { 1, 1, 1, 1 }; // Tooltip frame color
-
     //Sounds
     soundClick[] = { "\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1 }; // Sound played after control is activated in format {file, volume, pitch}
     soundEnter[] = { "\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1 }; // Sound played when mouse cursor enters the control
     soundPush[] = { "\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1 }; // Sound played when the control is pushed down
     soundEscape[] = { "\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1 }; // Sound played when the control is released after pushing down
-
 };
-
 class Life_RscScrollBar
 {
     color[] = {1,1,1,0.6};
@@ -78,7 +69,6 @@ class Life_RscScrollBar
     autoScrollDelay = 5;
     autoScrollRewind = 0;
 };
-
 class Life_RscControlsGroup {
     type = 15;
     idc = -1;
@@ -88,31 +78,25 @@ class Life_RscControlsGroup {
     h = 1;
     shadow = 0;
     style = 16;
-
     class VScrollBar : Life_RscScrollBar
     {
         width = 0.021;
         autoScrollEnabled = 1;
     };
-
     class HScrollBar : Life_RscScrollBar
     {
         height = 0.028;
     };
-
     class Controls {};
 };
-
 class Life_RscControlsGroupNoScrollbars : Life_RscControlsGroup {
     class VScrollbar : VScrollbar {
         width = 0;
     };
-
     class HScrollbar : HScrollbar {
         height = 0;
     };
 };
-
 class Life_RscHud
 {
     idc = -1;
@@ -125,7 +109,6 @@ class Life_RscHud
     h = 0.25;
     text = "";
 };
-
 class Life_RscListNBox
 {
     style = 16;
@@ -155,8 +138,6 @@ class Life_RscListNBox
     class ListScrollBar: Life_RscScrollBar{};
     class ScrollBar: Life_RscScrollBar{};
 };
-
-
 class Life_RscText {
     x = 0;
     y = 0;
@@ -176,7 +157,6 @@ class Life_RscText {
     tooltipColorBox[] = {1,1,1,1};
     tooltipColorShade[] = {0,0,0,0.65};
 };
-
 class Life_RscLine: Life_RscText {
     idc = -1;
     style = 176;
@@ -188,7 +168,6 @@ class Life_RscLine: Life_RscText {
     colorBackground[] = {0, 0, 0, 0};
     colorText[] = {1, 1, 1, 1.0};
 };
-
 class Life_RscTree {
     style = 2;
     font = "RobotoCondensed";
@@ -203,13 +182,11 @@ class Life_RscTree {
     colorBorder[] = {0, 0, 0, 0};
     borderSize = 0;
 };
-
 class Life_RscTitle: Life_RscText {
     style = 0;
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     colorText[] = {0.95, 0.95, 0.95, 1};
 };
-
 class life_RscPicture {
     shadow = 0;
     type = 0;
@@ -226,18 +203,15 @@ class life_RscPicture {
     tooltipColorBox[] = {1,1,1,1};
     tooltipColorShade[] = {0,0,0,0.65};
 };
-
 class Life_RscTextMulti: Life_RscText
 {
     linespacing = 1;
     style = 0 + 16 + 0x200;
 };
-
 class Life_RscPictureKeepAspect : Life_RscPicture
 {
     style = 0x30 + 0x800;
 };
-
 class Life_RscStructuredText {
     type = 13;
     style = 0;
@@ -249,7 +223,6 @@ class Life_RscStructuredText {
     size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     colorText[] = {1, 1, 1, 1.0};
     shadow = 1;
-
     class Attributes {
         font = "RobotoCondensed";
         color = "#ffffff";
@@ -257,7 +230,6 @@ class Life_RscStructuredText {
         shadow = 1;
     };
 };
-
 class Life_RscActiveText {
 idc = -1;
     type = 11;
@@ -280,7 +252,6 @@ idc = -1;
     tooltipColorBox[] = {1,1,1,1};
     tooltipColorShade[] = {0,0,0,0.65};
 };
-
 class Life_RscButton
 {
     style = 2;
@@ -309,7 +280,6 @@ class Life_RscButton
     soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
-
 class Life_RscButtonTextOnly : Life_RscButton {
     SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
     colorBackground[] = {1, 1, 1, 0};
@@ -319,7 +289,6 @@ class Life_RscButtonTextOnly : Life_RscButton {
     colorShadow[] = {1, 1, 1, 0};
     borderSize = 0.0;
 };
-
 class Life_RscShortcutButton {
     idc = -1;
     style = 0;
@@ -387,7 +356,6 @@ class Life_RscShortcutButton {
         align = "left";
     };
 };
-
 class Life_RscButtonMenu : Life_RscShortcutButton {
     idc = -1;
     type = 16;
@@ -447,7 +415,6 @@ class Life_RscButtonMenu : Life_RscShortcutButton {
     soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,1};
     textureNoShortcut = "";
 };
-
 class Life_RscShortcutButtonMain : Life_RscShortcutButton {
     idc = -1;
     style = 0;
@@ -456,21 +423,18 @@ class Life_RscShortcutButtonMain : Life_RscShortcutButton {
     h = 0.104575;
     color[] = {1, 1, 1, 1.0};
     colorDisabled[] = {1, 1, 1, 0.25};
-
     class HitZone {
         left = 0.0;
         top = 0.0;
         right = 0.0;
         bottom = 0.0;
     };
-
     class ShortcutPos {
         left = 0.0145;
         top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)) / 2";
         w = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2) * (3/4)";
         h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
     };
-
     class TextPos {
         left = "(        ((safezoneW / safezoneH) min 1.2) / 32) * 1.5";
         top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20)*2 - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)) / 2";
@@ -493,21 +457,18 @@ class Life_RscShortcutButtonMain : Life_RscShortcutButton {
     soundClick[] = {"\A3\ui_f\data\sound\onclick", 0.07, 1};
     soundEscape[] = {"\A3\ui_f\data\sound\onescape", 0.09, 1};
     action = "";
-
     class Attributes {
         font = "RobotoCondensed";
         color = "#E5E5E5";
         align = "left";
         shadow = "false";
     };
-
     class AttributesImage {
         font = "RobotoCondensed";
         color = "#E5E5E5";
         align = "false";
     };
 };
-
 class Life_RscCheckbox {
     idc = -1;
     type = 7;
@@ -531,7 +492,6 @@ class Life_RscCheckbox {
     strings[] = {UNCHECKED};
     checked_strings[] = {CHECKED};
 };
-
 class Life_RscProgress
 {
     type = 8;
@@ -546,7 +506,6 @@ class Life_RscProgress
     colorBackground[] = {0,0,0,0.7};
     colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 };
-
 class Life_RscListBox
 {
     style = 16;
@@ -589,7 +548,6 @@ class Life_RscListBox
         autoScrollEnabled = 1;
     };
 };
-
 class Life_RscEdit {
     type = 2;
     style = 0x00 + 0x40;
@@ -605,13 +563,11 @@ class Life_RscEdit {
     colorSelection[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1};
     canModify = 1;
 };
-
 class Life_RscSlider {
     h = 0.025;
     color[] = {1, 1, 1, 0.8};
     colorActive[] = {1, 1, 1, 1};
 };
-
 class life_RscXSliderH
 {
     style = 1024;
@@ -635,7 +591,6 @@ class life_RscXSliderH
     border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa";
     thumb = "\A3\ui_f\data\gui\cfg\slider\thumb_ca.paa";
 };
-
 class Life_RscFrame {
     type = 0;
     idc = -1;
@@ -647,7 +602,6 @@ class Life_RscFrame {
     sizeEx = 0.02;
     text = "";
 };
-
 class Life_RscBackground: Life_RscText {
     type = 0;
     IDC = -1;
@@ -663,7 +617,6 @@ class Life_RscBackground: Life_RscText {
     font = "RobotoCondensed";
     SizeEx = 1;
 };
-
 class Life_RscHTML {
     colorText[] = {1, 1, 1, 1.0};
     colorBold[] = {1, 1, 1, 1.0};
@@ -673,49 +626,42 @@ class Life_RscHTML {
     prevPage = "\A3\ui_f\data\gui\Rsccommon\Rschtml\arrow_left_ca.paa";
     nextPage = "\A3\ui_f\data\gui\Rsccommon\Rschtml\arrow_right_ca.paa";
     shadow = 2;
-
     class H1 {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
         align = "left";
     };
-
     class H2 {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
         align = "right";
     };
-
     class H3 {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
         align = "left";
     };
-
     class H4 {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
         align = "left";
     };
-
     class H5 {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
         align = "left";
     };
-
     class H6 {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
         align = "left";
     };
-
     class P {
         font = "RobotoCondensed";
         fontBold = "RobotoCondensedBold";
@@ -723,7 +669,6 @@ class Life_RscHTML {
         align = "left";
     };
 };
-
 class Life_RscHitZones {
     x = 0;
     y = 0;
@@ -734,7 +679,6 @@ class Life_RscHitZones {
     xSpace = 0;
     ySpace = 0;
 };
-
 class Life_RscMapControl
 {
     access = 0;
@@ -1119,7 +1063,6 @@ class Life_RscMapControl
         textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
     };
 };
-
 class Life_RscCombo {
     style = 16;
     type = 4;
@@ -1147,10 +1090,8 @@ class Life_RscCombo {
     colorDisabled[] = {1, 1, 1, 0.25};
     font = "RobotoCondensed";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-
     class ComboScrollBar : Life_RscScrollBar {};
 };
-
 class Life_RscToolbox {
     colorText[] = {0.95, 0.95, 0.95, 1};
     color[] = {0.95, 0.95, 0.95, 1};

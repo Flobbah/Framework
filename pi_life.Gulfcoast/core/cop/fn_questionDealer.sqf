@@ -2,7 +2,6 @@
 /*
     File: fn_questionDealer.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Questions the drug dealer and sets the sellers wanted.
 */
@@ -11,7 +10,6 @@ _sellers = (_this select 0) getVariable ["sellers",[]];
 if (count _sellers isEqualTo 0) exitWith {[ localize "STR_Cop_DealerQuestion",true,"fast"] call life_fnc_notification_system}; //No data.
 life_action_inUse = true;
 _crimes = LIFE_SETTINGS(getArray,"crimes");
-
 _names = "";
 {
     _val = 0;
@@ -27,7 +25,6 @@ _names = "";
     [(_x select 0),(_x select 1),"483",_val] remoteExecCall ["life_fnc_wantedAdd",RSERV];
     _names = _names + format ["%1<br/>",(_x select 1)];
 } forEach _sellers;
-
 [ parseText format [(localize "STR_Cop_DealerMSG")+ "<br/><br/>%1",_names],false,"slow"] call life_fnc_notification_system;
 (_this select 0) setVariable ["sellers",[],true];
 life_action_inUse = false;

@@ -2,7 +2,6 @@
 /*
     File: fn_restrainAction.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Restrains the target.
 */
@@ -15,7 +14,6 @@ if (side _unit isEqualTo west) exitWith {};
 if (player isEqualTo _unit) exitWith {};
 if (!isPlayer _unit) exitWith {};
 //Broadcast!
-
 _unit setVariable ["playerSurrender",false,true];
 _unit setVariable ["restrained",true,true];
 [player] remoteExec ["life_fnc_restrain",_unit];

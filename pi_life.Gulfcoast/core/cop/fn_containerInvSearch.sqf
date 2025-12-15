@@ -3,17 +3,14 @@
     File: fn_containerInvSearch.sqf
     Author: NiiRoZz
     Inspired : Bryan "Tonic" Boardwine
-
     Description:
     Searches the container for illegal items.
 */
 private ["_container","_containerInfo","_value"];
 _container = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (isNull _container) exitWith {};
-
 _containerInfo = _container getVariable ["Trunk",[]];
 if (count _containerInfo isEqualTo 0) exitWith {[ localize "STR_Cop_ContainerEmpty",true,"fast"] call life_fnc_notification_system};
-
 _value = 0;
 _illegalValue = 0;
 {
@@ -26,7 +23,6 @@ _illegalValue = 0;
             _illegalItemProcessed = M_CONFIG(getText,"VirtualItems",_var,"processedItem");
             _illegalPrice = M_CONFIG(getNumber,"VirtualItems",_illegalItemProcessed,"sellPrice");
         };
-
         _illegalValue = _illegalValue + (round(_val * _illegalPrice / 2));
     };
 } forEach (_containerInfo select 0);

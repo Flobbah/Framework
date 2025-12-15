@@ -2,12 +2,10 @@
 /*
     File: fn_playerSkins.sqf
     Author: Daniel Stuart
-
     Description:
     Sets skins for players by their side and uniform.
 */
 private ["_skinName"];
-
 switch (playerSide) do {
     case civilian: {
         if (LIFE_SETTINGS(getNumber,"civ_skins") isEqualTo 1) then {
@@ -34,7 +32,6 @@ switch (playerSide) do {
             };
         };
     };
-
     case west: {
         if (uniform player isEqualTo "U_Rangemaster") then {
             _skinName = "\pi_data\textures\cop_uniform.jpg";
@@ -46,7 +43,6 @@ switch (playerSide) do {
             player setObjectTextureGlobal [0, _skinName];
         };
     };
-
     case independent: {
         if (uniform player isEqualTo "U_Rangemaster") then {
             player setObjectTextureGlobal [0, "\pi_data\textures\medic_uniform.jpg"];

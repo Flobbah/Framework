@@ -2,25 +2,19 @@
 /*
     File: fn_jerryRefuel.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Refuels the vehicle if the player has a fuel can.
 */
 private ["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_previousState"];
 _vehicle = cursorObject;
 life_interrupted = false;
-
 if (isNull _vehicle) exitWith {[ localize "STR_ISTR_Jerry_NotLooking",true,"fast"] call life_fnc_notification_system};
 if (!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship")) exitWith {};
 if (player distance _vehicle > 7.5) exitWith {[ localize "STR_ISTR_Jerry_NotNear",true,"fast"] call life_fnc_notification_system};
-
 if (!([false,"fuelFull",1] call life_fnc_handleInv)) exitWith {};
 life_action_inUse = true;
-
 _displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
-
 _upp = format [localize "STR_ISTR_Jerry_Process",_displayName];
-
 //Setup our progress bar.
 disableSerialization;
 "progressBar" cutRsc ["life_progress","PLAIN"];
@@ -30,7 +24,6 @@ _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
-
 for "_i" from 0 to 1 step 0 do {
     if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
         [player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
@@ -56,8 +49,6 @@ life_action_inUse = false;
 player playActionNow "stop";
 if (!alive player) exitWith {};
 if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"];};
-
-
 switch (true) do {
     case (_vehicle isKindOF "LandVehicle"): {
         if (!local _vehicle) then {
@@ -66,7 +57,6 @@ switch (true) do {
             _vehicle setFuel ((Fuel _vehicle) + 0.5);
         };
     };
-
     case (_vehicle isKindOf "Air"): {
         if (!local _vehicle) then {
             [_vehicle,(Fuel _vehicle) + 0.2] remoteExecCall ["life_fnc_setFuel",_vehicle];
@@ -74,7 +64,6 @@ switch (true) do {
             _vehicle setFuel ((Fuel _vehicle) + 0.2);
         };
     };
-
     case (_vehicle isKindOf "Ship"): {
         if (!local _vehicle) then {
             [_vehicle,(Fuel _vehicle) + 0.35] remoteExecCall ["life_fnc_setFuel",_vehicle];

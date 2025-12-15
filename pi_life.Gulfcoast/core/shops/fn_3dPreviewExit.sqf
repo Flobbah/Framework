@@ -1,13 +1,10 @@
 /*
     File: fn_3dPreviewExit.sqf
     Author: KLM
-
     Description:
     Handles the cleanup of the 3d preview.
 */
-
 if !(params [["_display", displayNull, [displayNull]]]) exitWith {};
-
 // delete objects
 if (!isNull life_3dPreview_object) then {deleteVehicle life_3dPreview_object;};
 deleteVehicle life_3dPreview_light;

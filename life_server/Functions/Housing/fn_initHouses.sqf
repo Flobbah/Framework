@@ -6,7 +6,6 @@
 */
 private ["_queryResult","_query","_count","_blacklistedHouses","_blacklistedGarages"];
 _count = (["SELECT COUNT(*) FROM houses WHERE owned='1'",2] call DB_fnc_asyncCall) select 0;
-
 for [{_x=0},{_x<=_count},{_x=_x+10}] do {
     _query = format ["SELECT houses.id, houses.pid, houses.pos, players.name, houses.garage FROM houses INNER JOIN players WHERE houses.owned='1' AND houses.pid = players.pid LIMIT %1,10",_x];
     _queryResult = [_query,2,true] call DB_fnc_asyncCall;
@@ -26,12 +25,10 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
         };
     } forEach _queryResult;
 };
-
 _blacklistedHouses = "count (getArray (_x >> 'garageBlacklists')) > 0" configClasses (missionconfigFile >> "Housing" >> worldName);
 _blacklistedGarages = "count (getArray (_x >> 'garageBlacklists')) > 0" configClasses (missionconfigFile >> "Garages" >> worldName);
 _blacklistedHouses = _blacklistedHouses apply {configName _x};
 _blacklistedGarages = _blacklistedGarages apply {configName _x};
-
 for "_i" from 0 to count(_blacklistedHouses)-1 do {
     _className = _blacklistedHouses select _i;
     _positions = getArray(missionConfigFile >> "Housing" >> worldName >> _className >> "garageBlacklists");
@@ -42,7 +39,6 @@ for "_i" from 0 to count(_blacklistedHouses)-1 do {
         };
     } forEach _positions;
 };
-
 for "_i" from 0 to count(_blacklistedGarages)-1 do {
     _className = _blacklistedGarages select _i;
     _positions = getArray(missionConfigFile >> "Garages" >> worldName >> _className >> "garageBlacklists");

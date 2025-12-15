@@ -2,7 +2,6 @@ class Chop_Shop {
     idd = 39400;
     movingEnable = 0;
     enableSimulation = 1;
-
     class controlsBackground {
         class RscTitleBackground: Life_RscText {
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -12,7 +11,6 @@ class Chop_Shop {
             w = 0.32;
             h = (1 / 25);
         };
-
         class MainBackGround: Life_RscText {
             colorBackground[] = {0,0,0,0.7};
             idc = -1;
@@ -21,7 +19,6 @@ class Chop_Shop {
             w = 0.32;
             h = 0.6 - (22 / 250);
         };
-
         class Title: Life_RscTitle {
             colorBackground[] = {0,0,0,0};
             idc = -1;
@@ -31,7 +28,6 @@ class Chop_Shop {
             w = 0.32;
             h = (1 / 25);
         };
-
         class priceInfo: Life_RscStructuredText {
             idc = 39401;
             text = "";
@@ -42,7 +38,6 @@ class Chop_Shop {
             h = 0.2;
         };
     };
-
     class controls {
         class vehicleList: Life_RscListBox {
             idc = 39402;
@@ -53,7 +48,6 @@ class Chop_Shop {
             w = 0.3;
             h = 0.38;
         };
-
         class BtnSell: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Sell";
@@ -63,7 +57,6 @@ class Chop_Shop {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
         class BtnClose: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Close";

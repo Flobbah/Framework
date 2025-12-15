@@ -2,7 +2,6 @@
 /*
     File: fn_garageRefund.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     I don't know?
 */

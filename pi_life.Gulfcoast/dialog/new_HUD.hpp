@@ -2,7 +2,6 @@
 // Authors: Kureo & Zalac                             //
 // Credit: Danny									  //
 ////////////////////////////////////////////////////////
-
 class new_HUD {
 	idd = 20099;
 	duration = 1e+1000;
@@ -13,7 +12,6 @@ class new_HUD {
 	onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
 	objects[] = {};
 	class controlsBackground {
-
 		// HUD Dx
 		
 		class BarraSfondoVita: Life_RscText {
@@ -128,9 +126,7 @@ class new_HUD {
 			w = 0.0864 * safezoneW;
 			h = 0.0275 * safezoneH;
 		};
-
 		// HUD Sx
-
 		class Banca_Icon: Life_RscPicture {
 			colorBackground[] = {0.02,0.06,0.06,1};
 			idc = -1;

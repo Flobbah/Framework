@@ -4,7 +4,6 @@ class life_admin_menu {
     movingEnable = 0;
     enableSimulation = 1;
     onLoad = "[] spawn life_fnc_adminMenu;";
-
     class controlsBackground {
         class MainBackground: Life_RscText {
             idc = -1;
@@ -14,7 +13,6 @@ class life_admin_menu {
             w = 0.37125 * safezoneW;
             h = 0.396 * safezoneH;
         };
-
         class Life_RscTitleBackground: Life_RscText {
             idc = -1;
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
@@ -25,7 +23,6 @@ class life_admin_menu {
             h = 0.022 * safezoneH;
         };
     };
-
     class controls {
         class RscButtonMenu_2400: Life_RscButtonMenu {
             idc = -1;
@@ -36,7 +33,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2402: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Admin_GetID";
@@ -46,7 +42,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2403: Life_RscButtonMenu {
             idc = 2904;
             text = "$STR_Admin_Compensate";
@@ -56,7 +51,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2404: Life_RscButtonMenu {
             idc = 2905;
             text = "$STR_Admin_Spectate";
@@ -66,7 +60,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2405: Life_RscButtonMenu {
             idc = 2906;
             text = "$STR_Admin_Teleport";
@@ -76,7 +69,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2401: Life_RscButtonMenu {
             idc = 2907;
             text = "$STR_Admin_TpHere";
@@ -86,7 +78,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2406: Life_RscButtonMenu {
             idc = 2908;
             text = "$STR_Admin_God";
@@ -96,7 +87,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2407: Life_RscButtonMenu {
             idc = 2909;
             text = "$STR_Admin_Freeze";
@@ -106,7 +96,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2408: Life_RscButtonMenu {
             idc = 2910;
             text = "$STR_Admin_Markers";
@@ -116,7 +105,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class RscButtonMenu_2409: Life_RscButtonMenu {
             idc = 2911;
             text = "$STR_Admin_Debug";
@@ -126,7 +114,6 @@ class life_admin_menu {
             w = 0.061875 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
         class PlayerList_Admin: Life_RscListBox {
             idc = 2902;
             text = "";
@@ -137,7 +124,6 @@ class life_admin_menu {
             w = 0.159844 * safezoneW;
             h = 0.275 * safezoneH;
         };
-
         class PlayerBInfo: Life_RscStructuredText {
             idc = 2903;
             text = "";
