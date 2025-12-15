@@ -104,6 +104,17 @@ _vehicle allowDamage true;
 _vehicle lock 2;
 //Reskin the vehicle
 [_vehicle,(_vInfo select 8)] remoteExecCall ["life_fnc_colorVehicle",_unit];
+
+// --- Set D3S License Plate (serverside) ---
+private _plate = (_vInfo select 7);
+if !(_plate isEqualType "") then { _plate = str _plate; };
+_plate = toLower _plate;
+// Optional: Set To 7 Numbers (D3S Uses 7 Slots: 20-26)
+_plate = _plate select [0,7];
+// Only For D3S Classes
+if ((toLower typeOf _vehicle) find "d3s_" == 0) then {
+    [_vehicle, _plate] call d3s_fnc_setlicense;
+};
 _vehicle setVariable ["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7)],true];
 _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
