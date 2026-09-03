@@ -39,7 +39,6 @@ addons[]=
 	"A3_Characters_F_Exp_Civil",
 	"cba_xeh",
 	"A3_Structures_F_Ind_Cargo",
-	"ace_cargo",
 	"A3_Modules_F",
 	"A3_Structures_F_Research",
 	"A3_Structures_F_Mil_Barracks",
@@ -110,31 +109,24 @@ class AddonsMetaData
 		};
 		class Item8
 		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item9
-		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="PoliceStation";
 			name="PoliceStation";
 		};
-		class Item12
+		class Item11
 		{
 			className="mm_bank";
 			name="mm_bank";
